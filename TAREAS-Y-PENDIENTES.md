@@ -33,3 +33,5 @@
 
 - Funcion que devuelta un numero aleatorio que se imprima en la pagina dentro de la parte del formulario
 - Sistema de envio de mails del formulario (al menos que de la imprecion de que se envio algo, indistinto que realmente se envie o no)
+- Menú hamburguer
+- ¿Vamos a aplicar Boostrp?,¿Donde?
