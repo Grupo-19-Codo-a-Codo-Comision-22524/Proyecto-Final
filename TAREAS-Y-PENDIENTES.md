@@ -25,9 +25,9 @@
 
 ***QUIEN ESTA HACIENDO QUE:***
 
-Daniel: carousel en CSS
-Osvalo: aplicando estetica de colores y fuentes a la web con CSS
-Hernan: trabajando con el calculador de presupuesto en JS
+- Daniel: carousel en CSS
+- Osvalo: aplicando estetica de colores y fuentes a la web con CSS
+- Hernan: trabajando con el calculador de presupuesto en JS
 
 ***IDEAS PARA AGREGAR:***
 
