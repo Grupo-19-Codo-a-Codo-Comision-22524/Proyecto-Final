@@ -1,0 +1,355 @@
+                    /* VARIABLES */
+
+:root {
+    --tamfuen:14px;
+    /*--Lifuen:13px;*/
+}
+
+                    /* GENERAL */
+
+* {
+    font-size: var(--tamfuen);
+    padding: 0;
+    margin: 0;
+    max-block-size: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.container { 
+    padding-top: 75px;
+}
+
+select {
+    margin-top: 24px;
+    border-radius: 0.1px;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+select:hover {
+    cursor: pointer;
+}
+
+label {
+    font-size: var(--tamfuen);
+    margin-top: 16px;
+    padding-left: 5px;
+}
+
+input {
+    font-size: var(--tamfuen);
+    padding-left: 5px;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+legend {
+    font-size: var(--tamfuen);
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 0.15rem;
+}
+
+                                    /* HEADER, NAV Y FOOTER*/
+
+header {
+    width: 100%;
+    position: fixed;
+    font-size: var(--tamfuen);
+    background-color: #222;
+    padding: 0 0 0 0;
+    margin: 0 0 2rem 0;
+    height: 5em;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.logoheader{
+    width: 20%;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin-left: 10px;
+}
+
+nav a:hover {
+    color: cornflowerblue;
+    font-weight: bold;
+}
+
+footer {
+    font-size: var(--tamfuen);
+    background-color: #222;
+    padding: 2.8rem;
+    color: white;
+}
+
+footer section {
+    margin-top: 25px;
+}
+
+footer a {  
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+div a { 
+        color: white;
+        width: 200px;
+        text-decoration: none;
+        transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: cornflowerblue;
+    font-weight: bold;
+}
+
+.footer-navbar {
+    width: 80%;
+    display: flex;
+    align-items: center;
+}
+
+.header-navbar {
+    width: 75%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-link{
+    color: white;
+    font-style: normal;
+}
+
+                                    /* TEXTOS */
+
+h1 { 
+    margin-top: 10px;
+    font-size: 24px;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+p {
+    font-size: var(--tamfuen);
+    margin: 0 25px 10px 0;
+    padding-left: 12px;
+}
+
+h2 { 
+    margin-top: 15px;
+    font-size: 24px;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+                                    /* SECCION: PRESENTACION */
+                                    /* SECCION: NOSOTROS */
+
+                                    /* SECCION: COMPUTADORAS */
+
+.equipos {
+    display: grid;
+    grid-template-columns: 150px 180px;
+    font-size: var(--tamfuen);
+    margin: 0 25px 1rem 25px;  
+    width: 500px;
+    height: 250px;
+    padding-top: 0;
+    padding-bottom: 35px;
+    border-radius: 12px;
+    border: 1px solid black;
+    background-color: antiquewhite;
+}
+
+.grid-equipos, .grid-upgrade{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.opventa {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+ul.opventa {
+    display: flex;
+    list-style-type: none;
+    flex-direction: column;
+    align-items: flex-start
+}
+
+.opventa li {
+    font-size: var(--Lifuen);
+    display: grid;
+    grid-template-columns: auto;
+    grid-column-end: auto;
+}
+
+.lista{
+    display: grid;
+    grid-area:auto ;
+}
+
+.select{
+    display: grid;
+    grid-area:auto ;
+}
+
+.img{
+    display: grid;
+    grid-area:auto ;
+}
+
+                                    /* SECCION: UPGRADES */
+
+legend {
+    font-size: var(--tamfuen);
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 0.15rem;
+}
+
+#upgrade legend{
+    padding: 15px;
+}
+
+fieldset {
+    display: grid;
+    grid-template-columns: auto auto;
+    font-size: var(--tamfuen);
+    margin: 25px 25px 1rem 25px;  
+    width: 500px;
+    height: 150px;
+    text-align: center;
+    justify-content: center;
+    padding-top: 35px;
+}
+
+                                    /* SECCION: ACCESORIOS */
+
+.accesorios {
+    display: grid;
+    grid-template-columns: auto auto;
+    list-style: none;
+    margin-left: 24px;
+    padding-left: 96px;
+    padding-bottom: 16px;
+}
+
+                                    /* FORMULARIO CONTACTO */
+
+.formulario_contacto {
+    font-size: var(--Lifuen);
+    margin-left: 50px;
+    width: 500px;
+}
+
+#consulta {
+    font-size: var(--tamfuen);
+    margin-top: 10px;
+    padding-left: 5px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+}
+
+.cons {
+    margin-bottom: 10px;
+    width: 550px;
+}
+
+textarea {
+    background-color: #fcfcfc;
+    font-size: var(--tamfuen);
+    padding: 16px 0 0 0;   
+    text-align: left;
+    border: none;
+    width: 500px;
+    height: 150px;
+    border: 1px solid black;
+    font-size: var(--tamfuen);
+    margin-top: 25px;
+    margin-left: 15px;
+    padding-left: 5px;
+    border-radius: 12px;
+}
+
+.cons {
+    margin-top: 8px;
+}
+
+#mensaje {
+    margin-top: 16px;
+}
+
+#horario, #contacto, #tipoconsulta {
+    margin-top: 8px;
+}
+
+.formulario_contacto {
+    display: grid;
+    grid-template-columns: auto;
+
+}
+
+.detalle {
+    border: 1px solid grey;
+    background-color: #fcfcfc;
+    width: 500px;
+    height: 500px;
+}
+
+                                    /* BOTONES */
+
+.btns {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 85px 15px 15px;
+    font-size: var(--tamfuen);
+    border: none;
+    background-color:rgb(100, 149, 237);
+    border-radius: 12px;
+    color: white;
+    width: 150px;
+    height: 50px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    font-weight: bold;
+    width: 155px;
+    height: 55px;
+    background-color: rgb(72, 128, 233)
+}
+
+
