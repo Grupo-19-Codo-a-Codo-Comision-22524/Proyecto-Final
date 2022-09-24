@@ -55,15 +55,17 @@
     
     <main id="productos">
 
-        <h2>Elegí el tipo de PC que estas buscando</h2>
+            <h2>Elegí el tipo de PC que estas buscando</h2>
 
-        <article class="grid-equipos">
+        <section class="grid-equipos">
+
             <section class="opcion-equipo">
                 <article class="equipos">
 
+                    <label for="standard">
                     <img src="/" alt="foto pc diseño estandar">
-
                     <ul class="opventa">
+
                         <li>ESTANDAR</li>
                         <li>Microprocesador: AMD 5</li>
                         <li>RAM: 4 GB DDR3</li>
@@ -71,49 +73,41 @@
                         <li>Video: integrada</li>
                         <li>Costo: $31.499,00 </li>
 
-                        
                     </ul>
-
-                    <div class="select">
-                        <label for="standard">Selecccionar</label>
-                        <input type="radio" name="opciondebase" id="standard" value="standard">
-                    </div>
-
+                    </label>
+                    <input type="radio" name="opciondebase" id="standard" value="standard" hidden>
+                
                 </article>
             </section>
             
             <section class="opcion-equipo">
                 <article class="equipos">
 
-                <div class="img">
+                    <label for="oficina">
                     <img src="/" alt="foto pc oficina">
-                </div>
-
-                <div class="lista">
                     <ul class="opventa">
+
                         <li>OFICINA</li>
                         <li>Microprocesador: Intel Core i5</li>
                         <li>RAM: 8GB DDR3</li>
                         <li>HDD: 1 TB</li>
                         <li>Video: integrada</li>
                         <li>Costo: $75.382,50 </li>
-                    </ul>
-                </div>
 
-                <div class="select">
-                        <label for="oficina">Seleccionar</label> 
-                        <input type="radio" name="opciondebase" id="oficina" value="oficina">
-                </div>
-                    
+                    </ul>
+                    </label> 
+                    <input type="radio" name="opciondebase" id="oficina" value="oficina" hidden>
+
                 </article>
             </section>
 
             <section class="opcion-equipo">
                 <article class="equipos">
-
+                    
+                    <label for="gamer">
                     <img src="/" alt="foto pc diseño gamer">
-
                     <ul class="opventa">
+
                         <li>GAMER</li>
                         <li>Microprocesador: AMD Ryzen 7</li>
                         <li>RAM: 32GB DDR4</li>
@@ -122,11 +116,8 @@
                         <li>Costo: $169.258,18 </li>
 
                     </ul>
-
-                <div class="select">
-                    <label for="gamer">Selecccionar</label> 
-                    <input type="radio" name="opciondebase" id="gamer" value="gamer">
-                </div>
+                    </label> 
+                    <input type="radio" name="opciondebase" id="gamer" value="gamer" hidden>
 
                 </article>
             </section>
@@ -134,9 +125,10 @@
             <section class="opcion-equipo">
                 <article class="equipos">
 
+                    <label for="multimedia">
                     <img src="/" alt="foto pc diseño multimedia"> 
-
                     <ul class="opventa">
+
                         <li>DISEÑO</li>
                         <li>Microprocesador: Intel Core i7</li>
                         <li>RAM: 16GB 2666HZ DDR4</li>
@@ -145,21 +137,16 @@
                         <li>Costo: $229.999,00</li>
 
                     </ul>
-
-                    <div class="select">
-                        <label for="multimedia">Seleccionar</label> 
-                        <input type="radio" name="opciondebase" id="multimedia" value="multimedia">
-                    </div>
-
+                    </label> 
+                    <input type="radio" name="opciondebase" id="multimedia" value="multimedia" hidden>
                 </article>
             </section>
-        </article>
+
+    </section>
 
         <div class="btns">
             <button class="btn" type="button" id="btn-computadora">Siguiente</button>
         </div>
-        
-    <hr>
 
     </main>
     
@@ -169,73 +156,93 @@
         <h2>Hace un UPGRADE del equipo que elegiste!</h2>
 
         <section class="grid-upgrade">
-            <section class="opcion-upgrade">
+
                 <fieldset> 
 
                     <legend>MICROPROCESADORES</legend>
-
+                    
+                        <img src="/" alt="...">
                         <label for="Ryzen3">Microprocesador AMD Ryzen 3 (+$21.804,00)
                             <input type="radio" id="Ryzen3" name="micro" value="Ryzen3">
                         </label>
+                        <img src="/" alt="...">
                         <label for="Ryzen5">Microprocesador AMD Ryzen 5 (+$37.999,00)
                             <input type="radio" id="Ryzen5" name="micro" value="Ryzen5">
                         </label>
+                        <img src="/" alt="...">
                         <label for="Ryzen7">Microprocesador AMD Ryzen 7 (+$61.899,00)
                             <input type="radio" id="Ryzen7" name="micro" value="Ryzen7">
                         </label>
+                        <img src="/" alt="...">
+                        <label for="Ryzen9">Microprocesador AMD Ryzen 9 (+$177.999)
+                            <input type="radio" id="Ryzen9" name="micro" value="Ryzen9">
+                        </label>
 
                 </fieldset>
-            </section>
-
-            <div class="opcion-upgrade">
                 <fieldset>
 
                     <legend>MEMORIAS RAM</legend>
-
-                        <label for="RAM32">16Gb Ddr4 3000Mhz (+$13.999,00)
-                            <input type="radio" id="RAM32" name="ram" value="RAM32">
+                        
+                        <img src="/" alt="...">
+                        <label for="RAM16">16Gb Ddr4 3000Mhz (+$13.999,00)
+                            <input type="radio" id="RAM16" name="ram" value="RAM32">
                         </label>
-                        <label for="RAM64">32Gb Ddr4 3200Mhz (+$37.900,00)
-                            <input type="radio" id="RAM64" name="ram" value="RAM64">
+                        <img src="/" alt="...">
+                        <label for="RAM32">32Gb Ddr4 3200Mhz (+$37.900,00)
+                            <input type="radio" id="RAM32" name="ram" value="RAM64">
                         </label>
-                        <label for="RAM128">64Gb Ddr4 3600Mhz (+$89.817,00)
+                        <img src="/" alt="...">
+                        <label for="RAM64">64Gb Ddr4 3600Mhz (+$89.817,00)
+                            <input type="radio" id="RAM64" name="ram" value="RAM128">
+                        </label>
+                        <img src="/" alt="..."> 
+                        <label for="RAM128">128Gb Ddr5 128Gbz (+$103.940,00)
                             <input type="radio" id="RAM128" name="ram" value="RAM128">
                         </label>
 
                 </fieldset>
-            </div>
 
-            <div class="opcion-upgrade">
                 <fieldset>
 
                     <legend>DISPOSITIVOS DE ALMACENAMIENTO</legend>
 
+                        <img src="/" alt="...">
                         <label for="hdd128">Disco sólido interno Kingston Ssd 128Gb (+$4.940,00)
                             <input type="radio" id="hdd128" name="hdd" value="hdd128">
                         </label>
+                        <img src="/" alt="...">
                         <label for="hhd256">Disco sólido interno Kingston Ssd 256Gb (+$7.778,00)
                             <input type="radio" id="hhd256" name="hdd" value="hhd256">
                         </label>
+                        <img src="/" alt="...">
                         <label for="hhd512">Disco sólido interno Kingston Ssd 512Gb (+$8.814,00)
                             <input type="radio" id="hhd512" name="hdd" value="hhd512">
                         </label>
+                        <img src="/" alt="...">
+                        <label for="hhd1t">Disco sólido interno Kingston Ssd 1tb (+$28.611,00)
+                            <input type="radio" id="hhd1t" name="hdd" value="hhd1t">
+                        </label>
 
                 </fieldset>
-            </div>
-
-            <div class="opcion-upgrade">
                 <fieldset>
 
                     <legend>PLACAS DE VIDEO</legend>
 
+                        <img src="/" alt="...">
                         <label for="NVidia_xx1">Nvidia Xc Geforce RTX 2060 (+$99.552,00)
                             <input type="radio" id="NVidia_xx1" name="video" value="NVidia_xx1">
                         </label>
+                        <img src="/" alt="...">
                         <label for="NVidia_xx2">Nvidia Xc Geforce MSI 2060 (+$89.658,00)
                             <input type="radio" id="NVidia_xx2" name="video" value="NVidia_xx2">
                         </label>
+                        <img src="/" alt="...">
                         <label for="NVidia_xx3">Nvidia Xc Geforce GTX 1060 (+$75.149,00)
                             <input type="radio" id="NVidia_xx3" name="video" value="NVidia_xx3">
+                        </label>
+                        <img src="/" alt="...">
+                        <label for="NVidia_xx4">Nvidia Xc GeForce RTX 3060 (+$121.999,00)
+                            <input type="radio" id="NVidia_xx4" name="video" value="NVidia_xx4">
                         </label>
                 
                 </fieldset>
@@ -255,28 +262,36 @@
 
     <article class="accesorios">
 
+                <img src="/" alt="...">
                 <label for="tecladogamer">Teclado gamer Logitech Serie G G413 (+$14.999,00) 
                     <input type="checkbox" name="tecladogamer" id="tecladogamer" value="tecladogamer">
                 </label>
+                <img src="/" alt="...">
                 <label for="Micrófono">Micrófono HyperX QuadCast (+$23.716,00)
                     <input type="checkbox" name="Micrófono" id="Micrófono" value="Micrófono">
                 </label>
+                <img src="/" alt="...">
                 <label for="Auriculares">Auriculares gamer Logitech Pro X negro (+$27.499,00)
                     <input type="checkbox" name="Auriculares" id="Auriculares" value="Auriculares">
                 </label>
+                <img src="/" alt="...">
                 <label for="Mouse">Accesorio Mouse Vsg Aquila Skin (+$840,00)
                     <input type="checkbox" name="Mouse" id="Mouse" value="Mouse">
                 </label>
+                <img src="/" alt="...">
                 <label for="Monitor">Smart Monitor M5 27" FHD con Smart TV (+$87.999,00)
                     <input type="checkbox" name="Monitor" id="Monitor" value="Monitor">
                 </label>
+                <img src="/" alt="...">
                 <label for="Gabinete">Gabinete Pc Gamer X-treme Warrior (+$46.000,00)
                     <input type="checkbox" name="accesorio" id="Gabinete" value="Gabinete">
                 </label>
+                <img src="/" alt="...">
                 <label for="Soporte">Soporte Cooler Indoor 4 (+$2.990,00)
                     <input type="checkbox" name="accesorio" id="Soporte" value="Soporte">
                 </label>
-                <label for="">ITEM 8 (+$)
+                <img src="/" alt="...">
+                <label for="Cable"> Cable Modding Motherboard 24 Malla Sync (+$15.229,00)
                     <input type="checkbox" name="accesorio" id="" value="">
                 </label>
 
@@ -315,7 +330,7 @@
     <label for ="tipoconsulta"> Tipo de consulta </label>
 
     <select name="tipoconsulta" id="tipoconsulta">
-            <option value="tc0">--Seleciona la opcion correspondiente--</option>
+            <option value="tc0">Seleciona la opcion correspondiente</option>
             <option value="tc1">Arme mi presupuesto y quiero que me contacten</option>
             <option value="tc2">Necesito asesoramiento</option>
             <option value="tc3">Tengo una propuesta comercial</option>
@@ -328,7 +343,7 @@
     <label for ="contacto"> Medio de consulta </label>
 
     <select name="contacto" id="contacto">
-            <option value="">--Seleciona la opcion correspondiente--</option>
+            <option value="">Seleciona la opcion correspondiente</option>
             <option value="Whatsapp">Whatsapp</option>
             <option value="Instagram">Instagram</option>
             <option value="Mail">Mail</option>
@@ -341,7 +356,7 @@
     <label for ="horario"> Horario de contacto </label>
 
     <select name="horario" id="horario">
-            <option value="">--Seleciona la opcion correspondiente--</option>
+            <option value="">Seleciona la opcion correspondiente</option>
             <option value="Whatsapp">De 09am a 12pm</option>
             <option value="Instagram">De 12pm a 18pm</option>
             <option value="Mail">De 18pm a 21pm</option>

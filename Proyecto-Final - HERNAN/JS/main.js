@@ -40,15 +40,15 @@ function selectYourComputer () {
         pc.preciofinalprocesador = 61899
     }
 
+    let ram16 = document.getElementById('RAM16')
     let ram32 = document.getElementById('RAM32')
     let ram64 = document.getElementById('RAM64')
-    let ram128 = document.getElementById('RAM128')
 
-    if (ram32.checked) {
+    if (ram16.checked) {
         pc.preciofinalram = 13999
-    } else if (ram64.checked) {
+    } else if (ram32.checked) {
         pc.preciofinalram = 37900
-    } else if (ram128.checked) {
+    } else if (ram64.checked) {
         pc.preciofinalram = 89817
     }
 
