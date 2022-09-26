@@ -2,7 +2,7 @@
 
 :root {
     --tamfuen:14px;
-    /*--Lifuen:13px;*/
+    --bgcolsqua: #fcfcfc
 }
 
                     /* GENERAL */
@@ -23,6 +23,7 @@ body {
     height: 100vh;
     font-family: 'Montserrat', sans-serif;
     font-family: 'Quicksand', sans-serif;
+    
 }
 
 .container { 
@@ -44,6 +45,7 @@ label {
     font-size: var(--tamfuen);
     margin-top: 16px;
     padding-left: 5px;
+    grid-column: 2
 }
 
 input {
@@ -67,7 +69,7 @@ header {
     position: fixed;
     font-size: var(--tamfuen);
     background-color: #222;
-    padding: 0 0 0 0;
+    padding: 0;
     margin: 0 0 2rem 0;
     height: 5em;
     color: white;
@@ -152,7 +154,7 @@ h1 {
 
 p {
     font-size: var(--tamfuen);
-    margin: 0 25px 10px 0;
+    margin: 0 0 10px 0;
     padding-left: 12px;
 }
 
@@ -170,21 +172,22 @@ h2 {
 
 .equipos {
     display: grid;
-    grid-template-columns: 150px 180px;
+    grid-template-columns: 300px 200px;
     font-size: var(--tamfuen);
     margin: 0 25px 1rem 25px;  
-    width: 500px;
+    width: 550px;
     height: 250px;
     padding-top: 0;
     padding-bottom: 35px;
     border-radius: 12px;
     border: 1px solid black;
-    background-color: antiquewhite;
+    background-color: var(--bgcolsqua);
 }
 
-.grid-equipos, .grid-upgrade{
+.grid-equipos{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
 }
 
 .opventa {
@@ -196,7 +199,8 @@ ul.opventa {
     display: flex;
     list-style-type: none;
     flex-direction: column;
-    align-items: flex-start
+    align-items: flex-start;
+    padding-right: 12px;
 }
 
 .opventa li {
@@ -206,60 +210,168 @@ ul.opventa {
     grid-column-end: auto;
 }
 
-.lista{
-    display: grid;
-    grid-area:auto ;
-}
-
-.select{
-    display: grid;
-    grid-area:auto ;
-}
-
-.img{
-    display: grid;
-    grid-area:auto ;
-}
-
                                     /* SECCION: UPGRADES */
 
-legend {
-    font-size: var(--tamfuen);
-    text-align: center;
-    font-weight: bold;
-    padding-bottom: 0.15rem;
-}
-
-#upgrade legend{
-    padding: 15px;
-}
-
-fieldset {
+.grid-upgrade{
     display: grid;
-    grid-template-columns: auto auto;
-    font-size: var(--tamfuen);
-    margin: 25px 25px 1rem 25px;  
-    width: 500px;
-    height: 200px;
+    grid-template-rows: repeat(4, 105px);
+    grid-template-columns: auto 100vh 100vh;
+    width: 250px;
+    border: none;
+    row-gap: 8px;
+    margin-left: 12px;
+}
+
+#btn-micro, #btn-ram, #btn-storage, #btn-video{
+    grid-column: 1;
+    border: none;
+    border-radius: 24px;
+    width: 230px;
+    font-weight: bold;
+}
+
+#btn-micro:hover, #btn-ram:hover, #btn-storage:hover, #btn-video:hover {
+    background-color:aliceblue;
+}
+
+#flex-micros, #flex-ram, #flex-storage, #flex-video {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 36px; /* Reemplazar esto por algo que centre las cosas */
+}
+
+#micros, #ram, #storage, #video {
+    padding-left: 36px;
+    grid-column: 2 / 3;
+    grid-row: 1 / 4;
+}
+
+.Ryzen3, .Ryzen5, .Ryzen7, .Ryzen9 {
+    width: 205px;
+    height: 205px;
+    border: 1px solid #222;
     text-align: center;
-    justify-content: center;
-    padding-top: 35px;
+    margin-top: 12px;
+}
+
+.Ryzen3 img, .Ryzen5 img, .Ryzen7 img, .Ryzen9 img {
+    padding: 12px 0 12px 0;
+    width: 125px;
+    height: 125px;
+}
+
+.Ryzen3:hover, .Ryzen5:hover, .Ryzen7:hover, .Ryzen9:hover {
+    background-color:aliceblue;
+}
+
+.RAM16, .RAM32, .RAM64, .RAM128 {
+    width: 205px;
+    height: 205px;
+    border: 1px solid #222;
+    text-align: center;
+    margin-top: 12px;
+}
+
+.RAM16 img, .RAM32 img, .RAM64 img, .RAM128 img{
+    padding: 12px 0 12px 0;
+    width: 125px;
+    height: 125px;
+}
+
+.RAM16:hover, .RAM32:hover, .RAM64:hover, .RAM128:hover {
+    background-color:aliceblue;
+}
+
+.hdd128, .hhd256, .hhd512, .hhd1t {
+    width: 205px;
+    height: 205px;
+    border: 1px solid #222;
+    text-align: center;
+    margin-top: 12px;
+}
+
+.hdd128 img, .hhd256 img, .hhd512 img, .hhd1t img{
+    padding: 12px 0 12px 0;
+    width: 125px;
+    height: 125px;
+}
+
+.hdd128:hover, .hhd256:hover, .hhd512:hover, .hhd1t:hover {
+    background-color:aliceblue;
+}
+
+.NVidia_xx1, .NVidia_xx2, .NVidia_xx3, .NVidia_xx4 {
+    width: 205px;
+    height: 205px;
+    border: 1px solid #222;
+    text-align: center;
+    margin-top: 12px;
+}
+
+.NVidia_xx1 img, .NVidia_xx2 img, .NVidia_xx3 img, .NVidia_xx4 img{
+    padding: 12px 0 12px 0;
+    width: 125px;
+    height: 125px;
+}
+
+.NVidia_xx1:hover, .NVidia_xx2:hover, .NVidia_xx3:hover, .NVidia_xx4:hover {
+    background-color:aliceblue;
 }
 
                                     /* SECCION: ACCESORIOS */
 
-.accesorios {
+.grid-accesorios{
     display: grid;
-    grid-template-columns: auto auto;
-    list-style: none;
-    margin-left: 24px;
-    padding-left: 96px;
-    padding-bottom: 16px;
+    grid-template-rows: auto auto;
+    width: 250px;
+    border: none;
+    row-gap: 8px;
+    margin-left: 56px; /* Reemplazar esto por algo que centre las cosas */
+}
+
+.flex-one, .flex-two, .flex-three, .flex-four {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    padding-left: 42px;
+} 
+
+.Tecladogamer, .Micrófono, .Auriculares, .Mouse {
+    grid-row: 1;
+    width: 250px;
+    height: 250px;
+    border: 1px solid #222;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.Monitor, .Gabinete, .Soporte, .Cable {
+    grid-row: 2;
+    width: 250px;
+    height: 250px;
+    border: 1px solid #222;
+    text-align: center;
+}
+
+.Tecladogamer:hover, .Micrófono:hover, .Auriculares:hover, .Mouse:hover, .Monitor:hover, .Gabinete:hover, .Soporte:hover, .Cable:hover {
+    background-color:aliceblue;
+}
+
+.Tecladogamer img, .Micrófono img, .Auriculares img, .Mouse img, .Monitor img, .Gabinete img, .Soporte img, .Cable img {
+    padding: 24px 0 0 0;
+    width: 125px;
+    height: 125px;
 }
 
                                     /* FORMULARIO CONTACTO */
 
 .formulario_contacto {
+    display: grid;
+    grid-template-columns: auto auto;
     font-size: var(--Lifuen);
     margin-left: 50px;
     width: 500px;
@@ -283,7 +395,7 @@ fieldset {
 }
 
 textarea {
-    background-color: #fcfcfc;
+    background-color: var(--bgcolsqua);
     font-size: var(--tamfuen);
     padding: 16px 0 0 0;   
     text-align: left;
@@ -307,20 +419,20 @@ textarea {
 }
 
 #horario, #contacto, #tipoconsulta {
+    columns: 1;
     margin-top: 8px;
 }
 
-.formulario_contacto {
+#detalle {
     display: grid;
-    grid-template-columns: auto;
-
-}
-
-.detalle {
+    grid-template-columns: 500px;
+    grid-template-rows: auto;
+    columns: 2;
     border: 1px solid grey;
-    background-color: #fcfcfc;
+    background-color: var(--bgcolsqua);
     width: 500px;
-    height: 500px;
+    height: 425px;
+    margin-left: 48px;
 }
 
                                     /* BOTONES */
@@ -334,7 +446,7 @@ textarea {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 15px 85px 15px 15px;
+    margin: 16px 0 16px 0;
     font-size: var(--tamfuen);
     border: none;
     background-color:rgb(100, 149, 237);
@@ -352,4 +464,6 @@ textarea {
     background-color: rgb(72, 128, 233)
 }
 
-
+#botonborrar, #botonenviar {
+    margin: 0 16px 16px 0;
+}

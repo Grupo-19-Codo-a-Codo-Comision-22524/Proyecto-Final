@@ -9,13 +9,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/Proyecto-Final - HERNAN/CSS/style.css">
-    <link rel="stylesheet" href="/Proyecto-Final - HERNAN/CSS/normalize.css">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/normalize.css">
 </head>
 <body>
     
     <header>
-    <!-- HEADER fixed con Logo barra de navegacion -->
         <img src="/" alt="logo-empresa" class="logoheader">
         <nav class="header-navbar">
             <a href="index.html" class="nav-link">HOME</a>
@@ -23,130 +22,126 @@
             <a href="#productos" class="nav-link">PRODUCTOS</a>
             <a href="#contacto" class="nav-link">CONTACTO</a>
         </nav>
-        
     </header>
 
     <section class="container">
+        <article class="presentacion">
 
-    <article class="presentacion">
-    <!--1ra seccion con Presentacion de la empresa Carrousel con imagenes, testimonios, etc -->
-        <hr>
+            <p>1er seccion PRESENTACION ocupa toda la pantalla, header fixed on top.</p>
 
-        <p>1er seccion PRESENTACION ocupa toda la pantalla, header fixed on top.</p>
+            <p>Esto seria un Carrousel de imagenes con texto que dan una nocion rapida del servicio y producto que se presta. Algunos testimonios. Frases "Marketineras"</p>
+    
+        </article>
 
-        <p>Esto seria un Carrousel de imagenes con texto que dan una nocion rapida del servicio y producto que se presta. Algunos testimonios. Frases "Marketineras"</p>
+        <article id="nosotros">
 
-        <hr>
-    </article>
+            <p>2da seccion NOSOTROS, ocupa toda la pantalla, header fixed on top.</p>
 
-    <article id="nosotros">
-    <!--2da seccion con NOSOTROS, descripcion de la empresa, servicios, historia, miembros  -->
-    <hr>
-
-        <p>2da seccion NOSOTROS, ocupa toda la pantalla, header fixed on top.</p>
-
-        <p>Aca va una descripcion mas completa de la empresa,  un poco de historia "desde 1995 estamos....", Puede aparecer foto de los socios/fundadores con nombre cargo y titulo y alguna frase inspiadora/vendedora de cada uno.</p>
-        
-    <hr>
+            <p>Aca va una descripcion mas completa de la empresa,  un poco de historia "desde 1995 estamos....", Puede aparecer foto de los socios/fundadores con nombre cargo y titulo y alguna frase inspiadora/vendedora de cada uno.</p>
 
     </article>
 
-        </section>
+    </section>
     
     <main id="productos">
 
             <h2>Elegí el tipo de PC que estas buscando</h2>
 
-        <section class="grid-equipos">
+    <section class="grid-equipos">
 
-            <section class="opcion-equipo">
-                <article class="equipos">
+    <section class="opcion-equipo">
+        <article class="equipos">
 
-                    <label for="standard">
-                    <img src="/" alt="foto pc diseño estandar">
-                    <ul class="opventa">
+            <label for="standard">
+            <img src="/" alt="foto pc diseño estandar">
+            <ul class="opventa">
 
-                        <li>ESTANDAR</li>
-                        <li>Microprocesador: AMD 5</li>
-                        <li>RAM: 4 GB DDR3</li>
-                        <li>HDD: 120 GB</li>
-                        <li>Video: integrada</li>
-                        <li>Costo: $31.499,00 </li>
+                <p>ESTANDAR</p>
+                <p>Componentes</p>
+                <li>Microprocesador: AMD 5</li>
+                <li>RAM: 4 GB DDR3</li>
+                <li>HDD: 120 GB</li>
+                <li>Video: integrada</li>
+                <li>Costo: $31.499,00 </li>
 
-                    </ul>
-                    </label>
-                    <input type="radio" name="opciondebase" id="standard" value="standard" hidden>
+            </ul>
+            </label>
+            <input type="radio" name="opciondebase" id="standard" value="standard" >
                 
-                </article>
-            </section>
+        </article>
+    </section>
             
-            <section class="opcion-equipo">
-                <article class="equipos">
+    <section class="opcion-equipo">
+        <article class="equipos">
 
-                    <label for="oficina">
-                    <img src="/" alt="foto pc oficina">
-                    <ul class="opventa">
+            <label for="oficina">
+            <img src="/" alt="foto pc oficina">
+            <ul class="opventa">
 
-                        <li>OFICINA</li>
-                        <li>Microprocesador: Intel Core i5</li>
-                        <li>RAM: 8GB DDR3</li>
-                        <li>HDD: 1 TB</li>
-                        <li>Video: integrada</li>
-                        <li>Costo: $75.382,50 </li>
+                <p>OFICINA</p>
+                <p>Componentes</p>
+                <li>Microprocesador: Intel Core i5</li>
+                <li>RAM: 8GB DDR3</li>
+                <li>HDD: 1 TB</li>
+                <li>Video: integrada</li>
+                <li>Costo: $75.382,50 </li>
 
-                    </ul>
-                    </label> 
-                    <input type="radio" name="opciondebase" id="oficina" value="oficina" hidden>
+            </ul>
+            </label> 
+            <input type="radio" name="opciondebase" id="oficina" value="oficina" >
 
                 </article>
-            </section>
+    </section>
 
-            <section class="opcion-equipo">
-                <article class="equipos">
+    <section class="opcion-equipo">
+        <article class="equipos">
                     
-                    <label for="gamer">
-                    <img src="/" alt="foto pc diseño gamer">
-                    <ul class="opventa">
+            <label for="gamer">
+            <img src="/" alt="foto pc diseño gamer">
+            <ul class="opventa">
 
-                        <li>GAMER</li>
-                        <li>Microprocesador: AMD Ryzen 7</li>
-                        <li>RAM: 32GB DDR4</li>
-                        <li>SSD: 960 GB</li>
-                        <li>Video: AMD RADEON VEGA</li>
-                        <li>Costo: $169.258,18 </li>
+                <p>GAMER</p>
+                <p>Componentes</p>
+                <li>Microprocesador: AMD Ryzen 7</li>
+                <li>RAM: 32GB DDR4</li>
+                <li>SSD: 960 GB</li>
+                <li>Video: AMD RADEON VEGA</li>
+                <li>Costo: $169.258,18 </li>
 
-                    </ul>
-                    </label> 
-                    <input type="radio" name="opciondebase" id="gamer" value="gamer" hidden>
+            </ul>
+            </label> 
+            <input type="radio" name="opciondebase" id="gamer" value="gamer" >
 
-                </article>
-            </section>
+        </article>
+    </section>
 
-            <section class="opcion-equipo">
-                <article class="equipos">
+    <section class="opcion-equipo">
+        <article class="equipos">
 
-                    <label for="multimedia">
-                    <img src="/" alt="foto pc diseño multimedia"> 
-                    <ul class="opventa">
+            <label for="multimedia">
+            <img src="/" alt="foto pc diseño multimedia"> 
+            <ul class="opventa">
 
-                        <li>DISEÑO</li>
-                        <li>Microprocesador: Intel Core i7</li>
-                        <li>RAM: 16GB 2666HZ DDR4</li>
-                        <li>HDD: 2 TB</li>
-                        <li>Video: NVIDIA QUADRO P1000 4GB GDDR5 </li>
-                        <li>Costo: $229.999,00</li>
+                <p>DISEÑO</p>
+                <p>Componentes</p>
+                <li>Microprocesador: Intel Core i7</li>
+                <li>RAM: 16GB 2666HZ DDR4</li>
+                <li>HDD: 2 TB</li>
+                <li>Video: NVIDIA QUADRO P1000 4GB GDDR5 </li>
+                <li>Costo: $229.999,00</li>
 
-                    </ul>
-                    </label> 
-                    <input type="radio" name="opciondebase" id="multimedia" value="multimedia" hidden>
-                </article>
-            </section>
+            </ul>
+            </label> 
+            <input type="radio" name="opciondebase" id="multimedia" value="multimedia" >
+
+        </article>
+    </section>
 
     </section>
 
-        <div class="btns">
-            <button class="btn" type="button" id="btn-computadora">Siguiente</button>
-        </div>
+                <div class="btns">
+                    <button class="btn" type="button" id="btn-computadora">Siguiente</button>
+                </div>
 
     </main>
     
@@ -157,161 +152,436 @@
 
         <section class="grid-upgrade">
 
-                <fieldset> 
-
-                    <legend>MICROPROCESADORES</legend>
+                    <button id="btn-micro">MICROPROCESADORES</button> 
                     
-                        <img src="/" alt="...">
-                        <label for="Ryzen3">Microprocesador AMD Ryzen 3 (+$21.804,00)
-                            <input type="radio" id="Ryzen3" name="micro" value="Ryzen3">
-                        </label>
-                        <img src="/" alt="...">
-                        <label for="Ryzen5">Microprocesador AMD Ryzen 5 (+$37.999,00)
-                            <input type="radio" id="Ryzen5" name="micro" value="Ryzen5">
-                        </label>
-                        <img src="/" alt="...">
-                        <label for="Ryzen7">Microprocesador AMD Ryzen 7 (+$61.899,00)
-                            <input type="radio" id="Ryzen7" name="micro" value="Ryzen7">
-                        </label>
-                        <img src="/" alt="...">
-                        <label for="Ryzen9">Microprocesador AMD Ryzen 9 (+$177.999)
-                            <input type="radio" id="Ryzen9" name="micro" value="Ryzen9">
-                        </label>
+        <section id="micros">
+        <section id="flex-micros">
 
-                </fieldset>
-                <fieldset>
+                    <div class="Ryzen3">
+                        <label for="Ryzen3">
+                        <img src="/img/Reyzen3.jpg" alt="...">
+                        <p>Microprocesador AMD Ryzen 3 (+$21.804,00)</p>  
+                        </label>
+                        <input type="radio" id="Ryzen3" name="micro" value="Ryzen3" >
+                    </div>
 
-                    <legend>MEMORIAS RAM</legend>
+                    <div class="Ryzen5">
+                        <label for="Ryzen5"></label>
+                        <img src="/img/Reyzen5.webp" alt="...">
+                        <p>Microprocesador AMD Ryzen 5 (+$37.999,00)</p>  
+                        </label>
+                            <input type="radio" id="Ryzen5" name="micro" value="Ryzen5" >
                         
-                        <img src="/" alt="...">
-                        <label for="RAM16">16Gb Ddr4 3000Mhz (+$13.999,00)
-                            <input type="radio" id="RAM16" name="ram" value="RAM32">
-                        </label>
-                        <img src="/" alt="...">
-                        <label for="RAM32">32Gb Ddr4 3200Mhz (+$37.900,00)
-                            <input type="radio" id="RAM32" name="ram" value="RAM64">
-                        </label>
-                        <img src="/" alt="...">
-                        <label for="RAM64">64Gb Ddr4 3600Mhz (+$89.817,00)
-                            <input type="radio" id="RAM64" name="ram" value="RAM128">
-                        </label>
-                        <img src="/" alt="..."> 
-                        <label for="RAM128">128Gb Ddr5 128Gbz (+$103.940,00)
-                            <input type="radio" id="RAM128" name="ram" value="RAM128">
-                        </label>
+                    </div>
 
-                </fieldset>
+                    <div class="Ryzen7">
+                        <label for="Ryzen7">
+                            <img src="/img/Reyzen7.webp" alt="...">
+                            <p>Microprocesador AMD Ryzen 7 (+$61.899,00)</p>
+                        </label>
+                        <input type="radio" id="Ryzen7" name="micro" value="Ryzen7" >
+                    </div>  
 
-                <fieldset>
+                    <div class="Ryzen9">
+                        <img src="/img/Reyzen9.webp" alt="...">
+                        <label for="Ryzen9">Microprocesador AMD Ryzen 9 (+$177.999)
+                            <input type="radio" id="Ryzen9" name="micro" value="Ryzen9" >
+                        </label>
+                    </div>
 
-                    <legend>DISPOSITIVOS DE ALMACENAMIENTO</legend>
-
-                        <img src="/" alt="...">
-                        <label for="hdd128">Disco sólido interno Kingston Ssd 128Gb (+$4.940,00)
-                            <input type="radio" id="hdd128" name="hdd" value="hdd128">
-                        </label>
-                        <img src="/" alt="...">
-                        <label for="hhd256">Disco sólido interno Kingston Ssd 256Gb (+$7.778,00)
-                            <input type="radio" id="hhd256" name="hdd" value="hhd256">
-                        </label>
-                        <img src="/" alt="...">
-                        <label for="hhd512">Disco sólido interno Kingston Ssd 512Gb (+$8.814,00)
-                            <input type="radio" id="hhd512" name="hdd" value="hhd512">
-                        </label>
-                        <img src="/" alt="...">
-                        <label for="hhd1t">Disco sólido interno Kingston Ssd 1tb (+$28.611,00)
-                            <input type="radio" id="hhd1t" name="hdd" value="hhd1t">
-                        </label>
-
-                </fieldset>
-                <fieldset>
-
-                    <legend>PLACAS DE VIDEO</legend>
-
-                        <img src="/" alt="...">
-                        <label for="NVidia_xx1">Nvidia Xc Geforce RTX 2060 (+$99.552,00)
-                            <input type="radio" id="NVidia_xx1" name="video" value="NVidia_xx1">
-                        </label>
-                        <img src="/" alt="...">
-                        <label for="NVidia_xx2">Nvidia Xc Geforce MSI 2060 (+$89.658,00)
-                            <input type="radio" id="NVidia_xx2" name="video" value="NVidia_xx2">
-                        </label>
-                        <img src="/" alt="...">
-                        <label for="NVidia_xx3">Nvidia Xc Geforce GTX 1060 (+$75.149,00)
-                            <input type="radio" id="NVidia_xx3" name="video" value="NVidia_xx3">
-                        </label>
-                        <img src="/" alt="...">
-                        <label for="NVidia_xx4">Nvidia Xc GeForce RTX 3060 (+$121.999,00)
-                            <input type="radio" id="NVidia_xx4" name="video" value="NVidia_xx4">
-                        </label>
-                
-                </fieldset>
-            </div>
         </section>
 
-        <div class="btns">
-            <button class="btn" type="button" id="btn-upgrade">Siguiente</button>
-        </div>
+        <section id="flex-micros">
 
-        </article>
+                    <div class="Ryzen3">
+                        
+                        <label for="Ryzen3">
+                            <img src="/img/Reyzen3.jpg" alt="...">
+                            <p>Microprocesador AMD Ryzen 3 (+$21.804,00)</p>
+                        </label>
+                        <input type="radio" id="Ryzen3" name="micro" value="Ryzen3" >
+                    </div>
 
-    <hr>
+                    <div class="Ryzen5">
+                        
+                        <label for="Ryzen5">
+                            <img src="/img/Reyzen5.webp" alt="...">
+                            <p>Microprocesador AMD Ryzen 5 (+$37.999,00)</p>
+                        </label>
+                        <input type="radio" id="Ryzen5" name="micro" value="Ryzen5" >
+                    </div>
+
+                    <div class="Ryzen7">
+                        <label for="Ryzen7">
+                            <img src="/img/Reyzen7.webp" alt="...">
+                            <p>< Microprocesador AMD Ryzen 7 (+$61.899,00)</p>
+                        </label>
+                        <input type="radio" id="Ryzen7" name="micro" value="Ryzen7" >
+                    </div>  
+
+                    <div class="Ryzen9">
+
+                        <label for="Ryzen9">
+                            <img src="/img/Reyzen9.webp" alt="...">
+                        <p>Microprocesador AMD Ryzen 9 (+$177.999)</p>
+                        </label>
+                        <input type="radio" id="Ryzen9" name="micro" value="Ryzen9" >
+                    </div>
+                    
+        </section>
+        </section>
+
+                    <button id="btn-ram">MEMORIAS RAM</button>
+                
+        <section id="ram">
+        <section id="flex-ram">
+
+                    <div class="RAM16">
+                        <img src="/img/AX4U32008G16A-ST60_400.webp" alt="..."> <br>
+                        <label for="RAM16">16Gb Ddr4 3000Mhz (+$13.999,00)
+                            <input type="radio" id="RAM16" name="ram" value="RAM32" >
+                        </label>
+                    </div>
+
+                    <div class="RAM32">
+                        <img src="/img/CMG8GX4M1E3200C16_400.webp" alt="..."> <br>
+                        <label for="RAM32"> 32Gb Ddr4 3200Mhz (+$37.900,00)
+                            <input type="radio" id="RAM32" name="ram" value="RAM64" >
+                        </label>
+                    </div>
+
+                    <div class="RAM64">
+                        <img src="/img/KF432C16BBA-8_400.webp" alt="..."> <br>
+                        <label for="RAM64"> 64Gb Ddr4 3600Mhz (+$89.817,00)
+                            <input type="radio" id="RAM64" name="ram" value="RAM128" >
+                        </label>
+                    </div>
+
+                    <div class="RAM128">
+                        <img src="/img/MD8GD4320016XRGBW_400.webp" alt="..."> <br>
+                        <label for="RAM128"> 128Gb Ddr5 128Gbz (+$103.940,00)
+                            <input type="radio" id="RAM128" name="ram" value="RAM128" > 
+                        </label>
+                    </div>
+                    
+        </section>
+
+        <section id="flex-ram">
+
+                        <div class="RAM16">
+                            <img src="/img/AX4U32008G16A-ST60_400.webp" alt="..."> <br>
+                            <label for="RAM16">16Gb Ddr4 3000Mhz (+$13.999,00)
+                                <input type="radio" id="RAM16" name="ram" value="RAM32" >
+                            </label>
+                        </div>
     
-    <h2>Podes agregar estos accesorios</h2>
-    <a name = "accesorios"> </a>
+                        <div class="RAM32">
+                            <img src="/img/CMG8GX4M1E3200C16_400.webp" alt="..."> <br>
+                            <label for="RAM32"> 32Gb Ddr4 3200Mhz (+$37.900,00)
+                                <input type="radio" id="RAM32" name="ram" value="RAM64" >
+                            </label>
+                        </div>
+    
+                        <div class="RAM64">
+                            <img src="/img/KF432C16BBA-8_400.webp" alt="..."> <br>
+                            <label for="RAM64"> 64Gb Ddr4 3600Mhz (+$89.817,00)
+                                <input type="radio" id="RAM64" name="ram" value="RAM128" >
+                            </label>
+                        </div>
+    
+                        <div class="RAM128">
+                            <img src="/img/MD8GD4320016XRGBW_400.webp" alt="..."> <br>
+                            <label for="RAM128"> 128Gb Ddr5 128Gbz (+$103.940,00)
+                                <input type="radio" id="RAM128" name="ram" value="RAM128" >
+                            </label>
+                        </div>
 
-    <article class="accesorios">
+        </section>
+        </section>
 
-                <img src="/" alt="...">
-                <label for="tecladogamer">Teclado gamer Logitech Serie G G413 (+$14.999,00) 
-                    <input type="checkbox" name="tecladogamer" id="tecladogamer" value="tecladogamer">
-                </label>
-                <img src="/" alt="...">
-                <label for="Micrófono">Micrófono HyperX QuadCast (+$23.716,00)
-                    <input type="checkbox" name="Micrófono" id="Micrófono" value="Micrófono">
-                </label>
-                <img src="/" alt="...">
-                <label for="Auriculares">Auriculares gamer Logitech Pro X negro (+$27.499,00)
-                    <input type="checkbox" name="Auriculares" id="Auriculares" value="Auriculares">
-                </label>
-                <img src="/" alt="...">
-                <label for="Mouse">Accesorio Mouse Vsg Aquila Skin (+$840,00)
-                    <input type="checkbox" name="Mouse" id="Mouse" value="Mouse">
-                </label>
-                <img src="/" alt="...">
-                <label for="Monitor">Smart Monitor M5 27" FHD con Smart TV (+$87.999,00)
-                    <input type="checkbox" name="Monitor" id="Monitor" value="Monitor">
-                </label>
-                <img src="/" alt="...">
-                <label for="Gabinete">Gabinete Pc Gamer X-treme Warrior (+$46.000,00)
-                    <input type="checkbox" name="accesorio" id="Gabinete" value="Gabinete">
-                </label>
-                <img src="/" alt="...">
-                <label for="Soporte">Soporte Cooler Indoor 4 (+$2.990,00)
-                    <input type="checkbox" name="accesorio" id="Soporte" value="Soporte">
-                </label>
-                <img src="/" alt="...">
-                <label for="Cable"> Cable Modding Motherboard 24 Malla Sync (+$15.229,00)
-                    <input type="checkbox" name="accesorio" id="" value="">
-                </label>
+                    <button id="btn-storage">DISPOSITIVOS DE ALMACENAMIENTO</button>
 
+        <section id="storage">
+        <section id="flex-storage">
+
+                    <div class="hdd128">
+                        <label for="hdd128">
+                            <img src="/img/CT480BX500SSD1_400.webp" alt="..."> <br>
+                        <p>Kingston Ssd 128Gb (+$4.940,00)</p>
+                        </label>
+                        <input type="radio" id="hdd128" name="hdd" value="hdd128" >
+                    </div>
+
+                    <div class="hhd256">
+                        <label for="hhd256">
+                            <img src="/img/CT500P3SSD8_400.webp" alt="..."> <br>
+                        <p>Kingston Ssd 256Gb (+$7.778,00)</p>
+                        </label>
+                        <input type="radio" id="hhd256" name="hdd" value="hhd256" >
+                    </div>
+                        
+                    <div class="hhd512">
+                        <label for="hhd512">
+                            <img src="/img/SA400S37-240G_400.webp" alt="..."> <br>
+                            <p>Kingston Ssd 512Gb (+$8.814,00)</p>
+                        </label>
+                        <input type="radio" id="hhd512" name="hdd" value="hhd512" >
+                    </div>
+
+                    <div class="hhd1t">
+                        <label for="hhd1t">
+                            <img src="/img/P210S1TB25_400.jpg" alt="..."> <br>
+                            <p>Kingston Ssd 1tb (+$28.611,00)</p>
+                        </label>
+                        <input type="radio" id="hhd1t" name="hdd" value="hhd1t" >
+                    </div>
+
+        </section>
+
+        <section id="flex-storage">
+
+                        <div class="hdd128">
+                            <label for="hdd128">
+                                <img src="/img/CT480BX500SSD1_400.webp" alt="..."> <br>
+                                <p>Kingston Ssd 128Gb (+$4.940,00)</p>
+                            </label>
+                            <input type="radio" id="hdd128" name="hdd" value="hdd128" >
+                        </div>
+
+                            
+                        <div class="hhd256">
+                            
+                            <label for="hhd256">
+                                <img src="/img/CT500P3SSD8_400.webp" alt="..."> <br>
+                                <p>Kingston Ssd 256Gb (+$7.778,00)</p>
+                            </label>
+                            <input type="radio" id="hhd256" name="hdd" value="hhd256" >
+                        </div>
+                            
+                        <div class="hhd512">
+                            <label for="hhd512">
+                                <img src="/img/SA400S37-240G_400.webp" alt="..."> <br>
+                                <p>Kingston Ssd 512Gb (+$8.814,00)</p>
+                            </label>
+                            <input type="radio" id="hhd512" name="hdd" value="hhd512" >
+                        </div>
+
+                        <div class="hhd1t">
+                            
+                            <label for="hhd1t">
+                                <img src="/img/P210S1TB25_400.jpg" alt="..."> <br>
+                                <p>Kingston Ssd 1tb (+$28.611,00)</p>
+                            </label>
+                            <input type="radio" id="hhd1t" name="hdd" value="hhd1t" >
+                        </div>
+
+        </section>
+        </section>
+
+                    <button id="btn-video">PLACAS DE VIDEO</button>
+                    
+        <section id="video">
+        <section id="flex-video">
+
+                    <div class="NVidia_xx1">
+                        
+                        <label for="NVidia_xx1">
+                            <p>Nvidia Xc Geforce RTX 2060 (+$99.552,00)</p>
+                            <img src="/img/912-V505-009_400.jpg" alt="..."> <br>
+                        </label>
+                        <input type="radio" id="NVidia_xx1" name="video" value="NVidia_xx1" >
+                    </div>
+
+                    <div class="NVidia_xx2">
+                        
+                        <label for="NVidia_xx2">
+                            <img src="/img/912-V809-2808_400.jpg" alt="..."> <br>
+                            <p>Nvidia Xc Geforce MSI 2060 (+$89.658,00)</p>
+                        </label>
+                        <input type="radio" id="NVidia_xx2" name="video" value="NVidia_xx2" >
+                    </div>
+
+                    <div class="NVidia_xx3">
+                        <label for="NVidia_xx3">
+                            <img src="/img/GV-N2060D6-12GD_400.jpg" alt="..."> <br>
+                            <p>Nvidia Xc Geforce GTX 1060 (+$75.149,00)</p>
+                        </label>
+                        <input type="radio" id="NVidia_xx3" name="video" value="NVidia_xx3" >
+                    </div>
+
+                    <div class="NVidia_xx4">
+                        <label for="NVidia_xx4">
+                            <img src="/img/M-NRTX3080TI_400.webp" alt="..."> <br>
+                            <p>Nvidia Xc GeForce RTX 3060 (+$121.999,00)</p>
+                        </label>
+                        <input type="radio" id="NVidia_xx4" name="video" value="NVidia_xx4" >
+                    </div>
+
+                    <div class="NVidia_xx4">
+                        <label for="NVidia_xx4">
+                            <p>Nvidia Xc GeForce RTX 3060 (+$121.999,00)</p>
+                            <img src="/img/M-NRTX3080TI_400.webp" alt="..."> <br>
+                        </label>
+                        <input type="radio" id="NVidia_xx4" name="video" value="NVidia_xx4" >
+                    </div>
+
+                    <div class="NVidia_xx4">
+                        <label for="NVidia_xx4">
+                            <img src="/img/M-NRTX3080TI_400.webp" alt="..."> <br>
+                            <p>Nvidia Xc GeForce RTX 3060 (+$121.999,00)</p>
+                        </label>
+                        <input type="radio" id="NVidia_xx4" name="video" value="NVidia_xx4" >
+                    </div>
+
+        </section>
+
+        <section id="flex-video">
+
+                        <div class="NVidia_xx1">
+                            
+                            <label for="NVidia_xx1">
+                                <img src="/img/912-V505-009_400.jpg" alt="..."> <br>
+                                <p>Nvidia Xc Geforce RTX 2060 (+$99.552,00)</p>
+                            </label>
+                            <input type="radio" id="NVidia_xx1" name="video" value="NVidia_xx1" >
+                        </div>
+    
+                        <div class="NVidia_xx2">
+                            <label for="NVidia_xx2">
+                                <img src="/img/912-V809-2808_400.jpg" alt="..."> <br>
+                                <p>Nvidia Xc Geforce MSI 2060 (+$89.658,00)</p>
+                            </label>
+                            <input type="radio" id="NVidia_xx2" name="video" value="NVidia_xx2" >
+                        </div>
+    
+                        <div class="NVidia_xx3">
+                            <label for="NVidia_xx3">
+                                <img src="/img/GV-N2060D6-12GD_400.jpg" alt="..."> <br>
+                                <p>Nvidia Xc Geforce GTX 1060 (+$75.149,00)</p>
+                            </label>
+                            <input type="radio" id="NVidia_xx3" name="video" value="NVidia_xx3" >
+                        </div>
+    
+                        <div class="NVidia_xx4">
+                            <label for="NVidia_xx4">
+                                <img src="/img/M-NRTX3080TI_400.webp" alt="..."> <br>
+                                <p>Nvidia Xc GeForce RTX 3060 (+$121.999,00)</p>
+                            </label>
+                            <input type="radio" id="NVidia_xx4" name="video" value="NVidia_xx4" >
+                        </div>
+    
+                        <div class="NVidia_xx4"> <!-- DUPLI -->
+                            <label for="NVidia_xx4">
+                                <img src="/img/M-NRTX3080TI_400.webp" alt="..."> <br>
+                                <p>Nvidia Xc GeForce RTX 3060 (+$121.999,00)</p>
+                            </label>
+                            <input type="radio" id="NVidia_xx4" name="video" value="NVidia_xx4" >
+                        </div>
+    
+                        <div class="NVidia_xx4"> <!-- DUPLI -->
+                            <label for="NVidia_xx4">
+                                <img src="/img/M-NRTX3080TI_400.webp" alt="..."> <br>
+                                <p>Nvidia Xc GeForce RTX 3060 (+$121.999,00)</p>
+                            </label>
+                            <input type="radio" id="NVidia_xx4" name="video" value="NVidia_xx4" >
+                        </div>
+
+        </section>
+        </section>
+        </section>
+        
     </article>
 
     <div class="btns">
+        <button class="btn" type="button" id="btn-upgrade">Siguiente</button>
+    </div>
+
+    <h2>Podes agregar estos accesorios</h2>
+    <a name = "accesorios"> </a>
+
+        <article class="grid-accesorios">
+            <section class="flex-one">
+
+                <div class="Tecladogamer">
+                    <img src="/img/CG-9900_400.webp" alt="..."> <br>
+                    <label for="Tecladogamer">Teclado gamer Logitech Serie G G413 (+$14.999,00) <br>
+                        <input type="checkbox" name="Tecladogamer" id="Tecladogamer" value="Tecladogamer">
+                    </label>
+                </div>
+
+                <div class="Micrófono">
+                    <img src="/img/CG-9900_400.webp" alt="..."> <br>
+                    <label for="Micrófono">Micrófono HyperX QuadCast (+$23.716,00)
+                        <input type="checkbox" name="Micrófono" id="Micrófono" value="Micrófono">
+                    </label>
+                </div>
+
+                <div class="Auriculares">
+                    <img src="/img/CG-9900_400.webp" alt="..."> <br>
+                    <label for="Auriculares">Auriculares gamer Logitech Pro X negro (+$27.499,00)
+                        <input type="checkbox" name="Auriculares" id="Auriculares" value="Auriculares">
+                    </label>
+                </div>
+
+                <div class="Mouse">
+                    <img src="/img/CG-9900_400.webp" alt="..."> <br>
+                    <label for="Mouse">Accesorio Mouse Vsg Aquila Skin (+$840,00)
+                        <input type="checkbox" name="Mouse" id="Mouse" value="Mouse">
+                    </label>
+                </div>
+
+            </section>
+            
+            <section class="flex-two">
+
+                <div class="Monitor">
+                    <img src="/img/CG-9900_400.webp" alt="..."> <br>
+                    <label for="Monitor">Smart Monitor M5 27" FHD con Smart TV (+$87.999,00)
+                        <input type="checkbox" name="Monitor" id="Monitor" value="Monitor">
+                    </label>
+                </div>
+
+                <div class="Gabinete">
+                    <img src="/img/CG-9900_400.webp" alt="..."> <br>
+                    <label for="Gabinete">Gabinete Pc Gamer X-treme Warrior (+$46.000,00)
+                        <input type="checkbox" name="accesorio" id="Gabinete" value="Gabinete">
+                    </label>
+                </div>
+
+                <div class="Soporte">
+                    <img src="/img/CG-9900_400.webp" alt="..."> <br>
+                    <label for="Soporte">Soporte Cooler Indoor 4 (+$2.990,00)
+                        <input type="checkbox" name="accesorio" id="Soporte" value="Soporte">
+                    </label>
+                </div>
+
+                <div class="Cable">
+                    <img src="/img/CG-9900_400.webp" alt="..."> <br>
+                    <label for="Cable"> Cable Modding Motherboard 24 Malla Sync (+$15.229,00)
+                        <input type="checkbox" name="accesorio" id="" value="">
+                    </label>
+                </div>
+
+            </section>
+
+            </section>
+
+        </article>
+
+    <div class="btns">
             <button class="btn" type="button" id="btn-presupuestar">PRESUPUESTAR</button>
-        </div>
-    <hr>
-        
+    </div>  
+
 <a name = "contacto"> </a>
 <h2>Dejanos tus datos de contacto y nos comunicaremos a la brevedad.</h2>
 
 
     <article class="formulario_contacto">
 
+    <form class="formulario" action="" method="" id="contacto">
+
         <h3>Presupuesto N°: <spam id="presupuesto_nro"> </spam></h3> 
         <h3>Monto estimado: <spam id="your-upgrade"> </spam></h3>
-
-    <form class="formulario" action="" method="" id="contacto">
 
             <label for ="nombre"> Nombre:</label>
             <input  type="text" name="nombre" placeholder="Juan" id="nombre">
@@ -323,8 +593,6 @@
             <input type="email" name="email" placeholder=" tucorreo@tucorreo.com" id="email">
             <label for="instagram">Instagram </label>
             <input type="text" name="instagram" placeholder=" Tu ID de Instagram" id="instagram">
-    
-    </form>
 
 <div class="cons">
     <label for ="tipoconsulta"> Tipo de consulta </label>
@@ -369,13 +637,13 @@
         <textarea name="mensaje" id="mensaje" maxlength="200" 
         placeholder="Dejanos tu mensaje"></textarea>
 
-        <div class="detalle" hidden></div>
-
     </section>
+</form>
 
+    <div id="detalle"></div>
 
         </article>
-    
+
         <div class="btns">
 
             <input class="btn" type="reset" value="Borrar" id="botonborrar">
@@ -384,7 +652,7 @@
         </div>
 
     <footer> 
-        <p> Copyright © 2022 NUESTRA_MARCA. Todos los derechos reservados </p> 
+        <p> Copyright © 2022 Arma Tu PC. Todos los derechos reservados </p> 
         <nav class="footer-navbar">
             <a href="index.html" class="nav-link">| Aviso Legal |</a>
             <a href="#nosotros" class="nav-link">| Politicas de privacidad |</a>
@@ -395,6 +663,7 @@
         </nav>
     </footer>
 
-<script src="/Proyecto-Final - HERNAN/JS/main.js"></script>
+<script src="/JS/main.js"></script>
+<script src="/JS/Upgrade.js"></script>
 </body>
 </html>
