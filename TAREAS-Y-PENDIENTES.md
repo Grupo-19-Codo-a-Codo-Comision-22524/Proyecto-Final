@@ -10,7 +10,7 @@
 - Redactar AVISO LEGAL
 - Redactar POLITICAS DE PRIVACIDAD
 - Redacar USO DE COOKIES
-- Cpnseguir y colocar imagenes correspondientes a los productos
+- Conseguir y colocar imagenes correspondientes a los productos
 - Verificar y actualizar (de ser necesarios) los costos de los productos
 - Hacer modificaciones pertientes en los ID del codigo HTML, CSS y JS en caso de modificar algo en las placas de productos.
 
