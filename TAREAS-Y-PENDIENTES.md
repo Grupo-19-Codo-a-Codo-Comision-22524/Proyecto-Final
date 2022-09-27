@@ -7,6 +7,12 @@
 - Responsive con 3 puntos de corte para 3 tamaños de dispositivos distintos.
 - Animación
 - Consumir una API Rest desde JavaScript (Tenemos que definir que API consumir y empezar a laburar esto por que tenemos que leer la docu de la API)
+- Redactar AVISO LEGAL
+- Redactar POLITICAS DE PRIVACIDAD
+- Redacar USO DE COOKIES
+- Cpnseguir y colocar imagenes correspondientes a los productos
+- Verificar y actualizar (de ser necesarios) los costos de los productos
+- Hacer modificaciones pertientes en los ID del codigo HTML, CSS y JS en caso de modificar algo en las placas de productos.
 
 ***INICIADOS***
 
