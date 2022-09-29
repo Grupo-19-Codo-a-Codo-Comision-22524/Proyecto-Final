@@ -20,9 +20,9 @@ function selectYourComputer () {
 
     if (standard.checked) {
         pc.preciofinalPC = 31499
-        let p = document.createElement('p')
-        campoPresupuesto.appendChild(p);
-        p.innerHTML = 'PC diseño domestico ' + '$' + pc.preciofinalPC
+        let detalle = document.createElement('p')
+        campoPresupuesto.appendChild(detalle);
+        detalle.innerHTML = 'PC diseño domestico ' + '$' + pc.preciofinalPC
 
     } else if (oficina.checked) {
         pc.preciofinalPC = 75382

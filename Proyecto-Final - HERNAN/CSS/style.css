@@ -31,7 +31,9 @@ body {
 
 select {
     margin-top: 24px;
-    border-radius: 0.1px;
+    border-radius: 8px;
+    height: 25px;
+    width: 300px;
     border: none;
     border-bottom: 1px solid black;
 }
@@ -49,17 +51,17 @@ label {
 
 input {
     font-size: var(--tamfuen);
-    padding-left: 5px;
+    padding-left: 10px;
     border: none;
     border-bottom: 1px solid black;
-    height: 20px;
+    height: 25px;
     border-radius: 12px;
 }
 
                                     /* HEADER, NAV Y FOOTER*/
 
 header {
-    width: 100%;
+        width: 100%;
     position: fixed;
     font-size: var(--tamfuen);
     padding: 0;
@@ -71,7 +73,8 @@ header {
 }
 
 .logoheader{
-    width: 20%;
+    width: 8%;
+    height: 100%;
 }
 
 nav a {
@@ -79,16 +82,17 @@ nav a {
     text-decoration: none;
     transition: color 0.3s ease;
     margin-left: 10px;
+    font-weight: bold;
 }
 
 nav a:hover {
-    color: cornflowerblue;
+    color: aqua;
     font-weight: bold;
 }
 
 footer {
     font-size: var(--tamfuen);
-    padding: 2.8rem;
+    padding: 1rem;
     color: white;
 }
 
@@ -113,7 +117,7 @@ div a {
 }
 
 footer a:hover {
-    color: cornflowerblue;
+    color: aqua;
     font-weight: bold;
 }
 
@@ -170,8 +174,8 @@ p {
     display: grid;
     grid-template-columns: 250px 250px;
     font-size: var(--tamfuen);
-    margin: 0 25px 1rem 25px;  
-    width: 550px;
+    margin: 0 40px 1rem 40px;  
+    width: 530px;
     height: 250px;
     padding-top: 0;
     padding-bottom: 35px;
@@ -181,13 +185,18 @@ p {
     color: black;
 }
 
+.equipos:hover {
+    border: 5px solid aqua;
+}
+
 .equipos.izquierda, .equipos.derecha {
-    margin-left: 64px;
+    margin: 12px 0 12px 78px;
 }
 
 .grid-equipos{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 550px);
+
 }
 
 label.grid-col-equipos {
@@ -221,6 +230,16 @@ img#PC-Muestra-Oficina {
     grid-column: 1;
 }
 
+#standard,  #gamer  {
+    width: 100vh;
+    height: 4vh;
+}
+
+#oficina,#multimedia {
+    width: 100vh;
+    height: 4vh;
+}
+
                                     /* SECCION: UPGRADES */
 
 .grid-upgrade{
@@ -243,6 +262,8 @@ img#PC-Muestra-Oficina {
 
 #btn-micro:hover, #btn-ram:hover, #btn-storage:hover, #btn-video:hover {
     background-color: var(--bgcolsqua);
+    cursor: pointer;
+    border: 5px solid aqua;
 }
 
 #flex-micros, #flex-ram, #flex-storage, #flex-video {
@@ -261,6 +282,7 @@ img#PC-Muestra-Oficina {
 .Ryzen3, .Ryzen5, .Ryzen7, .Ryzen9 {
     width: 205px;
     height: 205px;
+    border-radius: 24px;
     border: 1px solid rgb(255, 255, 255);
     text-align: center;
     margin-top: 12px;
@@ -279,7 +301,7 @@ img#PC-Muestra-Oficina {
 }
 
 .Ryzen3:hover, .Ryzen5:hover, .Ryzen7:hover, .Ryzen9:hover {
-    border: 5px solid #01F603;
+    border: 5px solid aqua;
 }
 
 .RAM16, .RAM32, .RAM64, .RAM128 {
@@ -299,7 +321,7 @@ img#PC-Muestra-Oficina {
 }
 
 .RAM16:hover, .RAM32:hover, .RAM64:hover, .RAM128:hover {
-    border: 5px solid #01F603;
+    border: 5px solid aqua
 }
 
 .hdd128, .hhd256, .hhd512, .hhd1t {
@@ -319,7 +341,7 @@ img#PC-Muestra-Oficina {
 }
 
 .hdd128:hover, .hhd256:hover, .hhd512:hover, .hhd1t:hover {
-    border: 5px solid #01F603;
+    border: 5px solid aqua;
 }
 
 .NVidia_xx1, .NVidia_xx2, .NVidia_xx3, .NVidia_xx4 {
@@ -339,7 +361,7 @@ img#PC-Muestra-Oficina {
 }
 
 .NVidia_xx1:hover, .NVidia_xx2:hover, .NVidia_xx3:hover, .NVidia_xx4:hover {
-    border: 5px solid #01F603;
+    border: 5px solid aqua;
 }
 
                                     /* SECCION: ACCESORIOS */
@@ -360,13 +382,14 @@ img#PC-Muestra-Oficina {
     align-items: center;
     gap: 12px;
     margin-bottom: 12px;
-    padding-left: 100px;
+    padding-left: 40px;
 } 
 
 .Tecladogamer, .Micrófono, .Auriculares, .Mouse {
     grid-row: 1;
     width: 250px;
     height: 250px;
+    border-radius: 24px;
     border: 1px solid rgb(255, 255, 255);
     text-align: center;
     margin-bottom: 12px;
@@ -378,6 +401,7 @@ img#PC-Muestra-Oficina {
     grid-row: 2;
     width: 250px;
     height: 250px;
+    border-radius: 24px;
     border: 1px solid rgb(255, 255, 255);
     text-align: center;
     background-color: var(--bgcolsqua);
@@ -385,12 +409,23 @@ img#PC-Muestra-Oficina {
 }
 
 .Tecladogamer:hover, .Micrófono:hover, .Auriculares:hover, .Mouse:hover, .Monitor:hover, .Gabinete:hover, .Soporte:hover, .Cable:hover {
-    border: 5px solid #01F603;
+    border: 5px solid aqua;
 }
 
-.Tecladogamer img, .Micrófono img, .Auriculares img, .Mouse img, .Monitor img, .Gabinete img, .Soporte img, .Cable img {
+#Tecladogamer, #Micrófono, #Auriculares, #Mouse, #Monitor, #Gabinete, #Soporte, #Cable {
+    width: 3vh;
+    margin-bottom: 12px;
+} 
+
+.Tecladogamer img, .Auriculares img, .Mouse img, .Monitor img, .Gabinete img, .Soporte img, .Cable img {
     padding: 24px 0 24px 0;
     width: 125px;
+    height: 125px;
+}
+
+.Micrófono img {
+    padding: 24px 0 24px 0;
+    width: 90px;
     height: 125px;
 }
 
@@ -401,6 +436,7 @@ img#PC-Muestra-Oficina {
     grid-template-columns: auto auto;
     font-size: var(--Lifuen);
     margin-left: 50px;
+    margin-top: 24px;
     width: 500px;
 }
 
@@ -454,6 +490,7 @@ textarea {
     background-color: var(--bgcolsqua);
     margin-left: 64px;
     height: 500px;
+    border-radius: 24px;
     color: black;
     padding-top: 8px;
     border: 3px solid #F0ECE2;
@@ -473,11 +510,36 @@ textarea {
     font-weight: bold;
 }
 
+.error, .exito {
+    text-align: center;
+    height: 44px;
+    line-height: 40px;
+}
+
+.error {
+    background-color: #F66060;
+    display: none;
+}
+
+.error-activo {
+    display: block;
+}
+
+.exito {
+    background-color: #119200;
+    display: none;
+}
+
+.exito-activo {
+    display: block;
+}
+
                                     /* BOTONES */
 
 .btns {
     display: flex;
     justify-content: center;
+    margin-top: 24px;
 }
 
 .btn {
@@ -508,24 +570,18 @@ textarea {
 
 body {
     color:#F0ECE2 ;
-    background-color:#0F4C75 ;
+    background-color: #1B262C;
 }
 
 header {
     color:#1B262C ;
-    height: 56px;
-    text-align: center;
-    background-color:#1B262C ;
-}
-
-h2 {
-    background-color:#1B262C ;
-    color: #F0ECE2;
-    text-align: center;
-    border-top: 2px solid white;
+    background-color: #0F4C75;
     border-bottom: 2px solid white;
 }
 
-footer {
-    background-color: #1B262C;
+h2 {
+    background-color:#0F4C75 ;
+    color: #F0ECE2;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
 }
