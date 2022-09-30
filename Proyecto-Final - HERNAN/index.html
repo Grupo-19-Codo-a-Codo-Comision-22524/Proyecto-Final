@@ -450,10 +450,10 @@
 
     <article class="formulario_contacto">
 
-    <form class="formulario" action="" method="" id="contacto">
+    <form class="formulario" action="" method="" id="formulario"> <!--Cambiar id por formulario idem class-->
 
-        <h3>Presupuesto N°: <spam id="presupuesto_nro"> </spam></h3> 
-        <h3>Monto estimado: <spam id="your-upgrade"> </spam></h3>
+        <h3>Presupuesto N°: <spam id="presupuesto_nro"></spam></h3> 
+        <h3>Monto estimado: <spam id="your-upgrade"></spam></h3>
 
             <label for ="nombre"> Nombre:</label>
             <input  type="text" name="nombre" placeholder="Harry" id="nombre">
@@ -463,14 +463,13 @@
             <input type="number" name="tel" placeholder=" Incluir código de área" id="tel">
             <label for = "email">Email:</label>
             <input type="email" name="email" placeholder=" HarryPotter@howard.edu.uk" id="email">
-            <label for="instagram">Instagram </label>
-            <input type="text" name="instagram" placeholder=" Tu ID de Instagram" id="instagram">
 
 <div class="cons">
     <label for ="tipoconsulta"> Tipo de consulta </label>
 
-    <select name="tipoconsulta" id="tipoconsulta">
-            <option value="tc0">Seleciona la opcion correspondiente</option>
+    <select name="tipoconsulta" id="tipoconsulta" >
+
+            <option value="">Seleciona la opcion correspondiente</option>
             <option value="tc1">Arme mi presupuesto y quiero que me contacten</option>
             <option value="tc2">Necesito asesoramiento</option>
             <option value="tc3">Tengo una propuesta comercial</option>
@@ -482,10 +481,10 @@
 <div class="cons">
     <label for ="contacto"> Medio de consulta </label>
 
-    <select name="contacto" id="contacto">
+    <select name="contacto" id="contacto" >
+
             <option value="">Seleciona la opcion correspondiente</option>
-            <option value="Whatsapp">Whatsapp</option>
-            <option value="Instagram">Instagram</option>
+            <option value="Whatsapp" minlength="8" maxlength="15" >Whatsapp</option>
             <option value="Mail">Mail</option>
             <option value="Telefono">Telefono</option>
 
@@ -493,9 +492,10 @@
 </div>
 
 <div class="cons">
-    <label for ="horario"> Horario de contacto </label>
+    <label for ="horario" id="horario"> Horario de contacto </label>
 
-    <select name="horario" id="horario">
+    <select name="horario" id="horario" >
+
             <option value="">Seleciona la opcion correspondiente</option>
             <option value="Whatsapp">De 09am a 12pm</option>
             <option value="Instagram">De 12pm a 18pm</option>
@@ -514,16 +514,21 @@
 <div class="btns">
 
     <input class="btn" type="reset" value="Borrar" id="botonborrar">
-    <input class="btn" type="button" value="Enviar"id="botonenviar">
+    <input class="btn" type="submit" value="Enviar"id="botonenviar">
+
 </div>
 
-<div class="error error-activo">
+<div id="error">
+
     <p><i class="fas fa-exclamation-triangle"></i> 
-    <b>Error:</b> Por favor complete el formulario </p>
+    <b>Error:</b> Por favor complete los campos faltantes del formulario</p>
+
 </div>
 
-<div class="exito exito-activo">
+<div id="exito">
+
     <p>Formulario enviado</p>
+
 </div>
 
 </form>
