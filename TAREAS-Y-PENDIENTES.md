@@ -12,9 +12,6 @@
 
 ***INICIADOS***
 
-- Contener un formulario de contacto con validación realizada mediante Javascript. (falta validaciones)
-- Consumir una API Rest desde JavaScript (Tenemos que definir que API consumir y empezar a laburar esto por que tenemos que leer la docu de la API)
-- Validaciones del formulario
 - Animación
 - Opcional: el formulario podrá enviar un email utilizando algún servicio externodestinado para ello.
 
@@ -28,6 +25,8 @@
 - Hacer modificaciones pertientes en los ID del codigo HTML, CSS y JS en caso de modificar algo en las placas de productos
 - Conseguir y colocar imagenes correspondientes a los productos
 - Funcion que devuelta un numero aleatorio que se imprima en la pagina dentro de la parte del formulario
+- Contener un formulario de contacto con validación realizada mediante Javascript
+- Consumir una API Rest desde JavaScript (Tenemos que definir que API consumir y empezar a laburar esto por que tenemos que leer la docu de la API)
 
 ***OPCIONALES***
 
