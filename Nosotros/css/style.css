@@ -1,0 +1,96 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background-color: #0F4C75;
+  }
+
+.nosotros{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: transparent;
+    justify-content: space-evenly;
+    align-content: center;
+    padding: 5rem 0 5rem 0;
+  }
+
+.ventananosotros{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: inline-block;
+    background-color: transparent;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 20px 20px 10px #3282B8;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+  }
+
+.fotonosotros{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    
+}
+.textonosotros{
+  position: absolute;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1rem;
+  z-index: 1;
+  /* background-color: ; */
+  width: 95%;
+  
+}
+
+#textoCEO{
+  position: absolute;
+  left: 20px;
+  top: 200px;
+  color: whitesmoke;
+}
+
+#textoCTO{
+  position: absolute;
+  left: 20px;
+  top: 220px;
+  color:black;
+}
+
+#textoAlianza{
+  position: absolute;
+  left: 20px;
+  top: 200px;
+  color:royalblue;
+}
+.firma{
+  font-style: italic;
+  font-weight: bold;
+  font
+}
+
+.ventananosotros:hover {    
+        transform: scale(1.5,1.5);
+        z-index: 1;
+        box-shadow: none;
+}
+@media screen and (max-width: 500px) {
+    .nosotros {
+        flex-direction: column;
+    }
+    .ventananosotros {
+      border-radius: 0;
+      box-shadow: none;
+    }
+    .fotonosotros{
+      border-radius: 0;
+    }
+}

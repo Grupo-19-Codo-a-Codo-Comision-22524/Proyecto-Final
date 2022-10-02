@@ -21,10 +21,10 @@
 }
 
 body {
-    background-color: white;;
+    background-color: #0F4C75;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     font-family: 'Montserrat', sans-serif;
     font-family: 'Quicksand', sans-serif;
@@ -35,18 +35,19 @@ body {
 
 
 header {
-    width: 100%;
-    position: fixed;
-    font-size: var(--tamfuen);
-    background-color: #222;
-    padding: 0 0 0 0;
-    margin: 0 0 2rem 0;
-    height: 5em;
-    color: white;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  position: fixed;
+  z-index: 4;
+  font-size: var(--tamfuen);
+  background-color: black;
+  padding: 0 0 0 0;
+  margin: 0 0 2rem 0;
+  height: 5em;
+  color: white;
+  display: flex;
+  justify-content: center;
 }
-
+                                  
 .logoheader{
     width: 20%;
 }
@@ -57,9 +58,10 @@ nav a {
     transition: color 0.3s ease;
     margin-left: 10px;
 }
-
+                                  
 nav a:hover {
-    color: cornflowerblue;
+    color: #3282B8;
+    font-weight: bold;
 }
 
 .footer-navbar {
@@ -79,7 +81,411 @@ nav a:hover {
     color: white;
     font-style: normal;
 }
+#menu, #menu-check{
+    display: none;
+}
 
+@media screen and (max-width: 700px){
+    #menu-check:not(:checked) ~ nav{
+        display: none;
+    }
+    #menu-check:checked ~ nav{
+        display: flex;
+    }
+    #menu{
+        display: block;
+        position: absolute;
+        right: 0.5rem;
+        top: 0.5rem;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.3rem;
+        font-weight: bold;
+        border: 1.5px solid white;
+        border-radius: 15%;
+        z-index: 99;
+
+    }
+    #menu:hover {
+        color: #3282B8;
+        border: 1.5px solid #3282B8;
+        border-radius: 15%;
+    }
+    #menu-cerrar {
+        display: none;
+    }
+    #menu-check:checked ~ label #menu-abrir {
+        display: none;
+    }
+    #menu-check:checked ~ label #menu-cerrar {
+        display: block;
+    }
+    .header-navbar{
+        position:absolute;
+        top: 0;
+        right: 0;
+        height: 50vh;
+        width: 33%;
+        background-color: transparent;
+        padding-top: 0.5rem;
+        padding-right: 1.5rem;
+        flex-direction: column;
+        justify-content:space-around;
+        align-content: right;
+        border: 3px solid #3282B8;
+        border-radius: 15px;
+        
+
+    }
+}
+
+                                     /* CARROUSEL */
+
+          /* para ocultar scroll bar en todos los browsers uso -webkit- y -ms-*/
+ *::-webkit-scrollbar {
+    width: 0;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: none;
+  }
+  
+  * {
+    -ms-overflow-style: none;
+  }
+                /* -------------------------------- */
+  li, ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .fotocarousel{
+    height: 100%;
+    width: 100%;
+    object-fit: contain; /*la foto se ajusta al contenedor*/
+  }
+
+  .carousel {
+    position: relative;
+    /* height: 100px; */
+    /* max-height: 70vh; */
+    padding-top: 75%;
+    background-color: #0F4C75;
+    /* justify-content: center; */
+    /* margin-top: 100px; */
+  }
+  
+  .carousel__viewport {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory; /*completa el movimiento de la foto, no la deja a medio camino*/
+  }
+  
+  .carousel__diapo {
+    position: relative;
+    flex: 0 0 100%; /*shorthand flex-growth flex-shrink flex-basis, los elementos flex en un mismo contenedor no aumentan/reducen de tamaño en relacion a otros, y cada uno ocupa el 100% del contenedor*/
+    width: 100%;
+    background-color: transparent;
+  }
+  
+  .carousel__diapo:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+  
+  .carousel__visor{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: center; /*la foto se centra en la ventana al hacer scroll, no queda descentrada aun cuando sea mas chica que el contenedor*/
+  }
+  
+  .textosobrefoto{
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    width: 50vw;
+    height: 20vh;
+    z-index: 1;
+    color: #BBE1FA;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    transform: rotate(-15deg);
+  }
+  @media (hover: hover){
+    .carousel__visor{
+      animation-name: desplazar, enfocar;
+      animation-timing-function: ease-in-out;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+    }
+  
+    .carousel__diapo:last-child .carousel__visor {
+      animation-name: recomenzar, enfocar;
+      animation-timing-function: ease-in-out;
+      animation-duration: 3s;
+    }
+  }
+  /* @media (prefers-reduced-motion: reduce) se usa para anular animaciones cuando el browser esta seteado para evitar esas situaciones, personas con discapacidades que no soportan el movimiento rapido*/
+  /* @media (prefers-reduced-motion: reduce) {
+    .carousel__visor {
+      animation-name: none;
+    }
+  } */
+  
+  .carousel:hover .carousel__visor,
+  .carousel:focus-within .carousel__visor {
+    animation-name: none;
+  }
+  
+  .carousel__botonera {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+  }
+  
+  .carousel__botonera-list,
+  .carousel__botonera-item {
+    display: inline-block;
+  }
+  .carousel__botonera-item{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .carousel__botonera-button {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #0F4C75;
+    background-clip: content-box;
+    border: 0.25rem solid #BBE1FA;
+    border-radius: 50%;
+    font-size: 0;
+    transition: transform 0.1s;
+  }
+  
+  .carousel::before,
+  .carousel::after,
+  .carousel__anterior,
+  .carousel__posterior {
+    position: absolute;
+    top: 0;
+    margin-top: 33%;
+    width: 4rem;
+    height: 4rem;
+    font-size: 2.5rem;
+  }
+  
+  .carousel::before,
+  .carousel__anterior {
+    left: -1rem;
+  }
+  
+  .carousel::after,
+  .carousel__posterior {
+    right: -1rem;
+  }
+  
+  .carousel::before{
+    content: '<';
+  }
+  .carousel::after{
+    content: '>';
+  }
+  .carousel::before,
+  .carousel::after {
+    z-index: 2;
+    background-color: transparent;
+    color: #BBE1FA;
+    font-size: 3rem;
+    line-height: 4rem;
+    text-align: center;
+    pointer-events: none;
+  }
+  
+  @media screen and (max-width: 800px) {
+    .textosobrefoto{
+        font-size: 2rem;
+    }
+  }
+  @media screen and (max-width: 549px) {
+    .carousel__botonera{
+        top: 17.5rem;
+    }
+    .carousel::before, .carousel::after {
+        font-size: 2rem;
+        margin-top: 25%;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .textosobrefoto{
+        font-size: 1rem;
+    }
+  }
+  @media screen and (max-width: 400px) {
+    .carousel__botonera{
+        top: 15rem;
+    }
+  }
+  
+  @media screen and (max-width: 350px) {
+    .carousel__botonera{
+        top: 12.5rem;
+    }
+  }
+
+/* Animacion para transicion a la siguiente foto de forma mas gradual, "empuja el borde izq" */
+@keyframes desplazar {
+  75% {
+    left: 0;
+  }
+  95% {
+    left: 100%;
+  }
+  98% {
+    left: 100%;
+  }
+  99% {
+    left: 0;
+  }
+}
+/* Animacion para volver a la primera foto, hace un scroll total */
+@keyframes recomenzar {
+  75% {
+    left: 0;
+  }
+  95% {
+    left: -300%;
+  }
+  98% {
+    left: -300%;
+  }
+  99% {
+    left: 0;
+  }
+}
+/* Despues de ejecutar las otras animaciones, "recentra" la foto para poder desplazar nuevamente */
+@keyframes enfocar {
+  96% {
+    scroll-snap-align: center;
+  }
+  97% {
+    scroll-snap-align: none;
+  }
+  99% {
+    scroll-snap-align: none;
+  }
+  100% {
+    scroll-snap-align: center;
+  }
+}
+
+                                    /* NOSOTROS */
+
+.nosotros{
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: transparent;
+  justify-content: space-evenly;
+  align-content: center;
+  padding: 5rem 0 5rem 0;
+}
+                                  
+.ventananosotros{
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+  background-color: transparent;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 20px 20px 10px #3282B8;
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+}
+                                  
+.fotonosotros{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+
+.textonosotros{
+  position: absolute;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1rem;
+  z-index: 1;
+  /* background-color: ; */
+  width: 95%;         
+}
+                                  
+#textoCEO{
+  position: absolute;
+  left: 20px;
+  top: 200px;
+  color: whitesmoke;
+}
+                                  
+#textoCTO{
+  position: absolute;
+  left: 20px;
+  top: 220px;
+  color:black;
+}
+
+#textoAlianza{
+  position: absolute;
+  left: 20px;
+  top: 200px;
+  color:royalblue;
+}
+
+.firma{
+  font-style: italic;
+  font-weight: bold;
+  font
+}
+
+.ventananosotros:hover {    
+        transform: scale(1.5,1.5);
+        z-index: 1;
+        box-shadow: none;
+}
+
+@media screen and (max-width: 500px) {
+    .nosotros {
+        flex-direction: column;
+    }
+    .ventananosotros {
+      border-radius: 0;
+      box-shadow: none;
+    }
+    .fotonosotros{
+      border-radius: 0;
+    }
+}
+                                  
                                     /* TEXTOS */
 
 h1 { 

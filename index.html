@@ -4,56 +4,140 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuestra Pagina</title>
+    <title>Arma.Tu.PC</title>
     <link rel="shortcut icon" href="./favicon/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/Proyecto final/CSS/indexstyle.css">
-    <link rel="stylesheet" href="/Proyecto final/CSS/normalize.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/normalize.css">
 </head>
 <body>
-    
+                        <!-- HEADER (fixed on top)-->
     <header>
-    <!-- HEADER fixed con Logo barra de navegacion -->
         <img src="/" alt="logo-empresa" class="logoheader">
+
+        <input type="checkbox" name="" id="menu-check">
+        <label id="menu" for="menu-check">
+            <span id="menu-abrir">&#9776;</span>
+            <span id="menu-cerrar">X</span>
+        </label>
+
         <nav class="header-navbar">
             <a href="index.html" class="nav-link">HOME</a>
             <a href="#nosotros" class="nav-link">NOSOTROS</a>
             <a href="#productos" class="nav-link">PRODUCTOS</a>
             <a href="#contacto" class="nav-link">CONTACTO</a>
         </nav>
-        
+
     </header>
 
-    <article class="container">
+    <section class="carousel" aria-label="Galleria">
+    
+    <ul class="carousel__viewport">
+      <li id="carousel__diapo1"
+          tabindex="0"
+          class="carousel__diapo">
+        <div class="carousel__visor">
+          <a href="#carousel__diapo4"
+             class="carousel__anterior"></a>
+          <img src="img/carrousel1.jpg" alt="foto carousel numero 1" class="fotocarousel">   
+          <h1 class="textosobrefoto">Facilitá la compra de tu próxima computadora!</h1>
+          <a href="#carousel__diapo2"
+             class="carousel__posterior"></a>
+        </div>
+      </li>
+      <li id="carousel__diapo2"
+          tabindex="0"
+          class="carousel__diapo">
+        <div class="carousel__visor"></div>
+        <a href="#carousel__diapo1"
+           class="carousel__anterior"></a>
+        <img src="img/carrousel2.jpg" alt="foto carousel numero 2" class="fotocarousel"> 
+        <h2 class="textosobrefoto">Equipos pensados para cada uso!</h2>  
+        <a href="#carousel__diapo3"
+           class="carousel__posterior"></a>
+      </li>
+      <li id="carousel__diapo3"
+          tabindex="0"
+          class="carousel__diapo">
+        <div class="carousel__visor"></div>
+        <a href="#carousel__diapo2"
+           class="carousel__anterior"></a>
+        <img src="img/carrousel3.jpg" alt="foto carousel numero 3" class="fotocarousel">
+        <h2 class="textosobrefoto">En tu hogar, en tu oficina, en tu estudio de diseño o a la hora de jugar!</h2>
+        <a href="#carousel__diapo4"
+           class="carousel__posterior"></a>
+      </li>
+      <li id="carousel__diapo4"
+          tabindex="0"
+          class="carousel__diapo">
+        <div class="carousel__visor"></div>
+        <a href="#carousel__diapo3"
+           class="carousel__anterior"></a>
+        <img src="img/carrousel4.jpg" alt="foto carousel numero 4" class="fotocarousel"> 
+        <h2 class="textosobrefoto">Los componentes óptimos para cada uso</h2>  
+        <a href="#carousel__diapo1"
+           class="carousel__posterior"></a>
+      </li>
+    </ul>
+    <aside class="carousel__botonera"> <!--uso tag aside, si bien no esta al costado es un elemento asociado al anterior-->
+      <ul class="carousel__botonera-list">
+        <li class="carousel__botonera-item">
+          <a href="#carousel__diapo1"
+             class="carousel__botonera-button"></a>
+        </li>
+        <li class="carousel__botonera-item">
+          <a href="#carousel__diapo2"
+             class="carousel__botonera-button"></a>
+        </li>
+        <li class="carousel__botonera-item">
+          <a href="#carousel__diapo3"
+             class="carousel__botonera-button"></a>
+        </li>
+        <li class="carousel__botonera-item">
+          <a href="#carousel__diapo4"
+             class="carousel__botonera-button"></a>
+        </li>
+      </ul>
+    </aside>
+  </section>
 
-    <section class="presentacion">
-    <!--1ra seccion con Presentacion de la empresa Carrousel con imagenes, testimonios, etc -->
-        <hr>
-
-        <p>1er seccion PRESENTACION ocupa toda la pantalla, header fixed on top.</p>
-
-        <p>Esto seria un Carrousel de imagenes con texto que dan una nocion rapida del servicio y producto que se presta. Algunos testimonios. Frases "Marketineras"</p>
-
-        <hr>
-    </section>
-
-    <section id="nosotros">
+    <!-- <section id="nosotros"> -->
     <!--2da seccion con NOSOTROS, descripcion de la empresa, servicios, historia, miembros  -->
-    <hr>
+    <!-- <hr>
 
         <p>2da seccion NOSOTROS, ocupa toda la pantalla, header fixed on top.</p>
 
         <p>Aca va una descripcion mas completa de la empresa,  un poco de historia "desde 1995 estamos....", Puede aparecer foto de los socios/fundadores con nombre cargo y titulo y alguna frase inspiadora/vendedora de cada uno.</p>
         
-    <hr>
+    <hr> -->
 
+    <!-- </section> -->
+
+        <!-- </article> -->
+    <section class="nosotros" id="nosotros">
+        <div class="ventananosotros" id="ventana1">
+            <img class="fotonosotros" src="img/fundadorCEO.jpg" alt="Foto Fundador CEO">
+            <div class="textonosotros">
+                <p id="textoCEO">Desde el inicio nuestro objetivo es simplificar el proceso de adquisición de tecnología.<br><span class="firma">~Gerardo Stratta, CEO~</span></p>
+            </div>
+        </div>
+        <div class="ventananosotros" id="ventana2">
+            <img class="fotonosotros" src="img/CTO.jpg" alt="Foto Jefe Area Tecnica">
+            <div class="textonosotros">
+                <p id="textoCTO">Seleccionamos los mejores componentes para cada usuario.<br><span class="firma">~Federico Schmidt, CTO~</span></p>
+            </div>
+        </div>
+        <div class="ventananosotros" id="ventana3">
+            <img class="fotonosotros" src="img/teamwork.jpg" alt="foto equipo">
+            <div class="textonosotros">
+                <p id="textoAlianza">Contamos con mas de 20 alianzas estratégicas con fabricantes de componentes, asegurando disponibilidad y calidad.</p>
+            </div>
+        </div>
     </section>
 
-        </article>
-    
-    <article id="productos">
+    <section id="productos">
     <!--3ra seccion VENTA EQUIPO BASE, opciones de equipos standard (3-4),
         grilla con foto y descripcion debajo de cada equipo, ver si en CSS hacemos un display: flex o grid,
         todos tienen un boton RADIO para elegirlo. Boton salta a la siguiente seccion -->
@@ -67,7 +151,7 @@
 
                     <legend>ESTANDAR</legend>
 
-                    <img class="compu-muesta" src="/" alt="foto pc diseño estandar">
+                    <img class="compu-muesta" src="img/Estandar.jpg" alt="foto pc diseño estandar">
                     <!-- <label for="standard">STANDARD</label> -->
 
                     <ul class="opventa">
@@ -89,7 +173,7 @@
                 <fieldset class="equipos">
                     <legend>OFICINA</legend>
 
-                    <img class="compu-muesta" src="/" alt="foto pc oficina">
+                    <img class="compu-muesta" src="img/Ofi.jpg" alt="foto pc oficina">
                     <!-- <label for="oficina">OFICINA</label> -->
 
                     <ul class="opventa">
@@ -114,7 +198,7 @@
 
                     <legend>GAMER</legend>
 
-                    <img class="compu-muesta" src="/" alt="foto pc diseño gamer">
+                    <img class="compu-muesta" src="img/Gamer.jpg" alt="foto pc diseño gamer">
                     <!-- <label for="gamer">GAMER</label> -->
 
                     <ul class="opventa">
@@ -138,7 +222,7 @@
 
                     <legend>DISEÑO</legend>
 
-                    <img class="compu-muesta" src="/" alt="foto pc diseño multimedia">
+                    <img class="compu-muesta" src="img/Diseño.jpg" alt="foto pc diseño multimedia">
                     <!-- <label for="multimedia">DISEÑO</label> -->  
 
                     <ul class="opventa">
@@ -170,9 +254,9 @@
         
     <hr>
 
-    </article>
+    </section>
     
-    <article id="upgrade">
+    <section id="upgrade">
     <!--4ta seccion VENTA UPGRADES, segun el equipo de base seleccionado,
         aparece un RADIO con opciones para mejorar el equipo, mas RAM, mejor HDD,
         mejor placa video/sonido, etc, la primer opcion esta checked porque seria
@@ -296,7 +380,7 @@
 
         </div>
 
-        </article>
+    </section>
 
     <hr>
     
