@@ -176,7 +176,42 @@ p {
 }
 
                                     /* SECCION: PRESENTACION */
+
                                     /* SECCION: NOSOTROS */
+
+#nosotros-grid {
+    display: grid;
+    grid-template-columns: 50%,50%;
+    grid-template-rows: 33% 33% 33%;
+}
+
+.LoremTestA {
+    display: flex;
+    align-items: center;
+    margin-left: 48px;
+    padding-right: 28px;
+    font-size: 14px;
+    margin-top: 28px;
+}
+
+.LoremTest {
+    display: flex;
+    align-items: center;
+    grid-column: 2;
+    margin-left: 48px;
+    padding-right: 28px;
+    font-size: 14px;
+}
+
+.GatoTest {
+    grid-column: 1;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-top: 12px;
+    margin-bottom: 24px;
+    margin: 12px 0 24px 24px;
+}
 
                                     /* SECCION: COMPUTADORAS */
 
@@ -474,6 +509,7 @@ img#PC-Diseño {
 .cons {
     margin-bottom: 10px;
     width: 550px;
+    margin-top: 8px;
 }
 
 textarea {
@@ -490,10 +526,6 @@ textarea {
     margin-left: 15px;
     padding-left: 5px;
     border-radius: 12px;
-}
-
-.cons {
-    margin-top: 8px;
 }
 
 #mensaje {
@@ -598,36 +630,4 @@ h2 {
     color: #F0ECE2;
     border-top: 2px solid white;
     border-bottom: 2px solid white;
-}
-
-#nosotros-grid {
-    display: grid;
-    grid-template-columns: 50%,50%;
-    grid-template-rows: 33% 33% 33%;
-}
-
-.LoremTestA {
-    display: flex;
-    align-items: center;
-    margin-left: 48px;
-    padding-right: 28px;
-    font-size: 14px;
-}
-
-.LoremTest {
-    display: flex;
-    align-items: center;
-    grid-column: 2;
-    margin-left: 48px;
-    padding-right: 28px;
-    font-size: 14px;
-}
-
-.GatoTest {
-    grid-column: 1;
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    margin-top: 12px;
-    margin-bottom: 24px;
 }
