@@ -2,7 +2,7 @@
 
 :root {
     --tamfuen:14px;
-    --bgcolsqua: #fcfcfc
+    --bgcolsqua: #fcfcfc 
 }
 
                     /* GENERAL */
@@ -92,8 +92,11 @@ nav a:hover {
 
 footer {
     font-size: var(--tamfuen);
-    padding: 1rem;
+    margin-top: 1rem;
+    padding: 2rem;
     color: white;
+    border-top: 1px solid white;
+    margin-left: -14px;
 }
 
 footer section {
@@ -137,6 +140,13 @@ footer a:hover {
 .nav-link{
     color: white;
     font-style: normal;
+}
+
+.disclaimer {
+    width: 510px;
+    margin-top: 24px;
+    font-style: italic;
+    font-size: 12px;
 }
 
                                     /* TEXTOS */
@@ -186,7 +196,7 @@ p {
 }
 
 .equipos:hover {
-    border: 5px solid aqua;
+    border: 2px solid aqua;
 }
 
 .equipos.izquierda, .equipos.derecha {
@@ -212,21 +222,27 @@ ul.opventa {
     grid-column: 2;
 }
 
-img#PC-Muestra {
+img#PC-Estandar {
+    width: 150px;
+    margin: 12px 12px 0 12px;
+    grid-column: 1;
+}
+
+img#PC-Oficina {
+    width: 130px;
+    margin: 12px 12px 0 12px;
+    grid-column: 1;
+}
+
+img#PC-Gamer {
     width: 200px;
     margin: 12px 12px 0 12px;
     grid-column: 1;
 }
 
-img#PC-Muestra-Estandar {
-    width: 150px;
-    margin: 12px 12px 0 12px;
-    grid-column: 1;
-}
-
-img#PC-Muestra-Oficina {
-    width: 150px;
-    margin: 12px 12px 0 12px;
+img#PC-Diseño {
+    width: 165px;
+    margin: 12px 0 0 12px;
     grid-column: 1;
 }
 
@@ -263,7 +279,7 @@ img#PC-Muestra-Oficina {
 #btn-micro:hover, #btn-ram:hover, #btn-storage:hover, #btn-video:hover {
     background-color: var(--bgcolsqua);
     cursor: pointer;
-    border: 5px solid aqua;
+    border: 3px solid aqua;
 }
 
 #flex-micros, #flex-ram, #flex-storage, #flex-video {
@@ -296,17 +312,18 @@ img#PC-Muestra-Oficina {
 
 .Ryzen3 img, .Ryzen5 img, .Ryzen7 img, .Ryzen9 img {
     padding: 12px 0 12px 0;
-    width: 125px;
-    height: 125px;
+    width: 100px;
+    height: 100px;
 }
 
 .Ryzen3:hover, .Ryzen5:hover, .Ryzen7:hover, .Ryzen9:hover {
-    border: 5px solid aqua;
+    border: 3px solid aqua;
 }
 
 .RAM16, .RAM32, .RAM64, .RAM128 {
     width: 205px;
     height: 205px;
+    border-radius: 24px;
     border: 1px solid rgb(255, 255, 255);
     text-align: center;
     margin-top: 12px;
@@ -316,17 +333,18 @@ img#PC-Muestra-Oficina {
 
 .RAM16 img, .RAM32 img, .RAM64 img, .RAM128 img{
     padding: 12px 0 12px 0;
-    width: 125px;
-    height: 125px;
+    width: 100px;
+    height: 100px;
 }
 
 .RAM16:hover, .RAM32:hover, .RAM64:hover, .RAM128:hover {
-    border: 5px solid aqua
+    border: 3px solid aqua
 }
 
 .hdd128, .hhd256, .hhd512, .hhd1t {
     width: 205px;
     height: 205px;
+    border-radius: 24px;
     border: 1px solid rgb(255, 255, 255);
     text-align: center;
     margin-top: 12px;
@@ -336,17 +354,18 @@ img#PC-Muestra-Oficina {
 
 .hdd128 img, .hhd256 img, .hhd512 img, .hhd1t img{
     padding: 12px 0 12px 0;
-    width: 125px;
-    height: 125px;
+    width: 100px;
+    height: 100px;
 }
 
 .hdd128:hover, .hhd256:hover, .hhd512:hover, .hhd1t:hover {
-    border: 5px solid aqua;
+    border: 3px solid aqua;
 }
 
 .NVidia_xx1, .NVidia_xx2, .NVidia_xx3, .NVidia_xx4 {
     width: 205px;
     height: 205px;
+    border-radius: 24px;
     border: 1px solid rgb(255, 255, 255);
     text-align: center;
     margin-top: 12px;
@@ -356,12 +375,12 @@ img#PC-Muestra-Oficina {
 
 .NVidia_xx1 img, .NVidia_xx2 img, .NVidia_xx3 img, .NVidia_xx4 img{
     padding: 12px 0 12px 0;
-    width: 125px;
-    height: 125px;
+    width: 100px;
+    height: 100px;
 }
 
 .NVidia_xx1:hover, .NVidia_xx2:hover, .NVidia_xx3:hover, .NVidia_xx4:hover {
-    border: 5px solid aqua;
+    border: 3px solid aqua;
 }
 
                                     /* SECCION: ACCESORIOS */
@@ -385,7 +404,7 @@ img#PC-Muestra-Oficina {
     padding-left: 40px;
 } 
 
-.Tecladogamer, .Micrófono, .Auriculares, .Mouse {
+.Tecladogamer, .Microfono, .Auriculares, .Mouse {
     grid-row: 1;
     width: 250px;
     height: 250px;
@@ -408,25 +427,25 @@ img#PC-Muestra-Oficina {
     color: black;
 }
 
-.Tecladogamer:hover, .Micrófono:hover, .Auriculares:hover, .Mouse:hover, .Monitor:hover, .Gabinete:hover, .Soporte:hover, .Cable:hover {
-    border: 5px solid aqua;
+.Tecladogamer:hover, .Microfono:hover, .Auriculares:hover, .Mouse:hover, .Monitor:hover, .Gabinete:hover, .Soporte:hover, .Cable:hover {
+    border: 3px solid aqua;
 }
 
-#Tecladogamer, #Micrófono, #Auriculares, #Mouse, #Monitor, #Gabinete, #Soporte, #Cable {
+#Tecladogamer, #Microfono, #Auriculares, #Mouse, #Monitor, #Gabinete, #Soporte, #Cable {
     width: 3vh;
     margin-bottom: 12px;
 } 
 
 .Tecladogamer img, .Auriculares img, .Mouse img, .Monitor img, .Gabinete img, .Soporte img, .Cable img {
     padding: 24px 0 24px 0;
-    width: 125px;
-    height: 125px;
+    width: 100px;
+    height: 100px;
 }
 
-.Micrófono img {
+.Microfono img {
     padding: 24px 0 24px 0;
     width: 90px;
-    height: 125px;
+    height: 100px;
 }
 
                                     /* FORMULARIO CONTACTO */
@@ -510,28 +529,23 @@ textarea {
     font-weight: bold;
 }
 
-.error, .exito {
+#error, #exito {
     text-align: center;
+    width: 510px;
     height: 44px;
     line-height: 40px;
+    margin-top: 8px;
+    border-radius: 12px;
 }
 
-.error {
+#error {
     background-color: #F66060;
     display: none;
 }
 
-.error-activo {
-    display: block;
-}
-
-.exito {
+#exito {
     background-color: #119200;
     display: none;
-}
-
-.exito-activo {
-    display: block;
 }
 
                                     /* BOTONES */
@@ -584,4 +598,36 @@ h2 {
     color: #F0ECE2;
     border-top: 2px solid white;
     border-bottom: 2px solid white;
+}
+
+#nosotros-grid {
+    display: grid;
+    grid-template-columns: 50%,50%;
+    grid-template-rows: 33% 33% 33%;
+}
+
+.LoremTestA {
+    display: flex;
+    align-items: center;
+    margin-left: 48px;
+    padding-right: 28px;
+    font-size: 14px;
+}
+
+.LoremTest {
+    display: flex;
+    align-items: center;
+    grid-column: 2;
+    margin-left: 48px;
+    padding-right: 28px;
+    font-size: 14px;
+}
+
+.GatoTest {
+    grid-column: 1;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-top: 12px;
+    margin-bottom: 24px;
 }
