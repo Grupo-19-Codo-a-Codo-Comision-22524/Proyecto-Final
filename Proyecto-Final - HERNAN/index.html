@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuestra Pagina</title>
+    <title>Arma.Tu.PC</title>
     <link rel="shortcut icon" href="./favicon/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon/laptop-regular-24.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
@@ -16,7 +17,7 @@
 <body>
     
     <header>
-        <img src="/Proyecto-Final - HERNAN/img/Screenshot_1.jpg" alt="logo-empresa" class="logoheader">
+        <img src="./img//Screenshot_1.jpg" alt="logo-empresa" class="logoheader">
         <nav class="header-navbar">
             <a href="index.html" class="nav-link">HOME</a>
             <a href="#nosotros" class="nav-link">NOSOTROS</a>
@@ -25,34 +26,96 @@
         </nav>
     </header>
 
-    <section class="container">
-        <article class="presentacion">
-
-<!--1er seccion PRESENTACION ocupa toda la pantalla, header fixed on top.-->
-
-        </article>
-
-    <section id="nosotros">
-<!--2da seccion NOSOTROS, ocupa toda la pantalla, header fixed on top.-->
-        <h2>Sobre Nostros</h2>
-
-        <p class="LoremTestA"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo rem nesciunt deserunt ad quasi doloremque alias id aut accusamus quidem ex ipsa maxime nobis saepe obcaecati fuga omnis, quia eius? Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo rem nesciunt deserunt ad quasi doloremque alias id aut accusamus quidem ex ipsa maxime nobis saepe obcaecati fuga omnis, quia eius? Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo rem nesciunt deserunt ad quasi doloremque alias id aut accusamus quidem ex ipsa maxime nobis saepe obcaecati fuga omnis, quia eius?</p>
-
-        <article id="nosotros-grid">
-
-            <img src="/Proyecto-Final - HERNAN/img/GatoTest.webp" alt="GatoTest" class="GatoTest">
-            <p class="LoremTest"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo rem nesciunt deserunt ad quasi doloremque alias id aut accusamus quidem ex ipsa maxime nobis saepe obcaecati fuga omnis, quia eius? Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo rem nesciunt deserunt ad quasi doloremque alias id aut accusamus quidem ex ipsa maxime nobis saepe obcaecati fuga omnis, quia eius?</p>
-
-            <img src="/Proyecto-Final - HERNAN/img/GatoTest.webp" alt="GatoTest" class="GatoTest">
-            <p class="LoremTest"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo rem nesciunt deserunt ad quasi doloremque alias id aut accusamus quidem ex ipsa maxime nobis saepe obcaecati fuga omnis, quia eius? Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo rem nesciunt deserunt ad quasi doloremque alias id aut accusamus quidem ex ipsa maxime nobis saepe obcaecati fuga omnis, quia eius?</p>
-
-            <img src="/Proyecto-Final - HERNAN/img/GatoTest.webp" alt="GatoTest" class="GatoTest">
-            <p class="LoremTest"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo rem nesciunt deserunt ad quasi doloremque alias id aut accusamus quidem ex ipsa maxime nobis saepe obcaecati fuga omnis, quia eius? Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo rem nesciunt deserunt ad quasi doloremque alias id aut accusamus quidem ex ipsa maxime nobis saepe obcaecati fuga omnis, quia eius?</p>
-
-        </article>
+    <section class="carousel" aria-label="Galleria">
+    
+        <ul class="carousel__viewport">
+        <li id="carousel__diapo1"
+            tabindex="0"
+            class="carousel__diapo">
+            <div class="carousel__visor">
+            <a href="#carousel__diapo4"
+                class="carousel__anterior"></a>
+            <img src="img/carrousel1.jpg" alt="foto carousel numero 1" class="fotocarousel">   
+            <h1 class="textosobrefoto">Facilitá la compra de tu próxima computadora!</h1>
+            <a href="#carousel__diapo2"
+                class="carousel__posterior"></a>
+            </div>
+        </li>
+        <li id="carousel__diapo2"
+            tabindex="0"
+            class="carousel__diapo">
+            <div class="carousel__visor"></div>
+            <a href="#carousel__diapo1"
+            class="carousel__anterior"></a>
+            <img src="img/carrousel2.jpg" alt="foto carousel numero 2" class="fotocarousel"> 
+            <h2 class="textosobrefoto">Equipos pensados para cada uso!</h2>  
+            <a href="#carousel__diapo3"
+            class="carousel__posterior"></a>
+        </li>
+        <li id="carousel__diapo3"
+            tabindex="0"
+            class="carousel__diapo">
+            <div class="carousel__visor"></div>
+            <a href="#carousel__diapo2"
+            class="carousel__anterior"></a>
+            <img src="img/carrousel3.jpg" alt="foto carousel numero 3" class="fotocarousel">
+            <h2 class="textosobrefoto">En tu hogar, en tu oficina, en tu estudio de diseño o a la hora de jugar!</h2>
+            <a href="#carousel__diapo4"
+            class="carousel__posterior"></a>
+        </li>
+        <li id="carousel__diapo4"
+            tabindex="0"
+            class="carousel__diapo">
+            <div class="carousel__visor"></div>
+            <a href="#carousel__diapo3"
+            class="carousel__anterior"></a>
+            <img src="img/carrousel4.jpg" alt="foto carousel numero 4" class="fotocarousel"> 
+            <h2 class="textosobrefoto">Los componentes óptimos para cada uso</h2>  
+            <a href="#carousel__diapo1"
+            class="carousel__posterior"></a>
+        </li>
+        </ul>
+        <aside class="carousel__botonera"> <!--uso tag aside, si bien no esta al costado es un elemento asociado al anterior-->
+        <ul class="carousel__botonera-list">
+            <li class="carousel__botonera-item">
+            <a href="#carousel__diapo1"
+                class="carousel__botonera-button"></a>
+            </li>
+            <li class="carousel__botonera-item">
+            <a href="#carousel__diapo2"
+                class="carousel__botonera-button"></a>
+            </li>
+            <li class="carousel__botonera-item">
+            <a href="#carousel__diapo3"
+                class="carousel__botonera-button"></a>
+            </li>
+            <li class="carousel__botonera-item">
+            <a href="#carousel__diapo4"
+                class="carousel__botonera-button"></a>
+            </li>
+        </ul>
+        </aside>
     </section>
 
-
+    <section class="nosotros" id="nosotros">
+        <div class="ventananosotros" id="ventana1">
+            <img class="fotonosotros" src="img/fundadorCEO.jpg" alt="Foto Fundador CEO">
+            <div class="textonosotros">
+                <p id="textoCEO">Desde el inicio nuestro objetivo es simplificar el proceso de adquisición de tecnología.<br><span class="firma">~Gerardo Stratta, CEO~</span></p>
+            </div>
+        </div>
+        <div class="ventananosotros" id="ventana2">
+            <img class="fotonosotros" src="img/CTO.jpg" alt="Foto Jefe Area Tecnica">
+            <div class="textonosotros">
+                <p id="textoCTO">Seleccionamos los mejores componentes para cada usuario.<br><span class="firma">~Federico Schmidt, CTO~</span></p>
+            </div>
+        </div>
+        <div class="ventananosotros" id="ventana3">
+            <img class="fotonosotros" src="img/teamwork.jpg" alt="foto equipo">
+            <div class="textonosotros">
+                <p id="textoAlianza">Contamos con mas de 20 alianzas estratégicas con fabricantes de componentes, asegurando disponibilidad y calidad.</p>
+            </div>
+        </div>
     </section>
     
     <main id="productos">
@@ -65,7 +128,7 @@
         <article class="equipos izquierda">
 
             <label class="grid-col-equipos" for="standard">
-                <img src="/Proyecto-Final - HERNAN/img/standar.webp" alt="foto pc diseño estandar" id="PC-Estandar">
+                <img src="./img/standar.webp" alt="foto pc diseño estandar" id="PC-Estandar">
             <ul class="opventa">
 
                 <h4>ESTANDAR</h4>
@@ -81,12 +144,13 @@
             
         </article>
     </section>
+    
             
     <section class="opcion-equipo">
         <article class="equipos derecha">
 
             <label class="grid-col-equipos" for="oficina">
-                <img src="/Proyecto-Final - HERNAN/img/Oficina.webp" alt="foto pc oficina" id="PC-Oficina">
+                <img src="./img//Oficina.webp" alt="foto pc oficina" id="PC-Oficina">
             <ul class="opventa">
 
                 <h4>OFICINA</h4>
@@ -108,7 +172,7 @@
         <article class="equipos izquierda">
 
             <label class="grid-col-equipos" for="gamer">
-                <img src="/Proyecto-Final - HERNAN/img/gamer.webp" alt="foto pc diseño gamer" id="PC-Gamer">
+                <img src="./img/gamer.webp" alt="foto pc diseño gamer" id="PC-Gamer">
             <ul class="opventa">
                 
                 <h4>GAMER</h4>
@@ -131,7 +195,7 @@
         <article class="equipos derecha">
 
             <label class="grid-col-equipos" for="multimedia">
-                <img src="/Proyecto-Final - HERNAN/img/D_NQ_NP_710372-MLA31113810925_062019-O.webp" alt="foto pc diseño multimedia" id="PC-Diseño"> 
+                <img src="./img/D_NQ_NP_710372-MLA31113810925_062019-O.webp" alt="foto pc diseño multimedia" id="PC-Diseño"> 
             <ul class="opventa">
 
                 <h4>DISEÑO</h4>
@@ -152,11 +216,11 @@
 
     </section>
 
-                <div class="btns">
+            <div class="btns">
                     <button class="btn" type="button" id="btn-computadora">Siguiente</button>
-                </div>
+            </div>
 
-    <article id="upgrade">
+    <section id="upgrade">
 
         <a name = "upgrade"> </a>
         <h2>Hace una mejora del equipo que elegiste!</h2>
@@ -170,7 +234,7 @@
 
                     <div class="Ryzen3">
                         <label for="Ryzen3">
-                        <img src="/Proyecto-Final - HERNAN/img/Reyzen3.jpg" alt="..."> <br>
+                        <img src="./img//Reyzen3.jpg" alt="..."> <br>
                         <hr>
                         <p>AMD Ryzen 3 3500ghz (+US$ 85,84)</p>  
                         </label>
@@ -179,7 +243,7 @@
 
                     <div class="Ryzen5">
                         <label for="Ryzen5">
-                        <img src="/Proyecto-Final - HERNAN/img/Reyzen5.webp" alt="..."> <br>
+                        <img src="./img//Reyzen5.webp" alt="..."> <br>
                         <hr>
                         <p>AMD Ryzen 5 2400ghz (+US$ 149,60)</p>  
                         </label>
@@ -189,7 +253,7 @@
 
                     <div class="Ryzen7">
                         <label for="Ryzen7">
-                        <img src="/Proyecto-Final - HERNAN/img/Reyzen7.webp" alt="..."> <br>
+                        <img src="./img//Reyzen7.webp" alt="..."> <br>
                         <hr>
                         <p>AMD Ryzen 7 3700ghz (+US$ 243,70)</p>
                         </label>
@@ -198,7 +262,7 @@
 
                     <div class="Ryzen9">
                         <label for="Ryzen9">
-                        <img src="/Proyecto-Final - HERNAN/img/Reyzen9.webp" alt="..."> <br>
+                        <img src="./img//Reyzen9.webp" alt="..."> <br>
                         <hr>
                         <P>AMD Ryzen 9 3900ghz (+US$ 700,78)</P>
                         </label>
@@ -215,7 +279,7 @@
 
                     <div class="RAM16">
                         <label for="RAM16"> 
-                        <img src="/Proyecto-Final - HERNAN/img/Fury.webp" alt="..."> <br>
+                        <img src="./img//Fury.webp" alt="..."> <br>
                         <hr>
                         <p>Fury 16Gb Ddr4 3000Mhz  (+US$ 55,11)</p>
                         </label>
@@ -224,7 +288,7 @@
 
                     <div class="RAM32">
                         <label for="RAM32"> 
-                        <img src="/Proyecto-Final - HERNAN/img/Fury.webp" alt="..."> <br>
+                        <img src="./img//Fury.webp" alt="..."> <br>
                         <hr>
                         <p>Fury 32Gb Ddr4 3200Mhz (+US$ 149,21)</p>
                         </label>
@@ -233,7 +297,7 @@
 
                     <div class="RAM64">
                         <label for="RAM64">
-                        <img src="/Proyecto-Final - HERNAN/img/Fury.webp" alt="..."> <br>
+                        <img src="./img//Fury.webp" alt="..."> <br>
                         <hr>
                         <p>Fury 64Gb Ddr4 3600Mhz (+US$ 353,61)</p> 
                         </label>
@@ -242,7 +306,7 @@
 
                     <div class="RAM128">
                         <label for="RAM128">
-                        <img src="/Proyecto-Final - HERNAN/img/Fury.webp" alt="..."> <br>
+                        <img src="./img//Fury.webp" alt="..."> <br>
                         <hr>
                         <p>Fury 128Gb Ddr5 128Gbz (+US$ 409,21)</p>
                         </label>
@@ -259,7 +323,7 @@
 
                     <div class="hdd128">
                         <label for="hdd128">
-                        <img src="/Proyecto-Final - HERNAN/img/SSD Kingston.webp" alt="..."> <br>
+                        <img src="./img//SSD Kingston.webp" alt="..."> <br>
                         <hr>
                         <p>Kingston Ssd 128Gb (+US$ 19,45)</p>
                         </label>
@@ -268,7 +332,7 @@
 
                     <div class="hhd256">
                         <label for="hhd256">
-                        <img src="/Proyecto-Final - HERNAN/img/SSD Kingston.webp" alt="..."> <br>
+                        <img src="./img//SSD Kingston.webp" alt="..."> <br>
                         <hr>
                         <p>Kingston Ssd 256Gb (+US$ 30,62)</p>
                         </label>
@@ -277,7 +341,7 @@
                         
                     <div class="hhd512">
                         <label for="hhd512">
-                        <img src="/Proyecto-Final - HERNAN/img/SSD Kingston.webp" alt="..."> <br>
+                        <img src="./img//SSD Kingston.webp" alt="..."> <br>
                         <hr>
                         <p>Kingston Ssd 512Gb (+US$ 34,70)</p>
                         </label>
@@ -286,7 +350,7 @@
 
                     <div class="hhd1t">
                         <label for="hhd1t">
-                        <img src="/Proyecto-Final - HERNAN/img/SSD Kingston.webp" alt="..."> <br>
+                        <img src="./img//SSD Kingston.webp" alt="..."> <br>
                         <hr>
                         <p>Kingston Ssd 1tb (+US$ 112,64)</p>
                         </label>
@@ -304,7 +368,7 @@
                     <div class="NVidia_xx1">
                         
                         <label for="NVidia_xx1">
-                        <img src="/Proyecto-Final - HERNAN/img/912-V505-009_400.jpg" alt="..."> <br>
+                        <img src="./img//912-V505-009_400.jpg" alt="..."> <br>
                         <hr>
                         <p>Nvidia Xc Geforce RTX 2060 (+US$ 391,94)</p>
                         </label>
@@ -314,7 +378,7 @@
                     <div class="NVidia_xx2">
                         
                         <label for="NVidia_xx2">
-                        <img src="/Proyecto-Final - HERNAN/img/912-V809-2808_400.jpg" alt="..."> 
+                        <img src="./img//912-V809-2808_400.jpg" alt="..."> 
                         <hr>
                         <p>Nvidia Xc Geforce MSI 2060 (+US$ 352,98)</p>
                         </label>
@@ -323,7 +387,7 @@
 
                     <div class="NVidia_xx3">
                         <label for="NVidia_xx3">
-                        <img src="/Proyecto-Final - HERNAN/img/GV-N2060D6-12GD_400.jpg" alt="..."> 
+                        <img src="./img//GV-N2060D6-12GD_400.jpg" alt="..."> 
                         <hr>
                         <p>Nvidia Xc Geforce RTX 1060 (+US$ 295,86)</p>
                         </label>
@@ -332,7 +396,7 @@
 
                     <div class="NVidia_xx4">
                         <label for="NVidia_xx4">
-                        <img src="/Proyecto-Final - HERNAN/img/M-NRTX3080TI_400.webp" alt="..."> 
+                        <img src="./img//M-NRTX3080TI_400.webp" alt="..."> 
                         <hr>
                         <p>Nvidia Xc GeForce GTX 3060 (+US$ 480,31)</p>
                         </label>
@@ -344,21 +408,21 @@
 
         </section>
 
-    </article>
+    </section>
 
-    <div class="btns">
+            <div class="btns">
         <button class="btn" type="button" id="btn-upgrade">Siguiente</button>
-    </div>
+            </div>
 
     <h2>Podes agregar estos accesorios</h2>
     <a name = "accesorios"> </a>
 
-        <article class="grid-accesorios">
+    <section class="grid-accesorios">
             <section class="flex-one">
 
                 <div class="Tecladogamer">
                     <label for="Tecladogamer">
-                    <img src="/Proyecto-Final - HERNAN/img/Teclado gamer Logitech Serie G G413.webp" alt="..."> <hr> <br>
+                    <img src="./img//Teclado gamer Logitech Serie G G413.webp" alt="..."> <hr> <br>
                     <p> Teclado gamer Logitech Serie G G413 (+US$ 59,05) </p>
                         <input type="checkbox" name="Tecladogamer" id="Tecladogamer" value="Tecladogamer">
                     </label>
@@ -366,7 +430,7 @@
 
                 <div class="Microfono">
                     <label for="Microfono">
-                    <img src="/Proyecto-Final - HERNAN/img/Micrófono HyperX QuadCast.webp" alt="..."> <hr> <br>
+                    <img src="./img//Micrófono HyperX QuadCast.webp" alt="..."> <hr> <br>
                     <p> Micrófono HyperX QuadCast (+US$ 93.37)</p>
                         <input type="checkbox" name="Microfono" id="Microfono" value="Microfono">
                     </label>
@@ -374,7 +438,7 @@
 
                 <div class="Auriculares">
                     <label for="Auriculares">
-                    <img src="/Proyecto-Final - HERNAN/img/Auriculares gamer Logitech Pro X negro.webp" alt="..."> <hr> <br>
+                    <img src="./img//Auriculares gamer Logitech Pro X negro.webp" alt="..."> <hr> <br>
                     <p>Auriculares gamer Logitech Pro X negro (+US$ 108.26)</p> 
                         <input type="checkbox" name="Auriculares" id="Auriculares" value="Auriculares">
                     </label>
@@ -382,7 +446,7 @@
 
                 <div class="Mouse">
                     <label for="Mouse">
-                    <img src="/Proyecto-Final - HERNAN/img/Accesorio Mouse Vsg Aquila Skin.webp" alt="..."> <hr> <br>
+                    <img src="./img//Accesorio Mouse Vsg Aquila Skin.webp" alt="..."> <hr> <br>
                     <p>Mouse Vsg Aquila Skin (+US$ 3,17)</p>
                         <input type="checkbox" name="Mouse" id="Mouse" value="Mouse">
                     </label>
@@ -394,7 +458,7 @@
 
                 <div class="Monitor">
                     <label for="Monitor">
-                    <img src="/Proyecto-Final - HERNAN/img/Smart Monitor M5 27 FHD con Smart TV.webp" alt="..."> <hr> <br>
+                    <img src="./img//Smart Monitor M5 27 FHD con Smart TV.webp" alt="..."> <hr> <br>
                     <p>Smart Monitor M5 27" FHD con Smart TV (+US$ 346.45)</p> 
                         <input type="checkbox" name="Monitor" id="Monitor" value="Monitor">
                     </label>
@@ -402,7 +466,7 @@
 
                 <div class="Gabinete">
                     <label for="Gabinete">
-                    <img src="/Proyecto-Final - HERNAN/img/Gabinete Pc Gamer X-treme Warrior.webp" alt="..."> <hr> <br>
+                    <img src="./img//Gabinete Pc Gamer X-treme Warrior.webp" alt="..."> <hr> <br>
                     <p>Gabinete Pc Gamer X-treme Warrior (+US$ 181.10)</p>
                         <input type="checkbox" name="accesorio" id="Gabinete" value="Gabinete">
                     </label>
@@ -410,7 +474,7 @@
 
                 <div class="Soporte">
                     <label for="Soporte">
-                    <img src="/Proyecto-Final - HERNAN/img/Soporte Cooler Indoor.webp" alt="..."> <hr> <br>
+                    <img src="./img//Soporte Cooler Indoor.webp" alt="..."> <hr> <br>
                         <p>Soporte Cooler Indoor 4 (+US$ 11.77)</p>
                         <input type="checkbox" name="accesorio" id="Soporte" value="Soporte">
                     </label>
@@ -418,23 +482,23 @@
 
                 <div class="Cable">
                     <label for="Cable"> 
-                    <img src="/Proyecto-Final - HERNAN/img/Cable Modding Motherboard 24 Malla Sync.webp" alt="..."> <hr> <br>
+                    <img src="./img//Cable Modding Motherboard 24 Malla Sync.webp" alt="..."> <hr> <br>
                     <p>Cable Modding Motherboard 24 Malla Sync (+US$ 59.96) </p>
                         <input type="checkbox" name="accesorio" id="Cable" value="">
                     </label>
                 </div>
 
             </section>
-        </article>
+    </section>
 
-    <div class="btns">
+            <div class="btns">
             <button class="btn" type="button" id="btn-presupuestar">PRESUPUESTAR</button>
-    </div>
+            </div>
 
     </main>
 
-<a name = "contacto"> </a>
-<h2>Dejanos tus datos de contacto y nos comunicaremos a la brevedad.</h2>
+    <a name = "contacto"> </a>
+    <h2>Dejanos tus datos de contacto y nos comunicaremos a la brevedad.</h2>
 
     <article class="formulario_contacto">
 
@@ -453,7 +517,7 @@
             <label for = "email">Email:</label>
             <input type="email" name="email" placeholder=" HarryPotter@howard.edu.uk" id="email">
 
-<div class="cons">
+    <div class="cons">
     <label for ="tipoconsulta"> Tipo de consulta </label>
 
     <select name="tipoconsulta" id="tipoconsulta" >
@@ -465,10 +529,10 @@
             <option value="tc4">Otros</option>
     
     </select>
-</div>
+            </div>
 
-<div class="cons">
-    <label for ="medio-contacto"> Medio de consulta </label>
+            <div class="cons">
+                <label for ="medio-contacto"> Medio de consulta </label>
 
     <select name="medio-contacto" id="medio-contacto" >
 
@@ -478,9 +542,9 @@
             <option value="Telefono">Telefono</option>
 
     </select>
-</div>
+            </div>
 
-<div class="cons">
+            <div class="cons">
     <label for ="horario" id="horario"> Horario de contacto </label>
 
     <select name="horario" id="horario" >
@@ -491,7 +555,7 @@
             <option value="Mail">De 18pm a 21pm</option>
 
     </select>
-</div>
+            </div>
 
     <section class="msj">
 
@@ -499,35 +563,30 @@
         placeholder="Dejanos tu mensaje"></textarea>
 
         <div id="error">
-
             <p><i class="fas fa-exclamation-triangle"></i> 
             <b>Error:</b> Por favor complete los campos faltantes del formulario</p>
-        
-        </div>
-        
-        <div id="exito">
-        
+    </div>
+    <div id="exito">
             <p>Formulario enviado</p>
-        
-        </div>
+    </div>
 
         <p class="disclaimer">Todos los valores expresados en dolares son convertidos de forma automatica a peso Argentino de acuerdo al valor oficial indicado por el BCRA. Los presupuestos tienen una valides de 48hs, pasado ese tiempo el mismo perdera vigencia y se deberan actualizar los montos. En caso de que el pago de la compra se realice en dolares el presupuesto se mantendra sin modificaciones por un plazo de 3 meses </p>
     </section>
 
-<div class="btns">
+            <div class="btns">
 
-    <input class="btn" type="reset" value="Borrar" id="botonborrar">
-    <input class="btn" type="submit" value="Enviar"id="botonenviar">
+                <input class="btn" type="reset" value="Borrar" id="botonborrar">
+                <input class="btn" type="submit" value="Enviar"id="botonenviar">
 
-</div>
+            </div>
 
-</form>
+    </form>
 
-<section class="detalle">
+    <section class="detalle">
     <div id="detalle"><P Id="compra">DETALLE DE LA COMPRA</P></div>
-</section>
+    </section>
 
-</article>
+    </article>
 
     <footer> 
         <p> Copyright © 2022 Arma.Tu.PC Todos los derechos reservados </p> 
@@ -543,5 +602,6 @@
 
 <script src="./JS/main.js"></script>
 <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13136.409164946592!2d-58.3751776!3d-34.6015748!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x66ea6e648f46a49a!2zR2FsZXLDrWEgSmFyZMOtbg!5e0!3m2!1ses!2sar!4v1664651634761!5m2!1ses!2sar" width="400" height="300" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </body>
 </html>
