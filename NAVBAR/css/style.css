@@ -1,0 +1,139 @@
+/* VARIABLE */
+
+*:root {
+    --tamfuen:14px;
+    --Lifuen:13px;
+}
+
+
+                    /* GENERAL */
+
+
+* {
+    padding: 0;
+    margin: 0;
+    max-block-size: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+    padding-top: 75px;
+}
+
+body {
+    background-color: #0F4C75;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+                                    /* HEADER */
+
+
+header {
+    width: 100%;
+    position: fixed;
+    z-index: 4;
+    font-size: var(--tamfuen);
+    background-color: black;
+    padding: 0 0 0 0;
+    margin: 0 0 2rem 0;
+    height: 5em;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.logoheader{
+    width: 20%;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin-left: 10px;
+}
+
+nav a:hover {
+    color: #3282B8;
+    font-weight: bold;
+}
+
+.footer-navbar {
+    width: 80%;
+    display: flex;
+    align-items: center;
+}
+
+.header-navbar {
+    width: 75%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-link{
+    color: white;
+    font-style: normal;
+}
+#menu, #menu-check{
+    display: none;
+}
+
+@media screen and (max-width: 700px){
+    #menu-check:not(:checked) ~ nav{
+        display: none;
+    }
+    #menu-check:checked ~ nav{
+        display: flex;
+    }
+    #menu{
+        display: block;
+        position: absolute;
+        right: 0.5rem;
+        top: 0.5rem;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.3rem;
+        font-weight: bold;
+        border: 1.5px solid white;
+        border-radius: 15%;
+        z-index: 99;
+
+    }
+    #menu:hover {
+        color: #3282B8;
+        border: 1.5px solid #3282B8;
+        border-radius: 15%;
+    }
+    #menu-cerrar {
+        display: none;
+    }
+    #menu-check:checked ~ label #menu-abrir {
+        display: none;
+    }
+    #menu-check:checked ~ label #menu-cerrar {
+        display: block;
+    }
+    .header-navbar{
+        position:absolute;
+        top: 0;
+        right: 0;
+        height: 50vh;
+        width: 33%;
+        background-color: transparent;
+        padding-top: 0.5rem;
+        padding-right: 1.5rem;
+        flex-direction: column;
+        justify-content:space-around;
+        align-content: right;
+        border: 3px solid #3282B8;
+        border-radius: 15px;
+        
+
+    }
+}

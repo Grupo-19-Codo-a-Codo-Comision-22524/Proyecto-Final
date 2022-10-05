@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+<section class="carousel" aria-label="Galleria">
+    
+  <ul class="carousel__viewport">
+    <li id="carousel__diapo1"
+        tabindex="0"
+        class="carousel__diapo">
+      <div class="carousel__visor">
+        <a href="#carousel__diapo4"
+           class="carousel__anterior"></a>
+        <img src="img/carrousel1.jpg" alt="foto carousel numero 1" class="fotocarousel">   
+        <h1 class="textosobrefoto">Facilitá la compra de tu próxima computadora!</h1>
+        <a href="#carousel__diapo2"
+           class="carousel__posterior"></a>
+      </div>
+    </li>
+    <li id="carousel__diapo2"
+        tabindex="0"
+        class="carousel__diapo">
+      <div class="carousel__visor"></div>
+      <a href="#carousel__diapo1"
+         class="carousel__anterior"></a>
+      <img src="img/carrousel2.jpg" alt="foto carousel numero 2" class="fotocarousel"> 
+      <h2 class="textosobrefoto">Equipos pensados para cada uso!</h2>  
+      <a href="#carousel__diapo3"
+         class="carousel__posterior"></a>
+    </li>
+    <li id="carousel__diapo3"
+        tabindex="0"
+        class="carousel__diapo">
+      <div class="carousel__visor"></div>
+      <a href="#carousel__diapo2"
+         class="carousel__anterior"></a>
+      <img src="img/carrousel3.jpg" alt="foto carousel numero 3" class="fotocarousel">
+      <h2 class="textosobrefoto">En tu hogar, en tu oficina, en tu estudio de diseño o a la hora de jugar!</h2>
+      <a href="#carousel__diapo4"
+         class="carousel__posterior"></a>
+    </li>
+    <li id="carousel__diapo4"
+        tabindex="0"
+        class="carousel__diapo">
+      <div class="carousel__visor"></div>
+      <a href="#carousel__diapo3"
+         class="carousel__anterior"></a>
+      <img src="img/carrousel4.jpg" alt="foto carousel numero 4" class="fotocarousel"> 
+      <h2 class="textosobrefoto">Los componentes óptimos para cada uso</h2>  
+      <a href="#carousel__diapo1"
+         class="carousel__posterior"></a>
+    </li>
+  </ul>
+  <aside class="carousel__botonera"> <!--uso tag aside, si bien no esta al costado es un elemento asociado al anterior-->
+    <ul class="carousel__botonera-list">
+      <li class="carousel__botonera-item">
+        <a href="#carousel__diapo1"
+           class="carousel__botonera-button"></a>
+      </li>
+      <li class="carousel__botonera-item">
+        <a href="#carousel__diapo2"
+           class="carousel__botonera-button"></a>
+      </li>
+      <li class="carousel__botonera-item">
+        <a href="#carousel__diapo3"
+           class="carousel__botonera-button"></a>
+      </li>
+      <li class="carousel__botonera-item">
+        <a href="#carousel__diapo4"
+           class="carousel__botonera-button"></a>
+      </li>
+    </ul>
+  </aside>
+</section>
+</body>
+</html>
