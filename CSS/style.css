@@ -1,0 +1,1017 @@
+                    /* VARIABLES */
+
+:root {
+    --tamfuen:14px;
+    --bgcolsqua: #fcfcfc 
+}
+
+                    /* GENERAL */
+
+* {
+    font-size: var(--tamfuen);
+    padding: 0;
+    margin: 0;
+    max-block-size: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    
+}
+
+.container { 
+    padding-top: 75px;
+}
+
+select {
+    margin-top: 24px;
+    border-radius: 8px;
+    height: 25px;
+    width: 300px;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+select:hover {
+    cursor: pointer;
+}
+
+label {
+    font-size: var(--tamfuen);
+    margin-top: 20px;
+    padding-left: 5px;
+    padding-bottom: 12px;
+}
+
+input {
+    font-size: var(--tamfuen);
+    padding-left: 10px;
+    border: none;
+    border-bottom: 1px solid black;
+    height: 25px;
+    border-radius: 12px;
+}
+
+                                    /* HEADER, NAV Y FOOTER*/
+
+header {
+    width: 100%;
+    position: fixed;
+    font-size: var(--tamfuen);
+    padding: 0;
+    margin: 0 0 2rem 0;
+    height: 5em;
+    color: white;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+
+.logoheader{
+    width: 8%;
+    height: 100%;
+}
+
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: aqua;
+    font-weight: bold;
+}
+
+footer {
+    font-size: var(--tamfuen);
+    margin-top: 1rem;
+    padding: 2rem;
+    color: white;
+    border-top: 1px solid white;
+    margin-left: -14px;
+}
+
+footer section {
+    margin-top: 25px;
+}
+
+footer a {  
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+div a { 
+        color: white;
+        width: 200px;
+        text-decoration: none;
+        transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: aqua;
+    font-weight: bold;
+}
+
+.footer-navbar {
+    width: 80%;
+    display: flex;
+    align-items: center;
+}
+
+.header-navbar {
+    width: 75%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-link{
+    color: white;
+    font-style: normal;
+}
+
+.disclaimer {
+    width: 510px;
+    margin-top: 24px;
+    font-style: italic;
+    font-size: 12px;
+}
+
+.iframe {
+    display: grid;
+    grid-template-columns: repeat (3, 350px);
+    padding-bottom: 1rem;
+}
+
+#gmap-jardin {
+    grid-column: 1;
+    margin-left: 28px;
+}
+
+#gmap-caballito {
+    grid-column: 2;
+}
+
+#gmap-barracas {
+    grid-column: 3;
+}
+
+                                    /* HAMBURGUER MENU */
+
+#menu, #menu-check{
+    display: none;
+    color: white;
+    font-weight: bold;
+    margin-right: 24px;
+}
+
+@media screen and (max-width: 700px){
+    #menu-check:not(:checked) ~ nav{
+        display: none;
+    }
+    #menu-check:checked ~ nav{
+        display: flex;
+    }
+
+    #menu {
+        display: block;
+        position: absolute;
+        right: 0.5rem;
+        top: 0.5rem;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.3rem;
+        font-weight: bold;
+        border-radius: 15%;
+        z-index: 9;
+    }
+
+    #menu-cerrar {
+        display: none;
+    }
+    
+    #menu-check:checked ~ label #menu-abrir {
+        display: none;
+        margin-right: 14px;
+    }
+
+    #menu-check:checked ~ label #menu-cerrar {  
+        display: block;
+        font-size: 16px;
+        color: white;
+        font-weight: bold;
+        margin-left: 18px;
+    }
+
+    .header-navbar{
+        position:absolute;
+        top: 0;
+        right: 0;
+        height: 95vh;
+        width: 25%;
+        background-color: #3282B8;
+        padding-top: 0.5rem;
+        padding-right: 1.5rem;
+        flex-direction: column;
+        justify-content:space-around;
+        align-content: right;
+        border: 3px solid #f9fbfc;
+        border-radius: 15px;
+    }
+}
+
+                                    /* TEXTOS */
+
+h2 { 
+    margin-top: 15px;
+    font-size: 24px;
+    text-align: center;
+    padding: 2rem 0;
+    margin-bottom: 16px;
+}
+
+h4 {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+h5 {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+p {
+    font-size: var(--tamfuen);
+    margin: 4px 0 14px 0;
+    padding-left: 12px;
+}
+
+                                    /* SECCION: PRESENTACION - CARROUSEL */
+
+  *::-webkit-scrollbar {
+    width: 0;
+}
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: none;
+}
+
+* {
+    -ms-overflow-style: none;
+}
+
+li, ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.fotocarousel{
+    height: 100%;
+    width: 100%;
+    object-fit: contain; /*la foto se ajusta al contenedor*/
+}
+.carousel {
+    position: relative;
+    padding-top: 75%;
+    background-color: #0F4C75;
+}
+.carousel__viewport {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory; /*completa el movimiento de la foto, no la deja a medio camino*/
+}
+.carousel__diapo {
+    position: relative;
+    flex: 0 0 100%; /*shorthand flex-growth flex-shrink flex-basis, los elementos flex en un mismo contenedor no aumentan/reducen de tamaño en relacion a otros, y cada uno ocupa el 100% del contenedor*/
+    width: 100%;
+    background-color: transparent;
+}
+.carousel__diapo:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.carousel__visor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: center; /*la foto se centra en la ventana al hacer scroll, no queda descentrada aun cuando sea mas chica que el contenedor*/
+}
+
+.textosobrefoto {
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    width: 55vw;
+    height: 25vh;
+    z-index: 1;
+    color: #BBE1FA;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    transform: rotate(-15deg);
+}
+
+/* Animacion para transicion a la siguiente foto de forma mas gradual, "empuja el borde izq" */
+@keyframes desplazar {
+    75% {
+    left: 0;
+    }
+    95% {
+    left: 100%;
+    }
+    98% {
+    left: 100%;
+    }
+    99% {
+    left: 0;
+    }
+}
+/* Animacion para volver a la primera foto, hace un scroll total */
+@keyframes recomenzar {
+    75% {
+    left: 0;
+    }
+    95% {
+    left: -300%;
+    }
+    98% {
+    left: -300%;
+    }
+    99% {
+    left: 0;
+    }
+}
+/* Despues de ejecutar las otras animaciones, "recentra" la foto para poder desplazar nuevamente */
+@keyframes enfocar {
+    96% {
+    scroll-snap-align: center;
+    }
+    97% {
+    scroll-snap-align: none;
+    }
+    99% {
+    scroll-snap-align: none;
+    }
+    100% {
+    scroll-snap-align: center;
+    }
+}
+
+.carousel:hover .carousel__visor,.carousel:focus-within .carousel__visor {
+    animation-name: none;
+}
+
+.carousel__botonera {
+    position: absolute;
+    right: 0;
+    bottom: 16px;
+    left: 0;
+    text-align: center;
+}
+
+.carousel__botonera-list,.carousel__botonera-item {
+    display: inline-block;
+}
+
+.carousel__botonera-item{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.carousel__botonera-button {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background-color: #BBE1FA;
+    background-clip: content-box;
+    border: 0.2rem solid #ffffff;
+    border-radius: 50%;
+    font-size: 0;
+    transition: transform 0.1s;
+}
+
+.carousel::before,.carousel::after,.carousel__anterior,.carousel__posterior {
+    position: absolute;
+    top: 0;
+    margin-top: 33%;
+    width: 4rem;
+    height: 4rem;
+    font-size: 2.5rem;
+}
+
+.carousel::before,.carousel__anterior {
+    left: -1rem;
+}
+
+.carousel::after,.carousel__posterior {
+    right: -1rem;
+}
+
+.carousel::before{
+    content: '<';
+}
+
+.carousel::after{
+    content: '>';
+}
+
+.carousel::before, .carousel::after {
+    z-index: 2;
+    background-color: transparent;
+    color: #BBE1FA;
+    font-size: 3rem;
+    line-height: 4rem;
+    text-align: center;
+    pointer-events: none;
+}
+
+                                    /* SECCION: NOSOTROS */
+
+                                    /* NOSOTROS */
+
+.nosotros{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: transparent;
+    justify-content: space-evenly;
+    align-content: center;
+    padding: 5rem 0 5rem 0;
+}
+
+.ventananosotros{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: inline-block;
+    background-color: transparent;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 20px 20px 10px #3282B8;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+}
+
+.fotonosotros{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.textonosotros{
+    position: absolute;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1rem;
+    z-index: 1;
+    width: 95%;         
+}
+
+#textoCEO{
+    position: absolute;
+    left: 20px;
+    top: 200px;
+    color: whitesmoke;
+}
+
+#textoCTO{
+    position: absolute;
+    left: 20px;
+    top: 220px;
+    font-weight: bold;
+    color: black;
+}
+
+#textoAlianza{
+    position: absolute;
+    left: 20px;
+    top: 200px;
+    color: black;
+    font-style: italic;
+    font-weight: bold
+}
+
+.firma{
+    font-style: italic;
+    font-weight: bold;
+}
+
+.ventananosotros:hover {    
+    transform: scale(1.5,1.5);
+    z-index: 1;
+    box-shadow: none;
+}
+
+                                    /* SECCION: COMPUTADORAS */
+
+.equipos {
+    display: grid;
+    grid-template-columns: 250px 250px;
+    font-size: var(--tamfuen);
+    margin: 0 40px 1rem 40px;  
+    width: 530px;
+    height: 250px;
+    padding-top: 0;
+    padding-bottom: 35px;
+    border-radius: 12px;
+    border: 1px solid black;
+    background-color: var(--bgcolsqua);
+    color: black;
+}
+
+.equipos:hover {
+    border: 2px solid aqua;
+}
+
+.equipos.izquierda, .equipos.derecha {
+    margin: 12px 0 12px 78px;
+}
+
+.grid-equipos{
+    display: grid;
+    grid-template-columns: repeat(2, 550px);
+
+}
+
+label.grid-col-equipos {
+    display: grid;
+    grid-template-columns: repeat(2, 250px);
+}
+
+ul.opventa {
+    list-style-type: none;
+    padding-right: 12px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    grid-column: 2;
+}
+
+img#PC-Estandar {
+    width: 150px;
+    margin: 12px 12px 0 12px;
+    grid-column: 1;
+}
+
+img#PC-Oficina {
+    width: 130px;
+    margin: 12px 12px 0 12px;
+    grid-column: 1;
+}
+
+img#PC-Gamer {
+    width: 200px;
+    margin: 12px 12px 0 12px;
+    grid-column: 1;
+}
+
+img#PC-Diseño {
+    width: 165px;
+    margin: 12px 0 0 12px;
+    grid-column: 1;
+}
+
+#standard,  #gamer  {
+    width: 100vh;
+    height: 4vh;
+}
+
+#oficina,#multimedia {
+    width: 100vh;
+    height: 4vh;
+}
+
+                                    /* SECCION: UPGRADES */
+
+.grid-upgrade{
+    display: grid;
+    grid-template-rows: repeat(4, 105px);
+    grid-template-columns: auto 100vh 100vh;
+    width: 250px;
+    border: none;
+    row-gap: 8px;
+    margin-left: 12px;
+}
+
+#btn-micro, #btn-ram, #btn-storage, #btn-video {
+    grid-column: 1;
+    border: none;
+    border-radius: 24px;
+    width: 230px;
+    font-weight: bold;
+}
+
+#btn-micro:hover, #btn-ram:hover, #btn-storage:hover, #btn-video:hover {
+    background-color: var(--bgcolsqua);
+    cursor: pointer;
+    border: 3px solid aqua;
+}
+
+#flex-micros, #flex-ram, #flex-storage, #flex-video {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 36px; /* Reemplazar esto por algo que centre las cosas */
+}
+
+#micros, #ram, #storage, #video {
+    padding-left: 36px;
+    grid-column: 2 / 3;
+    grid-row: 1 / 4;
+}
+
+.Ryzen3, .Ryzen5, .Ryzen7, .Ryzen9 {
+    width: 205px;
+    height: 205px;
+    border-radius: 24px;
+    border: 1px solid rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 12px;
+    background-color: var(--bgcolsqua);
+    color: black;
+}
+
+#Ryzen3, #Ryzen5, #Ryzen7, #Ryzen9 {
+    padding-bottom: 12px;
+}
+
+.Ryzen3 img, .Ryzen5 img, .Ryzen7 img, .Ryzen9 img {
+    padding: 12px 0 12px 0;
+    width: 100px;
+    height: 100px;
+}
+
+.Ryzen3:hover, .Ryzen5:hover, .Ryzen7:hover, .Ryzen9:hover {
+    border: 3px solid aqua;
+}
+
+.RAM16, .RAM32, .RAM64, .RAM128 {
+    width: 205px;
+    height: 205px;
+    border-radius: 24px;
+    border: 1px solid rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 12px;
+    background-color: var(--bgcolsqua);
+    color: black;
+}
+
+.RAM16 img, .RAM32 img, .RAM64 img, .RAM128 img{
+    padding: 12px 0 12px 0;
+    width: 100px;
+    height: 100px;
+}
+
+.RAM16:hover, .RAM32:hover, .RAM64:hover, .RAM128:hover {
+    border: 3px solid aqua
+}
+
+.hdd128, .hhd256, .hhd512, .hhd1t {
+    width: 205px;
+    height: 205px;
+    border-radius: 24px;
+    border: 1px solid rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 12px;
+    background-color: var(--bgcolsqua);
+    color: black;
+}
+
+.hdd128 img, .hhd256 img, .hhd512 img, .hhd1t img{
+    padding: 12px 0 12px 0;
+    width: 100px;
+    height: 100px;
+}
+
+.hdd128:hover, .hhd256:hover, .hhd512:hover, .hhd1t:hover {
+    border: 3px solid aqua;
+}
+
+.NVidia_xx1, .NVidia_xx2, .NVidia_xx3, .NVidia_xx4 {
+    width: 205px;
+    height: 205px;
+    border-radius: 24px;
+    border: 1px solid rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 12px;
+    background-color: var(--bgcolsqua);
+    color: black;
+}
+
+.NVidia_xx1 img, .NVidia_xx2 img, .NVidia_xx3 img, .NVidia_xx4 img{
+    padding: 12px 0 12px 0;
+    width: 100px;
+    height: 100px;
+}
+
+.NVidia_xx1:hover, .NVidia_xx2:hover, .NVidia_xx3:hover, .NVidia_xx4:hover {
+    border: 3px solid aqua;
+}
+
+                                    /* SECCION: ACCESORIOS */
+
+.grid-accesorios{
+    display: grid;
+    grid-template-rows: auto auto;
+    width: 250px;
+    border: none;
+    row-gap: 8px;
+    margin-left: 56px; /* Reemplazar esto por algo que centre las cosas */
+}
+
+.flex-one, .flex-two {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    padding-left: 40px;
+} 
+
+.Tecladogamer, .Microfono, .Auriculares, .Mouse {
+    grid-row: 1;
+    width: 250px;
+    height: 250px;
+    border-radius: 24px;
+    border: 1px solid rgb(255, 255, 255);
+    text-align: center;
+    margin-bottom: 12px;
+    background-color: var(--bgcolsqua);
+    color: black;
+}
+
+.Monitor, .Gabinete, .Soporte, .Cable {
+    grid-row: 2;
+    width: 250px;
+    height: 250px;
+    border-radius: 24px;
+    border: 1px solid rgb(255, 255, 255);
+    text-align: center;
+    background-color: var(--bgcolsqua);
+    color: black;
+}
+
+.Tecladogamer:hover, .Microfono:hover, .Auriculares:hover, .Mouse:hover, .Monitor:hover, .Gabinete:hover, .Soporte:hover, .Cable:hover {
+    border: 3px solid aqua;
+}
+
+#Tecladogamer, #Microfono, #Auriculares, #Mouse, #Monitor, #Gabinete, #Soporte, #Cable {
+    width: 3vh;
+    margin-bottom: 12px;
+} 
+
+.Tecladogamer img, .Auriculares img, .Mouse img, .Monitor img, .Gabinete img, .Soporte img, .Cable img {
+    padding: 24px 0 24px 0;
+    width: 100px;
+    height: 100px;
+}
+
+.Microfono img {
+    padding: 24px 0 24px 0;
+    width: 90px;
+    height: 100px;
+}
+
+                                    /* FORMULARIO CONTACTO */
+
+.formulario_contacto {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    font-size: var(--Lifuen);
+    margin-left: 50px;
+    margin-top: 24px;
+    width: 500px;
+}
+
+#consulta {
+    font-size: var(--tamfuen);
+    margin-top: 10px;
+    padding-left: 5px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+}
+
+.cons {
+    margin-bottom: 10px;
+    width: 550px;
+    margin-top: 8px;
+}
+
+textarea {
+    background-color: var(--bgcolsqua);
+    font-size: var(--tamfuen);
+    padding: 16px 0 0 0;   
+    text-align: left;
+    border: none;
+    width: 500px;
+    height: 150px;
+    border: 1px solid black;
+    font-size: var(--tamfuen);
+    margin-top: 25px;
+    margin-left: 15px;
+    padding-left: 5px;
+    border-radius: 12px;
+}
+
+#mensaje {
+    margin-top: 16px;
+}
+
+#horario, #contacto, #tipoconsulta {
+    columns: 1;
+    margin-top: 8px;
+}
+
+.detalle {
+    background-color: var(--bgcolsqua);
+    margin-left: 64px;
+    height: 500px;
+    border-radius: 24px;
+    color: black;
+    padding-top: 8px;
+    border: 3px solid #F0ECE2;
+}
+
+#detalle {
+    display: grid;
+    grid-template-columns: 500px;
+    width: 500px;
+    height: 10px;
+    columns: 2;
+    padding-bottom: 4px;
+}
+
+#compra {
+    text-align: center;
+    font-weight: bold;
+}
+
+#error, #exito {
+    text-align: center;
+    width: 510px;
+    height: 44px;
+    line-height: 40px;
+    margin-top: 8px;
+    border-radius: 12px;
+}
+
+#error {
+    background-color: #F66060;
+    display: none;
+}
+
+#exito {
+    background-color: #119200;
+    display: none;
+}
+
+                                    /* BOTONES */
+
+.btns {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16px 0 16px 0;
+    font-size: var(--tamfuen);
+    border: none;
+    background-color:rgb(100, 149, 237);
+    border-radius: 12px;
+    color: white;
+    width: 150px;
+    height: 50px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    font-weight: bold;
+    background-color: rgb(146, 175, 230)
+}
+
+#botonborrar, #botonenviar {
+    margin: 0 16px 16px 0;
+}
+
+/* COLORES */
+
+body {
+    color:#F0ECE2 ;
+    background-color: #1B262C;
+}
+
+header {
+    color:#1B262C ;
+    background-color: #0F4C75;
+    border-bottom: 2px solid white;
+}
+
+h2 {
+    background-color:#0F4C75 ;
+    color: #F0ECE2;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+                                                                        /* RESPONSIVE */
+
+                                    /* CARROUSELL */
+
+@media screen and (max-width: 800px) {
+    .textosobrefoto{
+    font-size: 2rem;
+    }
+}
+@media screen and (max-width: 549px) {
+    .carousel__botonera{
+    top: 17.5rem;
+    }
+.carousel::before, .carousel::after {
+    font-size: 2rem;
+    margin-top: 25%;
+    }
+}
+@media screen and (max-width: 450px) {
+    .textosobrefoto{
+    font-size: 1rem;
+    }
+}
+@media screen and (max-width: 400px) {
+    .carousel__botonera{
+    top: 15rem;
+    }
+}
+@media screen and (max-width: 350px) {
+    .carousel__botonera{
+    top: 12.5rem;
+    }
+}
+
+@media (hover: hover) { 
+    
+    .carousel__visor {
+    animation-name: desplazar, enfocar;
+    animation-timing-function: ease-in-out;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    }
+
+.carousel__diapo:last-child .carousel__visor {
+    animation-name: recomenzar, enfocar;
+    animation-timing-function: ease-in-out;
+    animation-duration: 3s;
+    }
+}
+
+                                    /* NOSOTROS */
+
+@media screen and (max-width: 500px) {
+    .nosotros {
+        flex-direction: column;
+    }
+    .ventananosotros {
+        border-radius: 0;
+        box-shadow: none;
+    }
+    .fotonosotros{
+        border-radius: 0;
+    }
+}
