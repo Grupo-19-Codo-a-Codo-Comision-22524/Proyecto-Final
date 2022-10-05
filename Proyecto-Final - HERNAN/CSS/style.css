@@ -61,7 +61,7 @@ input {
                                     /* HEADER, NAV Y FOOTER*/
 
 header {
-        width: 100%;
+    width: 100%;
     position: fixed;
     font-size: var(--tamfuen);
     padding: 0;
@@ -70,12 +70,14 @@ header {
     color: white;
     display: flex;
     justify-content: center;
+    z-index: 10;
 }
 
 .logoheader{
     width: 8%;
     height: 100%;
 }
+
 
 nav a {
     color: white;
@@ -149,6 +151,88 @@ footer a:hover {
     font-size: 12px;
 }
 
+.iframe {
+    display: grid;
+    grid-template-columns: repeat (3, 350px);
+    padding-bottom: 1rem;
+}
+
+#gmap-jardin {
+    grid-column: 1;
+    margin-left: 28px;
+}
+
+#gmap-caballito {
+    grid-column: 2;
+}
+
+#gmap-barracas {
+    grid-column: 3;
+}
+
+                                    /* HAMBURGUER MENU */
+
+#menu, #menu-check{
+    display: none;
+    color: white;
+    font-weight: bold;
+    margin-right: 24px;
+}
+
+@media screen and (max-width: 700px){
+    #menu-check:not(:checked) ~ nav{
+        display: none;
+    }
+    #menu-check:checked ~ nav{
+        display: flex;
+    }
+
+    #menu {
+        display: block;
+        position: absolute;
+        right: 0.5rem;
+        top: 0.5rem;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.3rem;
+        font-weight: bold;
+        border-radius: 15%;
+        z-index: 9;
+    }
+
+    #menu-cerrar {
+        display: none;
+    }
+    
+    #menu-check:checked ~ label #menu-abrir {
+        display: none;
+        margin-right: 14px;
+    }
+
+    #menu-check:checked ~ label #menu-cerrar {  
+        display: block;
+        font-size: 16px;
+        color: white;
+        font-weight: bold;
+        margin-left: 18px;
+    }
+
+    .header-navbar{
+        position:absolute;
+        top: 0;
+        right: 0;
+        height: 95vh;
+        width: 25%;
+        background-color: #3282B8;
+        padding-top: 0.5rem;
+        padding-right: 1.5rem;
+        flex-direction: column;
+        justify-content:space-around;
+        align-content: right;
+        border: 3px solid #f9fbfc;
+        border-radius: 15px;
+    }
+}
+
                                     /* TEXTOS */
 
 h2 { 
@@ -193,6 +277,7 @@ p {
 * {
     -ms-overflow-style: none;
 }
+
 li, ul {
     list-style: none;
     margin: 0;
@@ -230,7 +315,8 @@ li, ul {
     top: 50%;
     left: 50%;
 }
-.carousel__visor{
+
+.carousel__visor {
     position: absolute;
     top: 0;
     left: 0;
@@ -238,12 +324,13 @@ li, ul {
     height: 100%;
     scroll-snap-align: center; /*la foto se centra en la ventana al hacer scroll, no queda descentrada aun cuando sea mas chica que el contenedor*/
 }
-.textosobrefoto{
+
+.textosobrefoto {
     position: absolute;
     top: 30%;
     left: 25%;
-    width: 50vw;
-    height: 20vh;
+    width: 55vw;
+    height: 25vh;
     z-index: 1;
     color: #BBE1FA;
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -251,48 +338,86 @@ li, ul {
     text-align: center;
     transform: rotate(-15deg);
 }
-@media (hover: hover) { 
-    .carousel__visor{
-    animation-name: desplazar, enfocar;
-    animation-timing-function: ease-in-out;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    }
 
-.carousel__diapo:last-child .carousel__visor {
-    animation-name: recomenzar, enfocar;
-    animation-timing-function: ease-in-out;
-    animation-duration: 3s;
+/* Animacion para transicion a la siguiente foto de forma mas gradual, "empuja el borde izq" */
+@keyframes desplazar {
+    75% {
+    left: 0;
+    }
+    95% {
+    left: 100%;
+    }
+    98% {
+    left: 100%;
+    }
+    99% {
+    left: 0;
     }
 }
+/* Animacion para volver a la primera foto, hace un scroll total */
+@keyframes recomenzar {
+    75% {
+    left: 0;
+    }
+    95% {
+    left: -300%;
+    }
+    98% {
+    left: -300%;
+    }
+    99% {
+    left: 0;
+    }
+}
+/* Despues de ejecutar las otras animaciones, "recentra" la foto para poder desplazar nuevamente */
+@keyframes enfocar {
+    96% {
+    scroll-snap-align: center;
+    }
+    97% {
+    scroll-snap-align: none;
+    }
+    99% {
+    scroll-snap-align: none;
+    }
+    100% {
+    scroll-snap-align: center;
+    }
+}
+
 .carousel:hover .carousel__visor,.carousel:focus-within .carousel__visor {
     animation-name: none;
 }
+
 .carousel__botonera {
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: 16px;
     left: 0;
     text-align: center;
 }
+
 .carousel__botonera-list,.carousel__botonera-item {
     display: inline-block;
 }
+
 .carousel__botonera-item{
     padding-left: 1rem;
     padding-right: 1rem;
 }
+
 .carousel__botonera-button {
     display: inline-block;
-    width: 1.5rem;
-    height: 1.5rem;
-    background-color: #0F4C75;
+    width: 1rem;
+    height: 1rem;
+    background-color: #BBE1FA;
     background-clip: content-box;
-    border: 0.25rem solid #BBE1FA;
+    border: 0.2rem solid #ffffff;
     border-radius: 50%;
     font-size: 0;
     transition: transform 0.1s;
 }
+
 .carousel::before,.carousel::after,.carousel__anterior,.carousel__posterior {
     position: absolute;
     top: 0;
@@ -301,18 +426,23 @@ li, ul {
     height: 4rem;
     font-size: 2.5rem;
 }
+
 .carousel::before,.carousel__anterior {
     left: -1rem;
 }
+
 .carousel::after,.carousel__posterior {
     right: -1rem;
 }
+
 .carousel::before{
     content: '<';
 }
+
 .carousel::after{
     content: '>';
 }
+
 .carousel::before, .carousel::after {
     z-index: 2;
     background-color: transparent;
@@ -337,6 +467,7 @@ li, ul {
     align-content: center;
     padding: 5rem 0 5rem 0;
 }
+
 .ventananosotros{
     position: relative;
     width: 300px;
@@ -350,42 +481,51 @@ li, ul {
     transition-duration: 0.5s;
     transition-timing-function: ease-out;
 }
+
 .fotonosotros{
     position: absolute;
     width: 100%;
     height: 100%;
     border-radius: 15px;
 }
+
 .textonosotros{
     position: absolute;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 1rem;
     z-index: 1;
-    /* background-color: ; */
     width: 95%;         
 }
+
 #textoCEO{
     position: absolute;
     left: 20px;
     top: 200px;
     color: whitesmoke;
 }
+
 #textoCTO{
     position: absolute;
     left: 20px;
     top: 220px;
-    color:black;
+    font-weight: bold;
+    color: black;
 }
+
 #textoAlianza{
     position: absolute;
     left: 20px;
     top: 200px;
-    color:royalblue;
+    color: black;
+    font-style: italic;
+    font-weight: bold
 }
+
 .firma{
     font-style: italic;
     font-weight: bold;
 }
+
 .ventananosotros:hover {    
     transform: scale(1.5,1.5);
     z-index: 1;
@@ -425,7 +565,7 @@ li, ul {
 
 label.grid-col-equipos {
     display: grid;
-    grid-template-columns: 250px 250px;
+    grid-template-columns: repeat(2, 250px);
 }
 
 ul.opventa {
@@ -666,7 +806,7 @@ img#PC-Diseño {
 
 .formulario_contacto {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(2, auto);
     font-size: var(--Lifuen);
     margin-left: 50px;
     margin-top: 24px;
@@ -811,12 +951,8 @@ h2 {
     border-bottom: 2px solid white;
 }
 
-
-
                                                                         /* RESPONSIVE */
 
-
-                                                                        
                                     /* CARROUSELL */
 
 @media screen and (max-width: 800px) {
@@ -848,49 +984,20 @@ h2 {
     top: 12.5rem;
     }
 }
-/* Animacion para transicion a la siguiente foto de forma mas gradual, "empuja el borde izq" */
-@keyframes desplazar {
-    75% {
-    left: 0;
+
+@media (hover: hover) { 
+    
+    .carousel__visor {
+    animation-name: desplazar, enfocar;
+    animation-timing-function: ease-in-out;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
     }
-    95% {
-    left: 100%;
-    }
-    98% {
-    left: 100%;
-    }
-    99% {
-    left: 0;
-    }
-}
-/* Animacion para volver a la primera foto, hace un scroll total */
-@keyframes recomenzar {
-    75% {
-    left: 0;
-    }
-    95% {
-    left: -300%;
-    }
-    98% {
-    left: -300%;
-    }
-    99% {
-    left: 0;
-    }
-}
-/* Despues de ejecutar las otras animaciones, "recentra" la foto para poder desplazar nuevamente */
-@keyframes enfocar {
-    96% {
-    scroll-snap-align: center;
-    }
-    97% {
-    scroll-snap-align: none;
-    }
-    99% {
-    scroll-snap-align: none;
-    }
-    100% {
-    scroll-snap-align: center;
+
+.carousel__diapo:last-child .carousel__visor {
+    animation-name: recomenzar, enfocar;
+    animation-timing-function: ease-in-out;
+    animation-duration: 3s;
     }
 }
 

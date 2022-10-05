@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arma.Tu.PC</title>
+    <script src="https://kit.fontawesome.com/e15e8c34af.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="./favicon/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="favicon/laptop-regular-24.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,6 +19,13 @@
     
     <header>
         <img src="./img//Screenshot_1.jpg" alt="logo-empresa" class="logoheader">
+
+        <input type="checkbox" name="" id="menu-check">
+        <label id="menu" for="menu-check">
+            <span id="menu-abrir">☰</span>
+            <span id="menu-cerrar">X</span>
+        </label>
+
         <nav class="header-navbar">
             <a href="index.html" class="nav-link">HOME</a>
             <a href="#nosotros" class="nav-link">NOSOTROS</a>
@@ -36,7 +44,7 @@
             <a href="#carousel__diapo4"
                 class="carousel__anterior"></a>
             <img src="img/carrousel1.jpg" alt="foto carousel numero 1" class="fotocarousel">   
-            <h1 class="textosobrefoto">Facilitá la compra de tu próxima computadora!</h1>
+            <h2 class="textosobrefoto">Facilitá la compra de tu próxima computadora!</h2>
             <a href="#carousel__diapo2"
                 class="carousel__posterior"></a>
             </div>
@@ -48,7 +56,7 @@
             <a href="#carousel__diapo1"
             class="carousel__anterior"></a>
             <img src="img/carrousel2.jpg" alt="foto carousel numero 2" class="fotocarousel"> 
-            <h2 class="textosobrefoto">Equipos pensados para cada uso!</h2>  
+            <h2 class="textosobrefoto">Equipos pensados para cada persona y para cada tipo de uso!</h2>  
             <a href="#carousel__diapo3"
             class="carousel__posterior"></a>
         </li>
@@ -59,7 +67,7 @@
             <a href="#carousel__diapo2"
             class="carousel__anterior"></a>
             <img src="img/carrousel3.jpg" alt="foto carousel numero 3" class="fotocarousel">
-            <h2 class="textosobrefoto">En tu hogar, en tu oficina, en tu estudio de diseño o a la hora de jugar!</h2>
+            <h2 class="textosobrefoto">En tu hogar, la oficina, el estudio o a la hora de jugar!</h2>
             <a href="#carousel__diapo4"
             class="carousel__posterior"></a>
         </li>
@@ -70,7 +78,7 @@
             <a href="#carousel__diapo3"
             class="carousel__anterior"></a>
             <img src="img/carrousel4.jpg" alt="foto carousel numero 4" class="fotocarousel"> 
-            <h2 class="textosobrefoto">Los componentes óptimos para cada uso</h2>  
+            <h2 class="textosobrefoto">Componentes óptimos para cada tipo de PC</h2>  
             <a href="#carousel__diapo1"
             class="carousel__posterior"></a>
         </li>
@@ -570,7 +578,7 @@
             <p>Formulario enviado</p>
     </div>
 
-        <p class="disclaimer">Todos los valores expresados en dolares son convertidos de forma automatica a peso Argentino de acuerdo al valor oficial indicado por el BCRA. Los presupuestos tienen una valides de 48hs, pasado ese tiempo el mismo perdera vigencia y se deberan actualizar los montos. En caso de que el pago de la compra se realice en dolares el presupuesto se mantendra sin modificaciones por un plazo de 3 meses </p>
+        <p class="disclaimer">*Todos los valores expresados en dolares son convertidos de forma automatica a peso Argentino de acuerdo al valor oficial indicado por el BCRA. Los presupuestos tienen una valides de 48hs, pasado ese tiempo el mismo perdera vigencia y se deberan actualizar los montos. En caso de que el pago de la compra se realice en dolares el presupuesto se mantendra sin modificaciones por un plazo de 3 meses </p>
     </section>
 
             <div class="btns">
@@ -593,15 +601,43 @@
         <nav class="footer-navbar">
             <a href="index.html" class="nav-link">| Aviso Legal |</a>
             <a href="#nosotros" class="nav-link">| Politicas de privacidad |</a>
-            <a href="#productos" class="nav-link">| Uso de cookies |</a>
-            <a href="index.html" class="nav-link">| Instagram |</a>
-            <a href="#nosotros" class="nav-link">| Facebook |</a>
-            <a href="#productos" class="nav-link">| Twitter |</a>
+            <a href="#productos" class="nav-link">| Uso de cookies |</a> 
+
+            <a class="redsoc" href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter"
+                aria-hidden="true"></i></a>
+            <a class="redsoc" href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"
+                aria-hidden="true"></i></a>
+            <a class="redsoc" href="https://ar.pinterest.com/" target="_blank"><i class="fa fa-pinterest"
+                aria-hidden="true"></i></a>
+            <a class="redsoc" href="https://www.instagram.com/?hl=es" target="_blank"><i class="fa fa-instagram"
+                aria-hidden="true"></i></a>
+            <a class="redsoc" href="https://www.linkedin.com/" target="_blank"><i
+                class="fa fa-linkedin" aria-hidden="true"></i></a></a>
         </nav>
+
     </footer>
 
-<script src="./JS/main.js"></script>
-<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
-<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13136.409164946592!2d-58.3751776!3d-34.6015748!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x66ea6e648f46a49a!2zR2FsZXLDrWEgSmFyZMOtbg!5e0!3m2!1ses!2sar!4v1664651634761!5m2!1ses!2sar" width="400" height="300" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <section class = "iframe">
+        <p id="gmap-jardin">Visitanos en GALERIA JARDIN Local 7 </p>
+        <p id="gmap-caballito">Visitanos en nuestro local de Caballito </p>
+        <p id="gmap-barracas">Visitanos en nuestro local de Barracas </p>
+
+        <iframe id="gmap-jardin" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13136.409164946592!2d-58.3751776!3d-34.6015748!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x66ea6e648f46a49a!2zR2FsZXLDrWEgSmFyZMOtbg!5e0!3m2!1ses!2sar!4v1664651634761!5m2!1ses!2sar" 
+        width="300" height="150" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">  </iframe>
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5522.7198392194105!2d-58.43806736406576!3d-34.60848877775786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca6905e10ca1%3A0xf23efa716be146c2!2sEduardo%20Acevedo%2C%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1664926330181!5m2!1ses-419!2sar" 
+        width="300" height="150" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.2857424533045!2d-58.370492785374275!3d-34.647485967321074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a334ac667f75b3%3A0x81299e5a458f7123!2sAv.%20Gral.%20Tom%C3%A1s%20de%20Iriarte%201300%2C%20C1291ABB%20CABA!5e0!3m2!1ses-419!2sar!4v1664926361208!5m2!1ses-419!2sar" 
+        width="300" height="150" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </section>
+
+        <script src="./JS/main.js"></script>
+        <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+
+
+
 </body>
 </html>
