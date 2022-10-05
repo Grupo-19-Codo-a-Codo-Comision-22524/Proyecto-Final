@@ -2,16 +2,13 @@
 
 ***PENDIENTES***
 
+***INICIADOS***
+
+- Sistema de envio de mails del formulario (al menos que de la impresion de que se envio algo, indistinto que realmente se envie o no)
 - Responsive con 3 puntos de corte para 3 tamaños de dispositivos distintos.
 - Redactar AVISO LEGAL
 - Redactar POLITICAS DE PRIVACIDAD
 - Redacar USO DE COOKIES
-- Actualizar los costos de los productos a dolares
-
-***INICIADOS***
-
-- Animación
-- Opcional: el formulario podrá enviar un email utilizando algún servicio externodestinado para ello.
 
 ***COMPLETADOS***
 
@@ -25,16 +22,18 @@
 - Funcion que devuelta un numero aleatorio que se imprima en la pagina dentro de la parte del formulario
 - Contener un formulario de contacto con validación realizada mediante Javascript
 - Consumir una API Rest desde JavaScript (Tenemos que definir que API consumir y empezar a laburar esto por que tenemos que leer la docu de la API)
+- Animación
+- Opcional: el formulario podrá enviar un email utilizando algún servicio externodestinado para ello.
+- Menú hamburguer
+- Actualizar los costos de los productos a dolares
 
 ***OPCIONALES***
 
 ***QUIEN ESTA HACIENDO QUE:***
 
-- Daniel: Animación
-- Osvalo: Iframe, íconos de FontAwesome / Flaticon
-- Hernan: API y validaciones del formulario
+- Daniel: Responsive con 3 puntos de corte para 3 tamaños de dispositivos distintos.
+- Osvalo: Redactar AVISO LEGAL, POLITICAS DE PRIVACIDAD, USO DE COOKIES
+- Hernan: Sistema de envio de mails del formulario
 
 ***IDEAS PARA AGREGAR:***
 
-- Sistema de envio de mails del formulario (al menos que de la imprecion de que se envio algo, indistinto que realmente se envie o no)
-- Menú hamburguer
