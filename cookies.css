@@ -1,0 +1,41 @@
+
+
+
+div.cookies-texto{
+    
+        h3{
+            color: white;}
+        h4{color: white;}
+        
+        
+        }
+
+body{
+    background-image: url(img/fotopc.jpg);
+    background-size: cover;
+    color: white;
+    margin: 100;
+    font-family: "roboto; sans-serif";
+    
+}
+    
+
+.legales{
+    color: white;
+    text-align: center;
+
+}
+.cookies{
+    color: white;
+    text-align: center;
+}
+    
+.privacidad{
+    color: white;
+    text-align: center;
+
+}
+
+
+
+

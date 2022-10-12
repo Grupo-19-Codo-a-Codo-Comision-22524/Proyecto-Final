@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arma.Tu.PC</title>
+    <script src="https://kit.fontawesome.com/e15e8c34af.js" crossorigin="anonymous"></script>
+    <!-- <link rel="shortcut icon" href="img/Screenshotico_1.ico" type="image/x-icon"> -->
+    <link rel="shortcut icon" href="img/laptop-regular-24.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/normalize.css">
+    
+    
+</head>
+<body>
+    
+
+    
+    
+    
+    <header>
+        <img src="./img/Screenshot_1.jpg" alt="logo-empresa" class="logoheader">
+
+        <input type="checkbox" name="" id="menu-check">
+        <label id="menu" for="menu-check">
+            <span id="menu-abrir">☰</span>
+            <span id="menu-cerrar">X</span>
+        </label>
+
+        <nav class="header-navbar">
+            <a href="index.html" class="nav-link">HOME</a>
+            <a href="#nosotros" class="nav-link">NOSOTROS</a>
+            <a href="#productos" class="nav-link">PRODUCTOS</a>
+            <a href="#contacto" class="nav-link">CONTACTO</a>
+        </nav>
+    </header>
+
+    <section class="carousel" aria-label="Galleria">
+    
+        <ul class="carousel__viewport">
+            <li id="carousel__diapo1"
+                tabindex="0"
+                class="carousel__diapo">
+                <div class="carousel__visor">
+                    <a href="#carousel__diapo4"
+                    class="carousel__anterior"></a>
+                    <img src="img/carrousel1.jpg" alt="foto carousel numero 1" class="fotocarousel">   
+                    <h2 class="textosobrefoto">Facilitá la compra de tu próxima computadora!</h2>
+                    <a href="#carousel__diapo2"
+                    class="carousel__posterior"></a>
+                </div>
+            </li>
+            <li id="carousel__diapo2"
+                tabindex="0"
+                class="carousel__diapo">
+                <div class="carousel__visor"></div>
+                <a href="#carousel__diapo1"
+                class="carousel__anterior"></a>
+                <img src="img/carrousel2.jpg" alt="foto carousel numero 2" class="fotocarousel"> 
+                <h2 class="textosobrefoto">Equipos pensados para cada persona y para cada tipo de uso!</h2>  
+                <a href="#carousel__diapo3"
+                class="carousel__posterior"></a>
+            </li>
+            <li id="carousel__diapo3"
+                tabindex="0"
+                class="carousel__diapo">
+                <div class="carousel__visor"></div>
+                <a href="#carousel__diapo2"
+                class="carousel__anterior"></a>
+                <img src="img/carrousel3.jpg" alt="foto carousel numero 3" class="fotocarousel">
+                <h2 class="textosobrefoto">En tu hogar, la oficina, el estudio o a la hora de jugar!</h2>
+                <a href="#carousel__diapo4"
+                class="carousel__posterior"></a>
+            </li>
+            <li id="carousel__diapo4"
+                tabindex="0"
+                class="carousel__diapo">
+                <div class="carousel__visor"></div>
+                <a href="#carousel__diapo3"
+                class="carousel__anterior"></a>
+                <img src="img/carrousel4.jpg" alt="foto carousel numero 4" class="fotocarousel"> 
+                <h2 class="textosobrefoto">Componentes óptimos para cada tipo de PC</h2>  
+                <a href="#carousel__diapo1"
+                class="carousel__posterior"></a>
+            </li>
+        </ul>
+        
+        <aside class="carousel__botonera"> <!--uso tag aside, si bien no esta al costado es un elemento asociado al anterior-->
+        <ul class="carousel__botonera-list">
+            <li class="carousel__botonera-item">
+            <a href="#carousel__diapo1"
+                class="carousel__botonera-button"></a>
+            </li>
+            <li class="carousel__botonera-item">
+            <a href="#carousel__diapo2"
+                class="carousel__botonera-button"></a>
+            </li>
+            <li class="carousel__botonera-item">
+            <a href="#carousel__diapo3"
+                class="carousel__botonera-button"></a>
+            </li>
+            <li class="carousel__botonera-item">
+            <a href="#carousel__diapo4"
+                class="carousel__botonera-button"></a>
+            </li>
+        </ul>
+        </aside>
+
+    </section>
+
+    <section class="nosotros" id="nosotros">
+        
+
+        <div class="ventananosotros" id="ventana1">
+            <img class="fotonosotros" src="img/fundadorCEO.jpg" alt="Foto Fundador CEO">
+            <div class="textonosotros">
+                <p id="textoCEO">Desde el inicio nuestro objetivo es simplificar el proceso de adquisición de tecnología.<br><span class="firma">~Gerardo Stratta, CEO~</span></p>
+            </div>
+        </div> 
+
+        <div class="ventananosotros" id="ventana2">
+            <img class="fotonosotros" src="img/CTO.jpg" alt="Foto Jefe Area Tecnica">
+            <div class="textonosotros">
+                <p id="textoCTO">Seleccionamos los mejores componentes para cada usuario.<br><span class="firma">~Federico Schmidt, CTO~</span></p>
+            </div>
+        </div>
+
+        <div class="ventananosotros" id="ventana3">
+            <img class="fotonosotros" src="img/teamwork.jpg" alt="foto equipo">
+            <div class="textonosotros">
+                <p id="textoAlianza">Contamos con mas de 20 alianzas estratégicas con fabricantes de componentes, asegurando disponibilidad y calidad.</p>
+            </div>
+        </div>
+
+    </section>
+    
+    <main id="productos">
+
+            <h2>Elegí el tipo de PC que estas buscando</h2>
+
+    <section class="grid-equipos">
+
+    <section class="opcion-equipo">
+        <article class="equipos izquierda">
+
+            <label class="grid-col-equipos" for="standard">
+                <img src="./img/standar.webp" alt="foto pc diseño estandar" id="PC-Estandar">
+            <ul class="opventa">
+
+                <h4>ESTANDAR</h4>
+                <h5>Componentes</h5>
+                <li>Microprocesador: AMD 5</li>
+                <li>RAM: 4 GB DDR3</li>
+                <li>HDD: 120 GB</li>
+                <li>Video: integrada</li>
+                <li>* Costo: US$ 124,01</li>
+            </ul>
+                <input type="radio" name="opciondebase" id="standard" value="standard">
+            </label>
+            
+        </article>
+    </section>
+    
+            
+    <section class="opcion-equipo">
+        <article class="equipos derecha">
+
+            <label class="grid-col-equipos" for="oficina">
+                <img src="./img//Oficina.webp" alt="foto pc oficina" id="PC-Oficina">
+                
+            <ul class="opventa">
+
+                <h4>OFICINA</h4>
+                <h5>Componentes</h5>
+                <li>Microprocesador: Intel Core i5</li>
+                <li>RAM: 8GB DDR3</li>
+                <li>HDD: 1 TB</li>
+                <li>Video: integrada</li>
+                <li>* Costo: US$ 296,78</li>
+            </ul>
+                <input type="radio" name="opciondebase" id="oficina" value="oficina" >
+            </label> 
+            
+
+        </article>
+    </section>
+
+    <section class="opcion-equipo">
+        <article class="equipos izquierda">
+
+            <label class="grid-col-equipos" for="gamer">
+                <img src="./img/gamer.webp" alt="foto pc diseño gamer" id="PC-Gamer">
+            <ul class="opventa">
+                
+                <h4>GAMER</h4>
+                <h5>Componentes</h5>
+                <li>Microprocesador: AMD Ryzen 7</li>
+                <li>RAM: 32GB DDR4</li>
+                <li>SSD: 960 GB</li>
+                <li>Video: AMD RADEON VEGA</li>
+                <li>* Costo: US$ 666,37</li>
+                
+            </ul>
+                <input type="radio" name="opciondebase" id="gamer" value="gamer" >
+            </label> 
+            
+
+        </article>
+    </section>
+
+    <section class="opcion-equipo">
+        <article class="equipos derecha">
+
+            <label class="grid-col-equipos" for="multimedia">
+                <img src="./img/D_NQ_NP_710372-MLA31113810925_062019-O.webp" alt="foto pc diseño multimedia" id="PC-Diseño"> 
+            <ul class="opventa">
+
+                <h4>DISEÑO</h4>
+                <h5>Componentes</h5>
+                <li>Microprocesador: Intel Core i7</li>
+                <li>RAM: 16GB 2666HZ DDR4</li>
+                <li>HDD: 2 TB</li>
+                <li>Video: NVIDIA QUADRO P1000 4GB GDDR5 </li>
+                <li>* Costo: US$ 905,51</li>
+        
+            </ul>
+                <input type="radio" name="opciondebase" id="multimedia" value="multimedia" >
+            </label> 
+            
+
+        </article>
+    </section>
+
+    </section>
+
+            <div class="btns">
+                    <button class="btn" type="button" id="btn-computadora">Siguiente</button>
+            </div>
+
+    <section id="upgrade">
+
+        <a name = "upgrade"> </a>
+        <h2>Hace una mejora del equipo que elegiste!</h2>
+
+        <section class="grid-upgrade">
+
+                    <button id="btn-micro">MICROPROCESADORES</button> 
+                    
+        <section id="micros">
+        <section id="flex-micros">
+
+                    <div class="Ryzen3">
+                        <label for="Ryzen3">
+                        <img src="./img//Reyzen3.jpg" alt="..."> <br>
+                        <hr>
+                        <p>AMD Ryzen 3 3500ghz (+US$ 85,84)</p>  
+                        </label>
+                        <input type="radio" id="Ryzen3" name="micro" value="Ryzen3">
+                    </div>
+
+                    <div class="Ryzen5">
+                        <label for="Ryzen5">
+                        <img src="./img//Reyzen5.webp" alt="..."> <br>
+                        <hr>
+                        <p>AMD Ryzen 5 2400ghz (+US$ 149,60)</p>  
+                        </label>
+                        <input type="radio" id="Ryzen5" name="micro" value="Ryzen5">
+                        
+                    </div>
+
+                    <div class="Ryzen7">
+                        <label for="Ryzen7">
+                        <img src="./img//Reyzen7.webp" alt="..."> <br>
+                        <hr>
+                        <p>AMD Ryzen 7 3700ghz (+US$ 243,70)</p>
+                        </label>
+                        <input type="radio" id="Ryzen7" name="micro" value="Ryzen7">
+                    </div>  
+
+                    <div class="Ryzen9">
+                        <label for="Ryzen9">
+                        <img src="./img//Reyzen9.webp" alt="..."> <br>
+                        <hr>
+                        <P>AMD Ryzen 9 3900ghz (+US$ 700,78)</P>
+                        </label>
+                        <input type="radio" id="Ryzen9" name="micro" value="Ryzen9">
+                    </div>
+
+        </section>
+    </section>
+
+                    <button id="btn-ram">MEMORIAS RAM</button>
+                
+        <section id="ram">
+        <section id="flex-ram">
+
+                    <div class="RAM16">
+                        <label for="RAM16"> 
+                        <img src="./img//Fury.webp" alt="..."> <br>
+                        <hr>
+                        <p>Fury 16Gb Ddr4 3000Mhz  (+US$ 55,11)</p>
+                        </label>
+                        <input type="radio" id="RAM16" name="ram" value="RAM32">
+                    </div>
+
+                    <div class="RAM32">
+                        <label for="RAM32"> 
+                        <img src="./img//Fury.webp" alt="..."> <br>
+                        <hr>
+                        <p>Fury 32Gb Ddr4 3200Mhz (+US$ 149,21)</p>
+                        </label>
+                        <input type="radio" id="RAM32" name="ram" value="RAM64">
+                    </div>
+
+                    <div class="RAM64">
+                        <label for="RAM64">
+                        <img src="./img//Fury.webp" alt="..."> <br>
+                        <hr>
+                        <p>Fury 64Gb Ddr4 3600Mhz (+US$ 353,61)</p> 
+                        </label>
+                        <input type="radio" id="RAM64" name="ram" value="RAM128">
+                    </div>
+
+                    <div class="RAM128">
+                        <label for="RAM128">
+                        <img src="./img//Fury.webp" alt="..."> <br>
+                        <hr>
+                        <p>Fury 128Gb Ddr5 128Gbz (+US$ 409,21)</p>
+                        </label>
+                        <input type="radio" id="RAM128" name="ram" value="RAM128"> 
+                    </div>
+                    
+        </section>
+        </section>
+
+                    <button id="btn-storage">DISPOSITIVOS DE ALMACENAMIENTO</button>
+
+        <section id="storage">
+        <section id="flex-storage">
+
+                    <div class="hdd128">
+                        <label for="hdd128">
+                        <img src="./img//SSD Kingston.webp" alt="..."> <br>
+                        <hr>
+                        <p>Kingston Ssd 128Gb (+US$ 19,45)</p>
+                        </label>
+                        <input type="radio" id="hdd128" name="hdd" value="hdd128">
+                    </div>
+
+                    <div class="hhd256">
+                        <label for="hhd256">
+                        <img src="./img//SSD Kingston.webp" alt="..."> <br>
+                        <hr>
+                        <p>Kingston Ssd 256Gb (+US$ 30,62)</p>
+                        </label>
+                        <input type="radio" id="hhd256" name="hdd" value="hhd256">
+                    </div>
+                        
+                    <div class="hhd512">
+                        <label for="hhd512">
+                        <img src="./img//SSD Kingston.webp" alt="..."> <br>
+                        <hr>
+                        <p>Kingston Ssd 512Gb (+US$ 34,70)</p>
+                        </label>
+                        <input type="radio" id="hhd512" name="hdd" value="hhd512">
+                    </div>
+
+                    <div class="hhd1t">
+                        <label for="hhd1t">
+                        <img src="./img//SSD Kingston.webp" alt="..."> <br>
+                        <hr>
+                        <p>Kingston Ssd 1tb (+US$ 112,64)</p>
+                        </label>
+                        <input type="radio" id="hhd1t" name="hdd" value="hhd1t">
+                    </div>
+
+        </section>
+        </section>
+
+                    <button id="btn-video">PLACAS DE VIDEO</button>
+                    
+        <section id="video">
+        <section id="flex-video">
+
+                    <div class="NVidia_xx1">
+                        
+                        <label for="NVidia_xx1">
+                        <img src="./img//912-V505-009_400.jpg" alt="..."> <br>
+                        <hr>
+                        <p>Nvidia Xc Geforce RTX 2060 (+US$ 391,94)</p>
+                        </label>
+                        <input type="radio" id="NVidia_xx1" name="video" value="NVidia_xx1">
+                    </div>
+
+                    <div class="NVidia_xx2">
+                        
+                        <label for="NVidia_xx2">
+                        <img src="./img//912-V809-2808_400.jpg" alt="..."> 
+                        <hr>
+                        <p>Nvidia Xc Geforce MSI 2060 (+US$ 352,98)</p>
+                        </label>
+                        <input type="radio" id="NVidia_xx2" name="video" value="NVidia_xx2">
+                    </div>
+
+                    <div class="NVidia_xx3">
+                        <label for="NVidia_xx3">
+                        <img src="./img//GV-N2060D6-12GD_400.jpg" alt="..."> 
+                        <hr>
+                        <p>Nvidia Xc Geforce RTX 1060 (+US$ 295,86)</p>
+                        </label>
+                        <input type="radio" id="NVidia_xx3" name="video" value="NVidia_xx3">
+                    </div>
+
+                    <div class="NVidia_xx4">
+                        <label for="NVidia_xx4">
+                        <img src="./img//M-NRTX3080TI_400.webp" alt="..."> 
+                        <hr>
+                        <p>Nvidia Xc GeForce GTX 3060 (+US$ 480,31)</p>
+                        </label>
+                        <input type="radio" id="NVidia_xx4" name="video" value="NVidia_xx4">
+                    </div>
+
+        </section>
+        </section>
+
+        </section>
+
+    </section>
+
+            <div class="btns">
+        <button class="btn" type="button" id="btn-upgrade">Siguiente</button>
+            </div>
+
+    <h2>Podes agregar estos accesorios</h2>
+    <a name = "accesorios"> </a>
+
+    <section class="grid-accesorios">
+            <section class="flex-one">
+
+                <div class="Tecladogamer">
+                    <label for="Tecladogamer">
+                    <img src="./img//Teclado gamer Logitech Serie G G413.webp" alt="..."> <hr> <br>
+                    <p> Teclado gamer Logitech Serie G G413 (+US$ 59,05) </p>
+                        <input type="checkbox" name="Tecladogamer" id="Tecladogamer" value="Tecladogamer">
+                    </label>
+                </div>
+
+                <div class="Microfono">
+                    <label for="Microfono">
+                    <img src="./img//Micrófono HyperX QuadCast.webp" alt="..."> <hr> <br>
+                    <p> Micrófono HyperX QuadCast (+US$ 93.37)</p>
+                        <input type="checkbox" name="Microfono" id="Microfono" value="Microfono">
+                    </label>
+                </div>
+
+                <div class="Auriculares">
+                    <label for="Auriculares">
+                    <img src="./img//Auriculares gamer Logitech Pro X negro.webp" alt="..."> <hr> <br>
+                    <p>Auriculares gamer Logitech Pro X negro (+US$ 108.26)</p> 
+                        <input type="checkbox" name="Auriculares" id="Auriculares" value="Auriculares">
+                    </label>
+                </div>
+
+                <div class="Mouse">
+                    <label for="Mouse">
+                    <img src="./img//Accesorio Mouse Vsg Aquila Skin.webp" alt="..."> <hr> <br>
+                    <p>Mouse Vsg Aquila Skin (+US$ 3,17)</p>
+                        <input type="checkbox" name="Mouse" id="Mouse" value="Mouse">
+                    </label>
+                </div>
+
+            </section>
+            
+            <section class="flex-two">
+
+                <div class="Monitor">
+                    <label for="Monitor">
+                    <img src="./img//Smart Monitor M5 27 FHD con Smart TV.webp" alt="..."> <hr> <br>
+                    <p>Smart Monitor M5 27" FHD con Smart TV (+US$ 346.45)</p> 
+                        <input type="checkbox" name="Monitor" id="Monitor" value="Monitor">
+                    </label>
+                </div>
+
+                <div class="Gabinete">
+                    <label for="Gabinete">
+                    <img src="./img//Gabinete Pc Gamer X-treme Warrior.webp" alt="..."> <hr> <br>
+                    <p>Gabinete Pc Gamer X-treme Warrior (+US$ 181.10)</p>
+                        <input type="checkbox" name="accesorio" id="Gabinete" value="Gabinete">
+                    </label>
+                </div>
+
+                <div class="Soporte">
+                    <label for="Soporte">
+                    <img src="./img//Soporte Cooler Indoor.webp" alt="..."> <hr> <br>
+                        <p>Soporte Cooler Indoor 4 (+US$ 11.77)</p>
+                        <input type="checkbox" name="accesorio" id="Soporte" value="Soporte">
+                    </label>
+                </div>
+
+                <div class="Cable">
+                    <label for="Cable"> 
+                    <img src="./img//Cable Modding Motherboard 24 Malla Sync.webp" alt="..."> <hr> <br>
+                    <p>Cable Modding Motherboard 24 Malla Sync (+US$ 59.96) </p>
+                        <input type="checkbox" name="accesorio" id="Cable" value="">
+                    </label>
+                </div>
+
+            </section>
+    </section>
+
+            <div class="btns">
+            <button class="btn" type="button" id="btn-presupuestar">PRESUPUESTAR</button>
+            </div>
+
+    </main>
+
+    <a name = "contacto"> </a>
+    <h2>Dejanos tus datos de contacto y nos comunicaremos a la brevedad.</h2>
+
+    <article class="formulario_contacto">
+
+    <form class="formulario" action="" method="" id="formulario"> <!--Cambiar id por formulario idem class-->
+
+        <h3>Presupuesto N°: <spam id="presupuesto_nro"></spam></h3> 
+        <h3>* Monto total en AR$: <spam id="your-upgrade"></spam>
+        <h3>Valor dolar oficial: US$ <spam id="detalleDolar"></spam> (impuestos ya calculados)</h3>
+
+            <label for ="nombre"> Nombre:</label>
+            <input  type="text" name="nombre" placeholder=" Harry" id="nombre">
+            <label for="apellido">Apellido:</label>
+            <input type="text" name="apellido" placeholder=" Potter" id="apellido">
+            <label for ="tel">Teléfono celular:</label>
+            <input type="number" name="tel" placeholder=" Incluir código de área" id="tel">
+            <label for = "email">Email:</label>
+            <input type="email" name="email" placeholder=" HarryPotter@howard.edu.uk" id="email">
+
+    <div class="cons">
+    <label for ="tipoconsulta"> Tipo de consulta </label>
+
+    <select name="tipoconsulta" id="tipoconsulta" >
+
+            <option value="">Seleciona la opcion correspondiente</option>
+            <option value="tc1">Arme mi presupuesto y quiero que me contacten</option>
+            <option value="tc2">Necesito asesoramiento</option>
+            <option value="tc3">Tengo una propuesta comercial</option>
+            <option value="tc4">Otros</option>
+    
+    </select>
+            </div>
+
+            <div class="cons">
+                <label for ="medio-contacto"> Medio de consulta </label>
+
+    <select name="medio-contacto" id="medio-contacto" >
+
+            <option value="">Seleciona la opcion correspondiente</option>
+            <option value="Whatsapp" minlength="8" maxlength="15" >Whatsapp</option>
+            <option value="Mail">Mail</option>
+            <option value="Telefono">Telefono</option>
+
+    </select>
+            </div>
+
+            <div class="cons">
+    <label for ="horario" id="horario"> Horario de contacto </label>
+
+    <select name="horario" id="horario" >
+
+            <option value="">Seleciona la opcion correspondiente</option>
+            <option value="Whatsapp">De 09am a 12pm</option>
+            <option value="Instagram">De 12pm a 18pm</option>
+            <option value="Mail">De 18pm a 21pm</option>
+
+    </select>
+            </div>
+
+    <section class="msj">
+
+        <textarea name="mensaje" id="mensaje" maxlength="200" 
+        placeholder="Dejanos tu mensaje"></textarea>
+
+        <div id="error">
+            <p><i class="fas fa-exclamation-triangle"></i> 
+            <b>Error:</b> Por favor complete los campos faltantes del formulario</p>
+    </div>
+    <div id="exito">
+            <p>Formulario enviado</p>
+    </div>
+
+        <p class="disclaimer">*Todos los valores expresados en dolares son convertidos de forma automatica a peso Argentino de acuerdo al valor oficial indicado por el BCRA. Los presupuestos tienen una valides de 48hs, pasado ese tiempo el mismo perdera vigencia y se deberan actualizar los montos. En caso de que el pago de la compra se realice en dolares el presupuesto se mantendra sin modificaciones por un plazo de 3 meses </p>
+    </section>
+
+            <div class="btns">
+
+                <input class="btn" type="reset" value="Borrar" id="botonborrar">
+                <input class="btn" type="submit" value="Enviar"id="botonenviar">
+
+            </div>
+
+    </form>
+
+    <section class="detalle">
+    <div id="detalle"><P Id="compra">DETALLE DE LA COMPRA</P></div>
+    </section>
+
+    </article>
+
+    <footer> 
+        <p> Copyright © 2022 Arma.Tu.PC Todos los derechos reservados </p> 
+        <nav class="footer-navbar">
+            <a href="cookies.html" class="nav-link">|Politica de Cookies|</a>
+            <a href="legales.html" class="nav-link">| Avisos Legales |</a>
+            <a href="privacidad.html" class="nav-link">|Politica de Privacidad |</a> 
+
+            <a class="redsoc" href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter"
+                aria-hidden="true"></i></a>
+            <a class="redsoc" href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"
+                aria-hidden="true"></i></a>
+            <a class="redsoc" href="https://ar.pinterest.com/" target="_blank"><i class="fa fa-pinterest"
+                aria-hidden="true"></i></a>
+            <a class="redsoc" href="https://www.instagram.com/?hl=es" target="_blank"><i class="fa fa-instagram"
+                aria-hidden="true"></i></a>
+            <a class="redsoc" href="https://www.linkedin.com/" target="_blank"><i
+                class="fa fa-linkedin" aria-hidden="true"></i></a></a>
+        </nav>
+
+    </footer>
+    <div id="overbox3">
+        <div id="infobox3">
+            <p>Esta web utiliza cookies para obtener datos estadísticos de la navegación de sus usuarios.
+            <a href="cookies.html"><button>Mas Información</button></a>
+            <a href="https://www.google.com/search"><button>SALIR</button></a>
+            <a onclick="aceptar_cookies();" style="cursor:pointer;"></a></p>
+
+        </div>
+    </div>
+
+
+    <section class = "iframe">
+        <p id="gmap-jardin">Visitanos en GALERIA JARDIN Local 7 </p>
+        <p id="gmap-caballito">Visitanos en nuestro local de Caballito </p>
+        <p id="gmap-barracas">Visitanos en nuestro local de Barracas </p>
+
+        <iframe id="gmap-jardin" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13136.409164946592!2d-58.3751776!3d-34.6015748!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x66ea6e648f46a49a!2zR2FsZXLDrWEgSmFyZMOtbg!5e0!3m2!1ses!2sar!4v1664651634761!5m2!1ses!2sar" 
+        width="300" height="150" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">  </iframe>
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5522.7198392194105!2d-58.43806736406576!3d-34.60848877775786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca6905e10ca1%3A0xf23efa716be146c2!2sEduardo%20Acevedo%2C%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1664926330181!5m2!1ses-419!2sar" 
+        width="300" height="150" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.2857424533045!2d-58.370492785374275!3d-34.647485967321074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a334ac667f75b3%3A0x81299e5a458f7123!2sAv.%20Gral.%20Tom%C3%A1s%20de%20Iriarte%201300%2C%20C1291ABB%20CABA!5e0!3m2!1ses-419!2sar!4v1664926361208!5m2!1ses-419!2sar" 
+        width="300" height="150" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </section>
+
+        <script src="./JS/main.js"></script>
+        <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+
+
+
+
+</body>
+</html>
