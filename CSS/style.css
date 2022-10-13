@@ -1,17 +1,16 @@
-                    /* VARIABLES */
+/* VARIABLES */
 
 :root {
     --tamfuen:14px;
     --bgcolsqua: #fcfcfc 
 }
 
-                    /* GENERAL */
+/* GENERAL */
 
 * {
     font-size: var(--tamfuen);
     padding: 0;
     margin: 0;
-    max-block-size: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -22,7 +21,6 @@ body {
     height: 100vh;
     font-family: 'Montserrat', sans-serif;
     font-family: 'Quicksand', sans-serif;
-    
 }
 
 .container { 
@@ -74,8 +72,8 @@ header {
 }
 
 .logoheader{
-    width: 8%;
-    height: 100%;
+    width: auto;
+    height: 5em;
 }
 
 
@@ -144,12 +142,7 @@ footer a:hover {
     font-style: normal;
 }
 
-.disclaimer {
-    width: 510px;
-    margin-top: 24px;
-    font-style: italic;
-    font-size: 12px;
-}
+
 
 .iframe {
     display: grid;
@@ -168,6 +161,30 @@ footer a:hover {
 
 #gmap-barracas {
     grid-column: 3;
+}
+@media screen and (max-width: 950px) {
+    .iframe {
+        display: grid;
+        grid-template-columns: 350px;
+        grid-row: repeat (3,auto);
+        padding-bottom: 1rem;
+    }
+    
+    #gmap-jardin {
+        grid-column: 1;
+        grid-row: 1;
+        margin-left: 28px;
+    }
+    
+    #gmap-caballito {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    
+    #gmap-barracas {
+        grid-column: 1;
+        grid-row: 2;
+    }
 }
 
                                     /* HAMBURGUER MENU */
@@ -190,10 +207,10 @@ footer a:hover {
     #menu {
         display: block;
         position: absolute;
-        right: 0.5rem;
-        top: 0.5rem;
+        right: 0.2rem;
+        top: 0.05rem;
         font-family: Arial, Helvetica, sans-serif;
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         font-weight: bold;
         border-radius: 15%;
         z-index: 9;
@@ -208,9 +225,14 @@ footer a:hover {
         margin-right: 14px;
     }
 
+    #menu-check:not(:checked) ~ label #menu-abrir {
+        margin-right: 14px;
+        font-size: 2rem;
+    }
+
     #menu-check:checked ~ label #menu-cerrar {  
         display: block;
-        font-size: 16px;
+        font-size: 1rem;
         color: white;
         font-weight: bold;
         margin-left: 18px;
@@ -220,22 +242,28 @@ footer a:hover {
         position:absolute;
         top: 0;
         right: 0;
-        height: 95vh;
+        height: 40vh;
         width: 25%;
-        background-color: #3282B8;
+        background-color: #0F4C75;
         padding-top: 0.5rem;
         padding-right: 1.5rem;
         flex-direction: column;
-        justify-content:space-around;
+        justify-content:space-around ;
         align-content: right;
-        border: 3px solid #f9fbfc;
+        border: 1px solid #f9fbfc;
         border-radius: 15px;
+    }
+}
+@media screen and (max-width: 500px){
+    .header-navbar{
+        height: 60vh;
     }
 }
 
                                     /* TEXTOS */
 
 h2 { 
+    width: 100%;
     margin-top: 15px;
     font-size: 24px;
     text-align: center;
@@ -291,7 +319,8 @@ li, ul {
 .carousel {
     position: relative;
     padding-top: 75%;
-    background-color: #0F4C75;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 .carousel__viewport {
     position: absolute;
@@ -329,14 +358,13 @@ li, ul {
     position: absolute;
     top: 30%;
     left: 25%;
-    width: 55vw;
-    height: 25vh;
+    width: 60vw;
+    border-radius: 15px;
     z-index: 1;
     color: #BBE1FA;
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 3rem;
-    text-align: center;
-    transform: rotate(-15deg);
+    background-color: rgba(0,0,0,0.5);
 }
 
 /* Animacion para transicion a la siguiente foto de forma mas gradual, "empuja el borde izq" */
@@ -455,13 +483,10 @@ li, ul {
 
                                     /* SECCION: NOSOTROS */
 
-                                       /* NOSOTROS */
 
 .nosotros{
     position: relative;
     width: 100%;
-    height: 75%;
-    margin-left: 24px;
     display: flex;
     flex-wrap: wrap;
     background-color: transparent;
@@ -474,11 +499,11 @@ li, ul {
     position: relative;
     width: 300px;
     height: 300px;
-    margin-left: 56px;
     display: inline-block;
     background-color: transparent;
     overflow: hidden;
-    border-radius: 14px;
+    border-radius: 15px;
+    box-shadow: 20px 20px 10px #3282B8;
     transition-property: all;
     transition-duration: 0.5s;
     transition-timing-function: ease-out;
@@ -486,9 +511,9 @@ li, ul {
 
 .fotonosotros{
     position: absolute;
-    width: 65%;
-    height: 65%;
-    border-radius: 14px;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
 }
 
 .textonosotros{
@@ -497,52 +522,37 @@ li, ul {
     font-size: 1rem;
     z-index: 1;
     width: 100%;   
-    right: 24px; 
+    color: white;
 }
 
 #textoCEO{
     position: absolute;
-    left: 20px;
-    top: 160px;
-    width: 187px;
-    height: 187px;
-    padding-top: 14px;
-    font-style: italic;
-    color: whitesmoke;
-    background-color: #0F4C75
+    padding-left: 20px;
+    top: 200px;
+    background-color: rgba(0,0,0,0.5);
 }
 
 #textoCTO{
     position: absolute;
-    left: 20px;
-    top: 160px;
-    width: 187px;
-    height: 187px;
-    padding-top: 14px;
-    font-style: italic;
-    color: whitesmoke;
-    background-color: #0F4C75
+    padding-left: 20px;
+    top: 220px;
+    background-color: rgba(0,0,0,0.5);
 }
 
 #textoAlianza{
     position: absolute;
-    left: 20px;
-    top: 160px;
-    width: 187px;
-    height: 187px;
-    padding-top: 4px;
-    color: whitesmoke;
-    font-style: italic;
-    font-weight: bold;
-    background-color: #0F4C75
+    padding-left: 20px;
+    top: 200px;
+    background-color: rgba(0,0,0,0.5);
 }
 
 .firma{
+    font-style: italic;
     font-weight: bold;
 }
 
 .ventananosotros:hover {    
-    transform: scale(1.5,1.5);
+    transform: scale(1.4,1.4);
     z-index: 1;
     box-shadow: none;
 }
@@ -550,38 +560,33 @@ li, ul {
 
                                     /* SECCION: COMPUTADORAS */
 
+.grid-equipos{
+
+    width: 90vw;
+    margin-left: 5vw;
+    justify-content:space-around;
+    align-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(2, 47.5%); /*550px*/
+    row-gap: 3%;
+
+}     
+
 .equipos {
     display: grid;
-    grid-template-columns: 250px 250px;
-    font-size: var(--tamfuen);
-    margin: 0 40px 1rem 40px;  
-    width: 530px;
-    height: 250px;
-    padding-top: 0;
-    padding-bottom: 35px;
-    border-radius: 12px;
-    border: 1px solid black;
-    background-color: var(--bgcolsqua);
-    color: black;
+    grid-template-columns: 34% 66%; /*250px 250px*/
+    border-radius: 15px;
+    border: 4px solid white;
+    background-color: white;
 }
 
 .equipos:hover {
-    border: 2px solid aqua;
-}
-
-.equipos.izquierda, .equipos.derecha {
-    margin: 12px 0 12px 78px;
-}
-
-.grid-equipos{
-    display: grid;
-    grid-template-columns: repeat(2, 550px);
-
+    border: 4px solid aqua;
 }
 
 label.grid-col-equipos {
+    grid-column: 1 /3;
     display: grid;
-    grid-template-columns: repeat(2, 250px);
 }
 
 ul.opventa {
@@ -590,6 +595,9 @@ ul.opventa {
     margin-top: 20px;
     margin-bottom: 10px;
     grid-column: 2;
+    font-size: var(--tamfuen);
+    color: black;
+    z-index: 2;
 }
 
 img#PC-Estandar {
@@ -605,45 +613,75 @@ img#PC-Oficina {
 }
 
 img#PC-Gamer {
-    width: 200px;
-    margin: 12px 12px 0 12px;
-    grid-column: 1;
-}
-
-img#PC-Diseño {
-    width: 165px;
+    width: 200px; /*200*/
     margin: 12px 0 0 12px;
     grid-column: 1;
 }
 
-#standard,  #gamer  {
-    width: 100vh;
-    height: 4vh;
+img#PC-Diseño {
+    width: 165px; /*165*/
+    margin: 12px 0 0 12px;
+    grid-column: 1;
 }
 
-#oficina,#multimedia {
-    width: 100vh;
+#standard,#gamer,#oficina,#multimedia  {
+    width: 100%;
     height: 4vh;
+    grid-row: 2;
+    grid-column: 1 / 3;
 }
 
+@media screen and (max-width: 900px) {
+    .grid-equipos{
+        width: 90vw;
+        margin-top: 10px;
+        display: grid;
+        grid-template-columns: 100%; 
+        justify-self: center;
+        row-gap: 1%;
+    }
+
+@media screen and (max-width: 375px) {
+    img#PC-Estandar {
+        display: none;
+    }
+    img#PC-Oficina {
+        display: none;
+    }
+    img#PC-Gamer {
+        display: none;
+    }
+    img#PC-Diseño {
+        display: none;
+    }
+    ul.opventa {
+        grid-column: 1 /3;
+        padding-left: 10px;
+    }
+
+}    
+    
+}
                                     /* SECCION: UPGRADES */
 
 .grid-upgrade{
     display: grid;
     grid-template-rows: repeat(4, 105px);
-    grid-template-columns: auto 100vh 100vh;
-    width: 250px;
+    grid-template-columns: 230px auto;/*auto 100vh 100vh;*/
+    width: 90vw;
     border: none;
     row-gap: 8px;
-    margin-left: 12px;
+    column-gap: 8px;
+    margin-left: 5vw;
 }
 
 #btn-micro, #btn-ram, #btn-storage, #btn-video {
     grid-column: 1;
     border: none;
-    border-radius: 24px;
+    border-radius: 15px;
     width: 230px;
     font-weight: bold;
+    background-color: white;
 }
 
 #btn-micro:hover, #btn-ram:hover, #btn-storage:hover, #btn-video:hover {
@@ -655,12 +693,11 @@ img#PC-Diseño {
 #flex-micros, #flex-ram, #flex-storage, #flex-video {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    gap: 36px; /* Reemplazar esto por algo que centre las cosas */
+    flex-wrap: wrap;
+    justify-content:space-around;
 }
 
 #micros, #ram, #storage, #video {
-    padding-left: 36px;
     grid-column: 2 / 3;
     grid-row: 1 / 4;
 }
@@ -668,10 +705,11 @@ img#PC-Diseño {
 .Ryzen3, .Ryzen5, .Ryzen7, .Ryzen9 {
     width: 205px;
     height: 205px;
-    border-radius: 24px;
-    border: 1px solid rgb(255, 255, 255);
+    border-radius: 15px;
+    border: 3px solid rgb(255, 255, 255);
     text-align: center;
-    margin-top: 12px;
+    margin-bottom: 8px;
+    margin-right: 8px;
     background-color: var(--bgcolsqua);
     color: black;
 }
@@ -693,10 +731,11 @@ img#PC-Diseño {
 .RAM16, .RAM32, .RAM64, .RAM128 {
     width: 205px;
     height: 205px;
-    border-radius: 24px;
-    border: 1px solid rgb(255, 255, 255);
+    border-radius: 15px;
+    border: 3px solid rgb(255, 255, 255);
     text-align: center;
-    margin-top: 12px;
+    margin-bottom: 8px;
+    margin-right: 8px;
     background-color: var(--bgcolsqua);
     color: black;
 }
@@ -714,10 +753,11 @@ img#PC-Diseño {
 .hdd128, .hhd256, .hhd512, .hhd1t {
     width: 205px;
     height: 205px;
-    border-radius: 24px;
-    border: 1px solid rgb(255, 255, 255);
+    border-radius: 15px;
+    border: 3px solid rgb(255, 255, 255);
     text-align: center;
-    margin-top: 12px;
+    margin-bottom: 8px;
+    margin-right: 8px;
     background-color: var(--bgcolsqua);
     color: black;
 }
@@ -734,11 +774,12 @@ img#PC-Diseño {
 
 .NVidia_xx1, .NVidia_xx2, .NVidia_xx3, .NVidia_xx4 {
     width: 205px;
-    height: 205px;
-    border-radius: 24px;
-    border: 1px solid rgb(255, 255, 255);
+    height: 220px;
+    border-radius: 15px;
+    border: 3px solid rgb(255, 255, 255);
     text-align: center;
-    margin-top: 12px;
+    margin-bottom: 8px;
+    margin-right: 8px;
     background-color: var(--bgcolsqua);
     color: black;
 }
@@ -753,46 +794,111 @@ img#PC-Diseño {
     border: 3px solid aqua;
 }
 
+@media screen and (max-width: 750px){
+    #flex-micros, #flex-ram, #flex-storage, #flex-video {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .Ryzen3 img, .Ryzen5 img, .Ryzen7 img, .Ryzen9 img {
+        display:none;
+    }
+    .Ryzen3, .Ryzen5, .Ryzen7, .Ryzen9 {
+        width: 150px;
+        height:99px;
+        border-radius: 15px;
+        border: 3px solid rgb(255, 255, 255);
+        text-align: center;
+        margin-bottom: 8px;
+        background-color: var(--bgcolsqua);
+        color: black;
+    }
+    .RAM16 img, .RAM32 img, .RAM64 img, .RAM128 img{
+        display: none;
+    }
+    .RAM16, .RAM32, .RAM64, .RAM128 {
+        width: 150px;
+        height: 99px;
+        border-radius: 15px;
+        border: 3px solid rgb(255, 255, 255);
+        text-align: center;
+        margin-bottom: 8px;
+        background-color: var(--bgcolsqua);
+        color: black;
+    }
+    .hdd128 img, .hhd256 img, .hhd512 img, .hhd1t img{
+        display: none;
+    }
+    .hdd128, .hhd256, .hhd512, .hhd1t {
+        width: 150px;
+        height: 99px;
+        border-radius: 15px;
+        border: 3px solid rgb(255, 255, 255);
+        text-align: center;
+        margin-bottom: 8px;
+        background-color: var(--bgcolsqua);
+        color: black;
+    }
+    .NVidia_xx1 img, .NVidia_xx2 img, .NVidia_xx3 img, .NVidia_xx4 img{
+        display: none;
+    }
+    .NVidia_xx1, .NVidia_xx2, .NVidia_xx3, .NVidia_xx4 {
+        width: 150px;
+        height: 99px;
+        border-radius: 15px;
+        border: 3px solid rgb(255, 255, 255);
+        text-align: center;
+        margin-bottom: 8px;
+        background-color: var(--bgcolsqua);
+        color: black;
+    }
+        
+}
                                     /* SECCION: ACCESORIOS */
 
 .grid-accesorios{
     display: grid;
     grid-template-rows: auto auto;
-    width: 250px;
+    width: 90vw;
     border: none;
     row-gap: 8px;
-    margin-left: 56px; /* Reemplazar esto por algo que centre las cosas */
+    margin-left: 5vw;
+    justify-content: center; 
 }
-
+.flex-one{
+    grid-row: 1;
+}
+.flex-two{
+    grid-row: 2;
+}
 .flex-one, .flex-two {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-around;
     align-items: center;
-    gap: 12px;
-    margin-bottom: 12px;
-    padding-left: 40px;
 } 
 
 .Tecladogamer, .Microfono, .Auriculares, .Mouse {
-    grid-row: 1;
     width: 250px;
     height: 250px;
     border-radius: 24px;
-    border: 1px solid rgb(255, 255, 255);
+    border: 3px solid rgb(255, 255, 255);
     text-align: center;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
+    margin-right: 8px;
     background-color: var(--bgcolsqua);
     color: black;
 }
 
 .Monitor, .Gabinete, .Soporte, .Cable {
-    grid-row: 2;
     width: 250px;
     height: 250px;
     border-radius: 24px;
-    border: 1px solid rgb(255, 255, 255);
+    border: 3px solid rgb(255, 255, 255);
     text-align: center;
+    margin-bottom: 8px;
+    margin-right: 8px;
     background-color: var(--bgcolsqua);
     color: black;
 }
@@ -824,9 +930,8 @@ img#PC-Diseño {
     display: grid;
     grid-template-columns: repeat(2, auto);
     font-size: var(--Lifuen);
-    margin-left: 50px;
-    margin-top: 24px;
-    width: 500px;
+    width: 90vw;
+    margin-left: 5vw;
 }
 
 #consulta {
@@ -838,13 +943,21 @@ img#PC-Diseño {
 .formulario {
     display: flex;
     flex-direction: column;
+    width: 45vw;
     margin-bottom: 12px;
+    grid-column: 1;
 }
 
 .cons {
     margin-bottom: 10px;
-    width: 550px;
+    width: 90%;
     margin-top: 8px;
+}
+.disclaimer {
+    width: 90%;
+    margin-top: 12px;
+    font-style: italic;
+    font-size: 12px;
 }
 
 textarea {
@@ -853,41 +966,40 @@ textarea {
     padding: 16px 0 0 0;   
     text-align: left;
     border: none;
-    width: 500px;
+    width: 90%;
     height: 150px;
     border: 1px solid black;
-    font-size: var(--tamfuen);
     margin-top: 25px;
     margin-left: 15px;
     padding-left: 5px;
-    border-radius: 12px;
+    border-radius: 15px;
 }
 
 #mensaje {
+    width: 90%;
     margin-top: 16px;
 }
 
+#nombre, #apellido, #tel, #email {
+    width: 90%;
+}
 #horario, #contacto, #tipoconsulta {
-    columns: 1;
     margin-top: 8px;
 }
 
 .detalle {
     background-color: var(--bgcolsqua);
-    margin-left: 64px;
+    width: 45vw;
     height: 500px;
-    border-radius: 24px;
+    border-radius: 15px;
     color: black;
     padding-top: 8px;
     border: 3px solid #F0ECE2;
+    grid-column: 2;
 }
 
 #detalle {
-    display: grid;
-    grid-template-columns: 500px;
-    width: 500px;
     height: 10px;
-    columns: 2;
     padding-bottom: 4px;
 }
 
@@ -898,7 +1010,7 @@ textarea {
 
 #error, #exito {
     text-align: center;
-    width: 510px;
+    width: 90%;
     height: 44px;
     line-height: 40px;
     margin-top: 8px;
@@ -913,6 +1025,45 @@ textarea {
 #exito {
     background-color: #119200;
     display: none;
+}
+
+@media screen and (max-width: 950px) {
+    .formulario_contacto {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(2, auto);
+        font-size: var(--Lifuen);
+        width: 90vw;
+    }
+    .detalle {
+        background-color: var(--bgcolsqua);
+        width: 90vw;
+        height: 500px;
+        border-radius: 15px;
+        color: black;
+        padding-top: 8px;
+        border: 3px solid #F0ECE2;
+        grid-row: 1;
+        grid-column: 1;
+    }
+    .formulario {
+        display: flex;
+        flex-direction: column;
+        width: 90vw;
+        margin-top: 20px;
+        margin-bottom: 12px;
+        grid-row: 2;
+        grid-column: 1;
+    }
+    .disclaimer {
+        width: 90%;
+        margin-top: 12px;
+        font-style: italic;
+        font-size: 12px;
+    }
+    select#tipoconsulta, select#medio-contacto, select#horario {
+        width: 250px;
+    }        
 }
 
                                     /* BOTONES */
@@ -960,7 +1111,7 @@ header {
     border-bottom: 2px solid white;
 }
 
-h2 {
+h2:not(.textosobrefoto) {
     background-color:#0F4C75 ;
     color: #F0ECE2;
     border-top: 2px solid white;
@@ -980,7 +1131,7 @@ h2 {
     .carousel__botonera{
     top: 17.5rem;
     }
-.carousel::before, .carousel::after {
+    .carousel::before, .carousel::after {
     font-size: 2rem;
     margin-top: 25%;
     }
@@ -1000,17 +1151,14 @@ h2 {
     top: 12.5rem;
     }
 }
-
 @media (hover: hover) { 
-    
     .carousel__visor {
     animation-name: desplazar, enfocar;
     animation-timing-function: ease-in-out;
     animation-duration: 3s;
     animation-iteration-count: infinite;
     }
-
-.carousel__diapo:last-child .carousel__visor {
+    .carousel__diapo:last-child .carousel__visor {
     animation-name: recomenzar, enfocar;
     animation-timing-function: ease-in-out;
     animation-duration: 3s;
