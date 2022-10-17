@@ -1,11 +1,11 @@
-/* VARIABLES */
+                    /*------VARIABLES--------*/
 
 :root {
     --tamfuen:14px;
     --bgcolsqua: #fcfcfc 
 }
 
-/* GENERAL */
+                    /*---------GENERAL-----------*/
 
 * {
     font-size: var(--tamfuen);
@@ -21,6 +21,7 @@ body {
     height: 100vh;
     font-family: 'Montserrat', sans-serif;
     font-family: 'Quicksand', sans-serif;
+    
 }
 
 .container { 
@@ -56,7 +57,7 @@ input {
     border-radius: 12px;
 }
 
-                                    /* HEADER, NAV Y FOOTER*/
+                            /*----------HEADER, NAVBAR Y FOOTER-------*/
 
 header {
     width: 100%;
@@ -111,7 +112,9 @@ footer a {
     flex-direction: column;
     flex-wrap: wrap;
 }
-
+footer i {
+    font-size: 2rem;
+}
 div a { 
         color: white;
         width: 200px;
@@ -125,9 +128,17 @@ footer a:hover {
 }
 
 .footer-navbar {
-    width: 80%;
+    width: 90vw;
+    margin-left: 5vw;
     display: flex;
-    align-items: center;
+    justify-content: space-around;
+}
+.redes-navbar {
+    width: 90vw;
+    margin-left: 5vw;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-around;
 }
 
 .header-navbar {
@@ -142,9 +153,23 @@ footer a:hover {
     font-style: normal;
 }
 
+@media screen and (max-width: 550px) {
+    footer a {  
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: clip;
+    }
+    .footer-navbar {
+        width: 90vw;
+        margin-left: 2vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }    
+}
 
-
-.iframe {
+                                /*------MAPAS-------*/
+.mapas {
     display: grid;
     grid-template-columns: repeat (3, 350px);
     padding-bottom: 1rem;
@@ -162,8 +187,11 @@ footer a:hover {
 #gmap-barracas {
     grid-column: 3;
 }
+#copyright {
+    margin-top: 20px;
+}
 @media screen and (max-width: 950px) {
-    .iframe {
+    .mapas {
         display: grid;
         grid-template-columns: 350px;
         grid-row: repeat (3,auto);
@@ -173,21 +201,28 @@ footer a:hover {
     #gmap-jardin {
         grid-column: 1;
         grid-row: 1;
-        margin-left: 28px;
+        margin-left: 30px;
     }
     
     #gmap-caballito {
-        grid-column: 2;
-        grid-row: 1;
+        grid-column: 1;
+        grid-row: 2;
+        margin-left: 30px;
     }
     
     #gmap-barracas {
         grid-column: 1;
-        grid-row: 2;
+        grid-row: 3;
+        margin-left: 30px;
     }
 }
+@media screen and (max-width: 350px) {
+    #gmap-jardin, #gmap-caballito, #gmap-barracas {
+        margin-left: 10px;
+    }    
+}
 
-                                    /* HAMBURGUER MENU */
+                        /*---------HAMBURGUER MENU----------*/
 
 #menu, #menu-check{
     display: none;
@@ -260,7 +295,7 @@ footer a:hover {
     }
 }
 
-                                    /* TEXTOS */
+                        /*-------TEXTOS---------*/
 
 h2 { 
     width: 100%;
@@ -287,7 +322,7 @@ p {
     padding-left: 12px;
 }
 
-                                    /* SECCION: PRESENTACION - CARROUSEL */
+                        /*--------CARROUSEL--------*/
 
   *::-webkit-scrollbar {
     width: 0;
@@ -318,9 +353,10 @@ li, ul {
 }
 .carousel {
     position: relative;
-    padding-top: 75%;
+    padding-top: 80%;
     padding-left: 5%;
     padding-right: 5%;
+    
 }
 .carousel__viewport {
     position: absolute;
@@ -360,11 +396,21 @@ li, ul {
     left: 25%;
     width: 60vw;
     border-radius: 15px;
-    z-index: 1;
-    color: #BBE1FA;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 3rem;
     background-color: rgba(0,0,0,0.5);
+}
+
+@media (hover: hover) { 
+    .carousel__visor {
+    animation-name: desplazar, enfocar;
+    animation-timing-function: ease-in-out;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    }
+    .carousel__diapo:last-child .carousel__visor {
+    animation-name: recomenzar, enfocar;
+    animation-timing-function: ease-in-out;
+    animation-duration: 3s;
+    }
 }
 
 /* Animacion para transicion a la siguiente foto de forma mas gradual, "empuja el borde izq" */
@@ -481,7 +527,49 @@ li, ul {
     pointer-events: none;
 }
 
-                                    /* SECCION: NOSOTROS */
+@media screen and (max-width: 800px) {
+    .textosobrefoto{
+    font-size: 2rem;
+    }
+}
+@media screen and (max-width: 549px) {
+    .carousel__botonera{
+    top: 17.5rem;
+    }
+    .carousel::before, .carousel::after {
+    font-size: 2rem;
+    margin-top: 25%;
+    }
+}
+@media screen and (max-width: 450px) {
+    .textosobrefoto{
+    font-size: 1rem;
+    }
+    .carousel__botonera{
+        top: 25rem;
+        }
+    .carousel{
+        padding-top: 100%;
+    }
+}
+@media screen and (max-width: 400px) {
+    .carousel__botonera{
+    top: 23rem;
+    }
+    .carousel {
+        padding-top: 110%;
+    }
+}
+@media screen and (max-width: 350px) {
+    .carousel__botonera{
+    top: 21rem;
+    }
+    .carousel {
+        padding-top: 115%;
+    }
+}
+
+                    /*--------NOSOTROS-----------*/
 
 
 .nosotros{
@@ -503,7 +591,6 @@ li, ul {
     background-color: transparent;
     overflow: hidden;
     border-radius: 15px;
-    box-shadow: 20px 20px 10px #3282B8;
     transition-property: all;
     transition-duration: 0.5s;
     transition-timing-function: ease-out;
@@ -557,24 +644,34 @@ li, ul {
     box-shadow: none;
 }
 
+@media screen and (max-width: 500px) {
+    .nosotros {
+        flex-direction: column;
+    }
+    .ventananosotros {
+        border-radius: 0;
+        box-shadow: none;
+    }
+    .fotonosotros{
+        border-radius: 0;
+    }
+}
 
-                                    /* SECCION: COMPUTADORAS */
+                    /*-----------EQUIPOS------------*/
 
 .grid-equipos{
-
     width: 90vw;
     margin-left: 5vw;
     justify-content:space-around;
     align-content: space-around;
     display: grid;
-    grid-template-columns: repeat(2, 47.5%); /*550px*/
+    grid-template-columns: repeat(2, 47.5%);
     row-gap: 3%;
-
 }     
 
 .equipos {
     display: grid;
-    grid-template-columns: 34% 66%; /*250px 250px*/
+    grid-template-columns: 34% 66%; 
     border-radius: 15px;
     border: 4px solid white;
     background-color: white;
@@ -613,13 +710,13 @@ img#PC-Oficina {
 }
 
 img#PC-Gamer {
-    width: 200px; /*200*/
+    width: 200px;
     margin: 12px 0 0 12px;
     grid-column: 1;
 }
 
 img#PC-Diseño {
-    width: 165px; /*165*/
+    width: 165px;
     margin: 12px 0 0 12px;
     grid-column: 1;
 }
@@ -634,13 +731,13 @@ img#PC-Diseño {
 @media screen and (max-width: 900px) {
     .grid-equipos{
         width: 90vw;
-        margin-top: 10px;
+        margin-top: 30px;
         display: grid;
         grid-template-columns: 100%; 
         justify-self: center;
         row-gap: 1%;
     }
-
+}
 @media screen and (max-width: 375px) {
     img#PC-Estandar {
         display: none;
@@ -658,16 +755,14 @@ img#PC-Diseño {
         grid-column: 1 /3;
         padding-left: 10px;
     }
-
 }    
-    
-}
-                                    /* SECCION: UPGRADES */
+
+                    /*--------UPGRADES-----------*/
 
 .grid-upgrade{
     display: grid;
     grid-template-rows: repeat(4, 105px);
-    grid-template-columns: 230px auto;/*auto 100vh 100vh;*/
+    grid-template-columns: 230px auto;
     width: 90vw;
     border: none;
     row-gap: 8px;
@@ -852,9 +947,27 @@ img#PC-Diseño {
         background-color: var(--bgcolsqua);
         color: black;
     }
-        
-}
-                                    /* SECCION: ACCESORIOS */
+}    
+    @media screen and (max-width: 420px) {
+        .grid-upgrade {
+            grid-template-columns: 200px auto;
+            margin-left: 2vw;
+        }
+        #btn-micro, #btn-ram, #btn-storage, #btn-video {
+            width: 200px;
+        }
+    }
+    @media screen and (max-width: 350px) {
+        .grid-upgrade {
+            grid-template-columns: 150px auto;
+            margin-left: 1vw;
+        }
+        #btn-micro, #btn-ram, #btn-storage, #btn-video {
+            width: 150px;
+        }
+    }
+
+                /*---------ACCESORIOS-----------*/
 
 .grid-accesorios{
     display: grid;
@@ -924,7 +1037,7 @@ img#PC-Diseño {
     height: 100px;
 }
 
-                                    /* FORMULARIO CONTACTO */
+                    /*-------FORMULARIO CONTACTO---------*/
 
 .formulario_contacto {
     display: grid;
@@ -932,6 +1045,8 @@ img#PC-Diseño {
     font-size: var(--Lifuen);
     width: 90vw;
     margin-left: 5vw;
+    /* margin-top: 30px; */
+    
 }
 
 #consulta {
@@ -1066,7 +1181,7 @@ textarea {
     }        
 }
 
-                                    /* BOTONES */
+                /*---------BOTONES------------*/
 
 .btns {
     display: flex;
@@ -1098,7 +1213,7 @@ textarea {
     margin: 0 16px 16px 0;
 }
 
-/* COLORES */
+                /*-----COLORES--------*/
 
 body {
     color:#F0ECE2 ;
@@ -1118,64 +1233,4 @@ h2:not(.textosobrefoto) {
     border-bottom: 2px solid white;
 }
 
-                                                                        /* RESPONSIVE */
 
-                                    /* CARROUSELL */
-
-@media screen and (max-width: 800px) {
-    .textosobrefoto{
-    font-size: 2rem;
-    }
-}
-@media screen and (max-width: 549px) {
-    .carousel__botonera{
-    top: 17.5rem;
-    }
-    .carousel::before, .carousel::after {
-    font-size: 2rem;
-    margin-top: 25%;
-    }
-}
-@media screen and (max-width: 450px) {
-    .textosobrefoto{
-    font-size: 1rem;
-    }
-}
-@media screen and (max-width: 400px) {
-    .carousel__botonera{
-    top: 15rem;
-    }
-}
-@media screen and (max-width: 350px) {
-    .carousel__botonera{
-    top: 12.5rem;
-    }
-}
-@media (hover: hover) { 
-    .carousel__visor {
-    animation-name: desplazar, enfocar;
-    animation-timing-function: ease-in-out;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    }
-    .carousel__diapo:last-child .carousel__visor {
-    animation-name: recomenzar, enfocar;
-    animation-timing-function: ease-in-out;
-    animation-duration: 3s;
-    }
-}
-
-                                    /* NOSOTROS */
-
-@media screen and (max-width: 500px) {
-    .nosotros {
-        flex-direction: column;
-    }
-    .ventananosotros {
-        border-radius: 0;
-        box-shadow: none;
-    }
-    .fotonosotros{
-        border-radius: 0;
-    }
-}

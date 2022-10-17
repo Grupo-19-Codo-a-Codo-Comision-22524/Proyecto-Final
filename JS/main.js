@@ -9,7 +9,7 @@ let pc = {
   preciofinalram: 0,
   preciofinaldisco: 0,
   preciofinalvideo: 0,
-  preciotecladogamer: 0,
+  preciotacladogamer: 0,
   preciomicrofono: 0,
   precioauriculares: 0,
   preciomouse: 0,
@@ -207,13 +207,13 @@ function selectYourComputer() {
   let Cable = document.getElementById("Cable");
 
   if (Tecladogamer.checked) {
-    pc.preciotecladogamer = 59.05 * pc.valorDolar;
+    preciotacladogamer = 59.05 * pc.valorDolar;
     let p = document.createElement("p");
     campoPresupuesto.appendChild(p);
     p.innerHTML =
       "Teclado gamer Logitech Serie G G413 " +
       "$" +
-      parseFloat(pc.preciotecladogamer).toFixed(2);
+      parseFloat(pc.preciotacladogamer).toFixed(2);
   }
 
   if (Microfono.checked) {
@@ -298,7 +298,6 @@ function selectYourComputer() {
         pc.precioauriculares +
         pc.preciocable +
         pc.preciogabinete +
-        pc.preciotecladogamer +
         pc.preciomicrofono +
         pc.preciomonitor +
         pc.preciomouse +
@@ -392,35 +391,47 @@ function enviarFormulario(evento) {
   let regularesEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
 
   if (nombre.value === "") {
-    msjError = document.getElementById("error").style.display = "block";
+  msjError = document.getElementById("error").style.display = "block";
+  }
+
+  else {
+    document.getElementById("exito").style.display = "block";
+    document.getElementById("error").style.display = "none";
   }
 
   if (apellido.value === "") {
     msjError = document.getElementById("error").style.display = "block";
   }
 
+  else {
+    document.getElementById("exito").style.display = "block";
+    document.getElementById("error").style.display = "none";
+  }
+
   if (telefono.value === "") {
     msjError = document.getElementById("error").style.display = "block";
+  }
+
+  else {
+    document.getElementById("exito").style.display = "block";
+    document.getElementById("error").style.display = "none";
   }
 
   if (!regularesEmail.test(email.value)) {
     msjError = document.getElementById("error").style.display = "block";
   }
 
-  if (tipoconsulta.value === "" || contacto.value === "" || horario.value === "") {
-    msjError = document.getElementById("error").style.display = "block";
-  }
-
-  if (
-    nombre.value !== "" &&
-    apellido.value !== "" &&
-    telefono.value !== "" &&
-    regularesEmail.test(email.value) &&
-    tipoconsulta.value !== "" &&
-    contacto.value !== "" &&
-    horario.value !== ""
-  ) {
+  else {
     document.getElementById("exito").style.display = "block";
     document.getElementById("error").style.display = "none";
   }
-}
+
+  if (tipoconsulta.value == "" || contacto.value == "" || horario.value == "") {
+    msjError = document.getElementById("error").style.display = "block";
+  }
+
+  else {
+    document.getElementById("exito").style.display = "block";
+    document.getElementById("error").style.display = "none";
+  }
+} 
